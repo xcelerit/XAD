@@ -1,0 +1,2279 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="">
+    
+    
+      
+        <title>Adjoint Mode Type AReal - XAD Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../static/stylesheets/main.2014a6d7.min.css">
+      
+        
+        <link rel="stylesheet" href="../static/stylesheets/palette.92c9fe4a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="../static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="../static/style.css" />
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-321978698"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-321978698",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-321978698"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="../static/logo.svg" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            XAD Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Adjoint Mode Type AReal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="../static/logo.svg" alt="logo">
+    </a>
+    XAD Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro.html" class="md-nav__link">
+        <span title="intro (document)" class="md-ellipsis">Introduction</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aad.html" class="md-nav__link">
+        <span title="aad (document)" class="md-ellipsis">Algorithmic Differentiation Background</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic.html" class="md-nav__link">
+        <span title="basic (document)" class="md-ellipsis">Basic Usage</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external_functions.html" class="md-nav__link">
+        <span title="external_functions (document)" class="md-ellipsis">External Functions</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checkpointing.html" class="md-nav__link">
+        <span title="checkpointing (document)" class="md-ellipsis">Checkpointing</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../higher_order.html" class="md-nav__link">
+        <span title="higher_order (document)" class="md-ellipsis">Higher-<wbr>Order Derivatives</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smoothed_math.html" class="md-nav__link">
+        <span title="smoothed_math (document)" class="md-ellipsis">Handling Discontinuities</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../reference.html"><span title="reference (document)" class="md-ellipsis">Reference</span></a>
+          
+            <label for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          <span title="reference (document)" class="md-ellipsis">Reference</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="headers.html" class="md-nav__link">
+        <span title="ref/headers (document)" class="md-ellipsis">Headers and Namespaces</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="interface.html" class="md-nav__link">
+        <span title="ref/interface (document)" class="md-ellipsis">AD Mode Interface</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span title="ref/areal (document)" class="md-ellipsis">Adjoint Mode Type AReal</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span title="ref/areal (document)" class="md-ellipsis">Adjoint Mode Type AReal</span>
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">Overview</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0E5AReal" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation." class="md-ellipsis">AReal</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">Members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">Types</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal9tape_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="AReal::tape_type (C++ type) — The type of the tape that is used to store operations on this class." class="md-ellipsis">tape_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal9slot_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="AReal::slot_type (C++ type) — The type used for storing this instance&#39;s slot in the tape. This type is useful for checkpointing, where the slot of the inputs and outputs needs to be stored in the checkpoint in order to retrieve or increment their derivatives during adjoint computation." class="md-ellipsis">slot_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal10value_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="AReal::value_type (C++ type) — The value-type of this class, i.e., T." class="md-ellipsis">value_<wbr>type</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construct-destruct-and-assign" class="md-nav__link">
+    <span class="md-ellipsis">Construct, Destruct, and Assign</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Construct, Destruct, and Assign">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::AReal (C++ function) — Constructs a new instance of this class, given its initial passive value." class="md-ellipsis">AReal</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AReal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK1T-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK1T-p-val" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::AReal::val (C++ function parameter) — Value to initialize the  the instance with." class="md-ellipsis">val</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK1T-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK5AReal" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::AReal (C++ function) — Copy-constructor" class="md-ellipsis">AReal</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AReal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK5AReal-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK5AReal-p-val" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::AReal::val (C++ function parameter) — Value to initialize the instance with." class="md-ellipsis">val</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK5AReal-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERR5AReal" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::AReal (C++ function) — Move-constructor" class="md-ellipsis">AReal</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AReal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERR5AReal-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERR5AReal-p-o" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::AReal::o (C++ function parameter) — Other object to move from" class="md-ellipsis">o</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::AReal (C++ function) — Construct from an expression. This constructor gets called from statements like this, where the right-hand side involves and active data type:" class="md-ellipsis">AReal</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AReal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE-p-expr" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::AReal::expr (C++ function parameter) — The expression to construct from" class="md-ellipsis">expr</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::operator= (C++ function) — Assign from a passive value." class="md-ellipsis">operator=</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="operator=">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK1T-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK1T-p-val" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::operator=::val (C++ function parameter) — Value to be assigned to this object." class="md-ellipsis">val</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK1T-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK1T-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK5AReal" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::operator= (C++ function) — Assign from another AReal object." class="md-ellipsis">operator=</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="operator=">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK5AReal-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK5AReal-p-val" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::operator=::val (C++ function parameter) — Value to be assigned to this object." class="md-ellipsis">val</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK5AReal-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK5AReal-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERR5AReal" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::operator= (C++ function) — Move-assignment" class="md-ellipsis">operator=</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="operator=">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERR5AReal-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERR5AReal-p-val" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::operator=::val (C++ function parameter) — Value to be moved into this object" class="md-ellipsis">val</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERR5AReal-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::operator= (C++ function) — Assign an expression" class="md-ellipsis">operator=</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="operator=">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-p-expr" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::operator=::expr (C++ function parameter) — Expression to be assigned to this object." class="md-ellipsis">expr</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealD0Ev" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::~AReal (C++ function) — Destructor." class="md-ellipsis">~AReal</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#values-and-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">Values and Derivatives</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Values and Derivatives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal8getValueEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::getValue (C++ function) — Get the value of this object, as the underlying type." class="md-ellipsis">get<wbr>Value</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getValue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal8getValueEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal5valueEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::value (C++ function) — Get a const reference to the value of this object." class="md-ellipsis">value</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal5valueEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5valueEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::value (C++ function) — Get a reference to the value of this object, i.e. it is assignable" class="md-ellipsis">value</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5valueEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal13getDerivativeEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::getDerivative (C++ function) — Get the stored derivative of this object." class="md-ellipsis">get<wbr>Derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getDerivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal13getDerivativeEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal10derivativeEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::derivative (C++ function) — Get a const reference to the stored derivative of this object." class="md-ellipsis">derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="derivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal10derivativeEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal10derivativeEv-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal10derivativeEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::derivative (C++ function) — Get a reference to the stored derivative of this object, i.e., it is assignable." class="md-ellipsis">derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="derivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal10derivativeEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal13setDerivativeERK1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::setDerivative (C++ function) — Sets the derivative of this object. This is the same as calling derivative() = a." class="md-ellipsis">set<wbr>Derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setDerivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal13setDerivativeERK1T-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal13setDerivativeERK1T-p-a" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::setDerivative::a (C++ function parameter) — The value to assign to the derivative." class="md-ellipsis">a</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal10setAdjointERK1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::setAdjoint (C++ function) — Synonym for setDerivative(a)." class="md-ellipsis">set<wbr>Adjoint</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal12shouldRecordEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::shouldRecord (C++ function) — Checks if the variable has been registered with a tape and should therefore be recorded." class="md-ellipsis">should<wbr>Record</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-operations" class="md-nav__link">
+    <span class="md-ellipsis">Other Operations</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="freal.html" class="md-nav__link">
+        <span title="ref/freal (document)" class="md-ellipsis">Forward Mode Type FReal</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="expression.html" class="md-nav__link">
+        <span title="ref/expression (document)" class="md-ellipsis">Expressions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="math.html" class="md-nav__link">
+        <span title="ref/math (document)" class="md-ellipsis">Mathematical Operations</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="complex.html" class="md-nav__link">
+        <span title="ref/complex (document)" class="md-ellipsis">Complex</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="smooth-math.html" class="md-nav__link">
+        <span title="ref/smooth-math (document)" class="md-ellipsis">Smoothed Mathematical Functions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="global.html" class="md-nav__link">
+        <span title="ref/global (document)" class="md-ellipsis">Global Functions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tape.html" class="md-nav__link">
+        <span title="ref/tape (document)" class="md-ellipsis">Tape</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chkpt_cb.html" class="md-nav__link">
+        <span title="ref/chkpt_cb (document)" class="md-ellipsis">Checkpoint<wbr>Callback</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exceptions.html" class="md-nav__link">
+        <span title="ref/exceptions (document)" class="md-ellipsis">Exceptions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="version.html" class="md-nav__link">
+        <span title="ref/version (document)" class="md-ellipsis">Version Information</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license.html" class="md-nav__link">
+        <span title="license (document)" class="md-ellipsis">GNU Free Documentation License</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">Overview</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0E5AReal" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation." class="md-ellipsis">AReal</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">Members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">Types</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal9tape_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="AReal::tape_type (C++ type) — The type of the tape that is used to store operations on this class." class="md-ellipsis">tape_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal9slot_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="AReal::slot_type (C++ type) — The type used for storing this instance&#39;s slot in the tape. This type is useful for checkpointing, where the slot of the inputs and outputs needs to be stored in the checkpoint in order to retrieve or increment their derivatives during adjoint computation." class="md-ellipsis">slot_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal10value_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="AReal::value_type (C++ type) — The value-type of this class, i.e., T." class="md-ellipsis">value_<wbr>type</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construct-destruct-and-assign" class="md-nav__link">
+    <span class="md-ellipsis">Construct, Destruct, and Assign</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Construct, Destruct, and Assign">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::AReal (C++ function) — Constructs a new instance of this class, given its initial passive value." class="md-ellipsis">AReal</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AReal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK1T-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK1T-p-val" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::AReal::val (C++ function parameter) — Value to initialize the  the instance with." class="md-ellipsis">val</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK1T-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK5AReal" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::AReal (C++ function) — Copy-constructor" class="md-ellipsis">AReal</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AReal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK5AReal-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK5AReal-p-val" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::AReal::val (C++ function parameter) — Value to initialize the instance with." class="md-ellipsis">val</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK5AReal-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERR5AReal" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::AReal (C++ function) — Move-constructor" class="md-ellipsis">AReal</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AReal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERR5AReal-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERR5AReal-p-o" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::AReal::o (C++ function parameter) — Other object to move from" class="md-ellipsis">o</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::AReal (C++ function) — Construct from an expression. This constructor gets called from statements like this, where the right-hand side involves and active data type:" class="md-ellipsis">AReal</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AReal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE-p-expr" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::AReal::expr (C++ function parameter) — The expression to construct from" class="md-ellipsis">expr</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::operator= (C++ function) — Assign from a passive value." class="md-ellipsis">operator=</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="operator=">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK1T-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK1T-p-val" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::operator=::val (C++ function parameter) — Value to be assigned to this object." class="md-ellipsis">val</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK1T-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK1T-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK5AReal" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::operator= (C++ function) — Assign from another AReal object." class="md-ellipsis">operator=</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="operator=">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK5AReal-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK5AReal-p-val" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::operator=::val (C++ function parameter) — Value to be assigned to this object." class="md-ellipsis">val</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK5AReal-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK5AReal-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERR5AReal" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::operator= (C++ function) — Move-assignment" class="md-ellipsis">operator=</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="operator=">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERR5AReal-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERR5AReal-p-val" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::operator=::val (C++ function parameter) — Value to be moved into this object" class="md-ellipsis">val</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERR5AReal-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::operator= (C++ function) — Assign an expression" class="md-ellipsis">operator=</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="operator=">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-p-expr" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::operator=::expr (C++ function parameter) — Expression to be assigned to this object." class="md-ellipsis">expr</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5ARealD0Ev" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::~AReal (C++ function) — Destructor." class="md-ellipsis">~AReal</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#values-and-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">Values and Derivatives</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Values and Derivatives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal8getValueEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::getValue (C++ function) — Get the value of this object, as the underlying type." class="md-ellipsis">get<wbr>Value</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getValue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal8getValueEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal5valueEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::value (C++ function) — Get a const reference to the value of this object." class="md-ellipsis">value</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal5valueEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5valueEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::value (C++ function) — Get a reference to the value of this object, i.e. it is assignable" class="md-ellipsis">value</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal5valueEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal13getDerivativeEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::getDerivative (C++ function) — Get the stored derivative of this object." class="md-ellipsis">get<wbr>Derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getDerivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal13getDerivativeEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal10derivativeEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::derivative (C++ function) — Get a const reference to the stored derivative of this object." class="md-ellipsis">derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="derivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal10derivativeEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal10derivativeEv-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal10derivativeEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::derivative (C++ function) — Get a reference to the stored derivative of this object, i.e., it is assignable." class="md-ellipsis">derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="derivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal10derivativeEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal13setDerivativeERK1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::setDerivative (C++ function) — Sets the derivative of this object. This is the same as calling derivative() = a." class="md-ellipsis">set<wbr>Derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setDerivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal13setDerivativeERK1T-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal13setDerivativeERK1T-p-a" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="AReal::setDerivative::a (C++ function parameter) — The value to assign to the derivative." class="md-ellipsis">a</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N5AReal10setAdjointERK1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::setAdjoint (C++ function) — Synonym for setDerivative(a)." class="md-ellipsis">set<wbr>Adjoint</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK5AReal12shouldRecordEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="AReal::shouldRecord (C++ function) — Checks if the variable has been registered with a tape and should therefore be recorded." class="md-ellipsis">should<wbr>Record</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-operations" class="md-nav__link">
+    <span class="md-ellipsis">Other Operations</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset" role="main">
+                
+
+
+  <h1 id="adjoint-mode-type-areal"><span id="ref-areal"></span>Adjoint Mode Type <code class="docutils literal notranslate"><span class="pre">AReal</span></code><a class="headerlink" href="#adjoint-mode-type-areal" title="Permalink to this headline">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp class objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4I0E5AReal">
+<span id="_CPPv3I0E5AReal"></span><span id="_CPPv2I0E5AReal"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a></span></span><span class="p">&gt;</span><span class="k"><br>class</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">AReal</span></span><span class="w">&nbsp;</span><span class="p">:</span><span class="w">&nbsp;</span><span class="k">public</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="expression.html#_CPPv4I00E10Expression" title="Expression (C++ class) — Represents a mathematical expression in a type. Active data types, such as AReal and FReal, as well as all mathematical expressions inherit from this class. Therefore all mathematical operations are defined on this type, rather than any specific derived class."><span class="n">Expression</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">,</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><span class="n">AReal</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">&gt;</span><span class="p">&gt;</span><a class="headerlink" href="#_CPPv4I0E5AReal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines and active data type version of the underlying type <cite>T</cite>
+that tracks derivatives on a tape for adjoint computation.</p>
+<p>Derivatives will only be tracked on tape if the variable has been registered
+or is dependent on other registered variables.
+Hence creating and using variables without an active tape is not problematic.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="tape.html#ref-tape"><span class="std std-ref">Tape</span></a>, <a class="reference internal" href="global.html#ref-global"><span class="std std-ref">Global Functions</span></a>, <a class="reference internal" href="interface.html#ref-interface"><span class="std std-ref">AD Mode Interface</span></a>, <a class="reference internal" href="math.html#ref-math"><span class="std std-ref">Mathematical Operations</span></a></p>
+</div>
+</dd></dl>
+
+<h2 id="members">Members<a class="headerlink" href="#members" title="Permalink to this headline">¶</a></h2>
+<h3 id="types">Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h3>
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5AReal9tape_typeE">
+<span id="_CPPv3N5AReal9tape_typeE"></span><span id="_CPPv2N5AReal9tape_typeE"></span><span id="AReal::tape_type"></span><span class="k">type</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">tape_type</span></span><a class="headerlink" href="#_CPPv4N5AReal9tape_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the tape that is used to store operations on this class.</p>
+</dd></dl>
+
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5AReal9slot_typeE">
+<span id="_CPPv3N5AReal9slot_typeE"></span><span id="_CPPv2N5AReal9slot_typeE"></span><span id="AReal::slot_type"></span><span class="k">type</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">slot_type</span></span><a class="headerlink" href="#_CPPv4N5AReal9slot_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type used for storing this instance’s slot in the tape.
+This type is useful for checkpointing, where the slot of the inputs and
+outputs needs to be stored in the checkpoint in order to retrieve or
+increment their derivatives during adjoint computation.</p>
+</dd></dl>
+
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5AReal10value_typeE">
+<span id="_CPPv3N5AReal10value_typeE"></span><span id="_CPPv2N5AReal10value_typeE"></span><span id="AReal::value_type"></span><span class="k">typedef</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">value_type</span></span><a class="headerlink" href="#_CPPv4N5AReal10value_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value-type of this class, i.e., <code class="docutils literal notranslate"><span class="pre">T</span></code>.</p>
+</dd></dl>
+
+<h3 id="construct-destruct-and-assign">Construct, Destruct, and Assign<a class="headerlink" href="#construct-destruct-and-assign" title="Permalink to this headline">¶</a></h3>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5AReal5ARealERK1T">
+<span id="_CPPv3N5AReal5ARealERK1T"></span><span id="_CPPv2N5AReal5ARealERK1T"></span><span id="AReal::AReal__TCR"></span><span class="sig-name descname"><span class="n">AReal</span></span><span><span class="p">(</span><span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N5AReal5ARealERK1T-p-val" title="AReal::AReal::val (C++ function parameter) — Value to initialize the  the instance with."><span class="n sig-param">val</span></a><span class="w">&nbsp;</span><span class="p">=</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">(</span><span class="p">)</span></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N5AReal5ARealERK1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a new instance of this class, given its initial passive value.</p>
+<p>Ensure that there is an active tape instance for the current thread,
+otherwise creating instances of this class results in undefined behaviour.
+This error condition is only checked in debug builds, where it throws
+an <a class="desctype reference internal" href="exceptions.html#_CPPv415NoTapeException" title="NoTapeException (C++ class) — Exception thrown if an AReal object is created without an active tape for the current thread (debug-mode only)."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">NoTapeException</span></code></a>. Release builds do not perform this check.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N5AReal5ARealERK1T-parameters">Parameters<a class="headerlink" href="#_CPPv4N5AReal5ARealERK1T-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N5AReal5ARealERK1T-p-val"><span class="k">const</span><span class="w">   </span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">   </span><span class="p">&amp;</span><span class="n sig-param sig-name">val</span><span class="w">   </span><span class="p">=</span><span class="w">   </span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">(</span><span class="p">)</span><a class="headerlink" href="#_CPPv4N5AReal5ARealERK1T-p-val" title="Permalink to this definition">¶</a></dt><dd><p>Value to initialize the  the instance with.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4N5AReal5ARealERK1T-throws">Throws<a class="headerlink" href="#_CPPv4N5AReal5ARealERK1T-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv415NoTapeException" title="NoTapeException (C++ class) — Exception thrown if an AReal object is created without an active tape for the current thread (debug-mode only)."><span class="n">NoTapeException</span></a></code></span> – If there is no active tape for the current thread
+(debug mode only)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5AReal5ARealERK5AReal">
+<span id="_CPPv3N5AReal5ARealERK5AReal"></span><span id="_CPPv2N5AReal5ARealERK5AReal"></span><span id="AReal::AReal__ARealCR"></span><span class="sig-name descname"><span class="n">AReal</span></span><span><span class="p">(</span><span><span class="k">const</span><span class="w">&nbsp;</span><a class="reference internal" href="#_CPPv4N5AReal5ARealERK5AReal" title="AReal::AReal (C++ function) — Copy-constructor"><span class="n">AReal</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N5AReal5ARealERK5AReal-p-val" title="AReal::AReal::val (C++ function parameter) — Value to initialize the instance with."><span class="n sig-param">val</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N5AReal5ARealERK5AReal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy-constructor</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N5AReal5ARealERK5AReal-parameters">Parameters<a class="headerlink" href="#_CPPv4N5AReal5ARealERK5AReal-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N5AReal5ARealERK5AReal-p-val"><span class="k">const</span><span class="w">   </span><a class="reference internal" href="#_CPPv4N5AReal5ARealERK5AReal" title="AReal::AReal (C++ function) — Copy-constructor"><span class="n">AReal</span></a><span class="w">   </span><span class="p">&amp;</span><span class="n sig-param sig-name">val</span><a class="headerlink" href="#_CPPv4N5AReal5ARealERK5AReal-p-val" title="Permalink to this definition">¶</a></dt><dd><p>Value to initialize the instance with.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4N5AReal5ARealERK5AReal-throws">Throws<a class="headerlink" href="#_CPPv4N5AReal5ARealERK5AReal-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv415NoTapeException" title="NoTapeException (C++ class) — Exception thrown if an AReal object is created without an active tape for the current thread (debug-mode only)."><span class="n">NoTapeException</span></a></code></span> – If there is no active tape for the current thread
+(debug mode only)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5AReal5ARealERR5AReal">
+<span id="_CPPv3N5AReal5ARealERR5AReal"></span><span id="_CPPv2N5AReal5ARealERR5AReal"></span><span id="AReal::AReal__ARealRR"></span><span class="sig-name descname"><span class="n">AReal</span></span><span><span class="p">(</span><span><a class="reference internal" href="#_CPPv4N5AReal5ARealERR5AReal" title="AReal::AReal (C++ function) — Move-constructor"><span class="n">AReal</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N5AReal5ARealERR5AReal-p-o" title="AReal::AReal::o (C++ function parameter) — Other object to move from"><span class="n sig-param">o</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N5AReal5ARealERR5AReal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move-constructor</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N5AReal5ARealERR5AReal-parameters">Parameters<a class="headerlink" href="#_CPPv4N5AReal5ARealERR5AReal-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N5AReal5ARealERR5AReal-p-o"><a class="reference internal" href="#_CPPv4N5AReal5ARealERR5AReal" title="AReal::AReal (C++ function) — Move-constructor"><span class="n">AReal</span></a><span class="w">   </span><span class="p">&amp;</span><span class="p">&amp;</span><span class="n sig-param sig-name">o</span><a class="headerlink" href="#_CPPv4N5AReal5ARealERR5AReal-p-o" title="Permalink to this definition">¶</a></dt><dd><p>Other object to move from</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE">
+<span id="_CPPv3N5AReal5ARealERK10ExpressionI1T4ExprE"></span><span id="_CPPv2N5AReal5ARealERK10ExpressionI1T4ExprE"></span><span id="AReal::AReal__Expression:T.Expr:CR"></span><span class="sig-name descname"><span class="n">AReal</span></span><span><span class="p">(</span><span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="expression.html#_CPPv4I00E10Expression" title="Expression (C++ class) — Represents a mathematical expression in a type. Active data types, such as AReal and FReal, as well as all mathematical expressions inherit from this class. Therefore all mathematical operations are defined on this type, rather than any specific derived class."><span class="n">Expression</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">,</span><span class="w">&nbsp;</span><span class="n">Expr</span><span class="p">&gt;</span><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE-p-expr" title="AReal::AReal::expr (C++ function parameter) — The expression to construct from"><span class="n sig-param">expr</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct from an expression. This constructor gets called from statements
+like this, where the right-hand side involves and active data type:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">AReal</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE-parameters">Parameters<a class="headerlink" href="#_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE-p-expr"><span class="k">const</span><span class="w">   </span><a class="desctype reference internal" href="expression.html#_CPPv4I00E10Expression" title="Expression (C++ class) — Represents a mathematical expression in a type. Active data types, such as AReal and FReal, as well as all mathematical expressions inherit from this class. Therefore all mathematical operations are defined on this type, rather than any specific derived class."><span class="n">Expression</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">,</span><span class="w">   </span><span class="n">Expr</span><span class="p">&gt;</span><span class="w">   </span><span class="p">&amp;</span><span class="n sig-param sig-name">expr</span><a class="headerlink" href="#_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE-p-expr" title="Permalink to this definition">¶</a></dt><dd><p>The expression to construct from</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE-throws">Throws<a class="headerlink" href="#_CPPv4N5AReal5ARealERK10ExpressionI1T4ExprE-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv415NoTapeException" title="NoTapeException (C++ class) — Exception thrown if an AReal object is created without an active tape for the current thread (debug-mode only)."><span class="n">NoTapeException</span></a></code></span> – If there is no active tape for the current thread
+(debug mode only)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5ARealaSERK1T">
+<span id="_CPPv3N5ARealaSERK1T"></span><span id="_CPPv2N5ARealaSERK1T"></span><span id="AReal::assign-operator__TCR"></span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><span class="n">AReal</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="sig-name descname"><span class="k">operator</span><span class="o">=</span></span><span><span class="p">(</span><span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N5ARealaSERK1T-p-val" title="AReal::operator=::val (C++ function parameter) — Value to be assigned to this object."><span class="n sig-param">val</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N5ARealaSERK1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign from a passive value.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N5ARealaSERK1T-parameters">Parameters<a class="headerlink" href="#_CPPv4N5ARealaSERK1T-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N5ARealaSERK1T-p-val"><span class="k">const</span><span class="w">   </span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">   </span><span class="p">&amp;</span><span class="n sig-param sig-name">val</span><a class="headerlink" href="#_CPPv4N5ARealaSERK1T-p-val" title="Permalink to this definition">¶</a></dt><dd><p>Value to be assigned to this object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4N5ARealaSERK1T-returns">Returns<a class="headerlink" href="#_CPPv4N5ARealaSERK1T-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p>A reference to <code class="docutils literal notranslate"><span class="pre">this</span></code></p>
+</dd>
+<dt class="field-odd" id="_CPPv4N5ARealaSERK1T-throws">Throws<a class="headerlink" href="#_CPPv4N5ARealaSERK1T-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv415NoTapeException" title="NoTapeException (C++ class) — Exception thrown if an AReal object is created without an active tape for the current thread (debug-mode only)."><span class="n">NoTapeException</span></a></code></span> – If there is no active tape for the current thread
+(debug mode only)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5ARealaSERK5AReal">
+<span id="_CPPv3N5ARealaSERK5AReal"></span><span id="_CPPv2N5ARealaSERK5AReal"></span><span id="AReal::assign-operator__ARealCR"></span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><span class="n">AReal</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="sig-name descname"><span class="k">operator</span><span class="o">=</span></span><span><span class="p">(</span><span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><span class="n">AReal</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N5ARealaSERK5AReal-p-val" title="AReal::operator=::val (C++ function parameter) — Value to be assigned to this object."><span class="n sig-param">val</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N5ARealaSERK5AReal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign from another <cite>AReal</cite> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N5ARealaSERK5AReal-parameters">Parameters<a class="headerlink" href="#_CPPv4N5ARealaSERK5AReal-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N5ARealaSERK5AReal-p-val"><span class="k">const</span><span class="w">   </span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><span class="n">AReal</span></a><span class="w">   </span><span class="p">&amp;</span><span class="n sig-param sig-name">val</span><a class="headerlink" href="#_CPPv4N5ARealaSERK5AReal-p-val" title="Permalink to this definition">¶</a></dt><dd><p>Value to be assigned to this object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4N5ARealaSERK5AReal-returns">Returns<a class="headerlink" href="#_CPPv4N5ARealaSERK5AReal-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p>A reference to <code class="docutils literal notranslate"><span class="pre">this</span></code></p>
+</dd>
+<dt class="field-odd" id="_CPPv4N5ARealaSERK5AReal-throws">Throws<a class="headerlink" href="#_CPPv4N5ARealaSERK5AReal-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv415NoTapeException" title="NoTapeException (C++ class) — Exception thrown if an AReal object is created without an active tape for the current thread (debug-mode only)."><span class="n">NoTapeException</span></a></code></span> – If there is no active tape for the current thread
+(debug mode only)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5ARealaSERR5AReal">
+<span id="_CPPv3N5ARealaSERR5AReal"></span><span id="_CPPv2N5ARealaSERR5AReal"></span><span id="AReal::assign-operator__ARealRR"></span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><span class="n">AReal</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="sig-name descname"><span class="k">operator</span><span class="o">=</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><span class="n">AReal</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N5ARealaSERR5AReal-p-val" title="AReal::operator=::val (C++ function parameter) — Value to be moved into this object"><span class="n sig-param">val</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N5ARealaSERR5AReal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move-assignment</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N5ARealaSERR5AReal-parameters">Parameters<a class="headerlink" href="#_CPPv4N5ARealaSERR5AReal-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N5ARealaSERR5AReal-p-val"><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><span class="n">AReal</span></a><span class="w">   </span><span class="p">&amp;</span><span class="p">&amp;</span><span class="n sig-param sig-name">val</span><a class="headerlink" href="#_CPPv4N5ARealaSERR5AReal-p-val" title="Permalink to this definition">¶</a></dt><dd><p>Value to be moved into this object</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4N5ARealaSERR5AReal-returns">Returns<a class="headerlink" href="#_CPPv4N5ARealaSERR5AReal-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p>A reference to <code class="docutils literal notranslate"><span class="pre">this</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5ARealaSERK10ExpressionI1T4ExprE">
+<span id="_CPPv3N5ARealaSERK10ExpressionI1T4ExprE"></span><span id="_CPPv2N5ARealaSERK10ExpressionI1T4ExprE"></span><span id="AReal::assign-operator__Expression:T.Expr:CR"></span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><span class="n">AReal</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="sig-name descname"><span class="k">operator</span><span class="o">=</span></span><span><span class="p">(</span><span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="expression.html#_CPPv4I00E10Expression" title="Expression (C++ class) — Represents a mathematical expression in a type. Active data types, such as AReal and FReal, as well as all mathematical expressions inherit from this class. Therefore all mathematical operations are defined on this type, rather than any specific derived class."><span class="n">Expression</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">,</span><span class="w">&nbsp;</span><span class="n">Expr</span><span class="p">&gt;</span><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-p-expr" title="AReal::operator=::expr (C++ function parameter) — Expression to be assigned to this object."><span class="n sig-param">expr</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign an expression</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-parameters">Parameters<a class="headerlink" href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-p-expr"><span class="k">const</span><span class="w">   </span><a class="desctype reference internal" href="expression.html#_CPPv4I00E10Expression" title="Expression (C++ class) — Represents a mathematical expression in a type. Active data types, such as AReal and FReal, as well as all mathematical expressions inherit from this class. Therefore all mathematical operations are defined on this type, rather than any specific derived class."><span class="n">Expression</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">,</span><span class="w">   </span><span class="n">Expr</span><span class="p">&gt;</span><span class="w">   </span><span class="p">&amp;</span><span class="n sig-param sig-name">expr</span><a class="headerlink" href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-p-expr" title="Permalink to this definition">¶</a></dt><dd><p>Expression to be assigned to this object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-returns">Returns<a class="headerlink" href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p>A reference to <code class="docutils literal notranslate"><span class="pre">this</span></code></p>
+</dd>
+<dt class="field-odd" id="_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-throws">Throws<a class="headerlink" href="#_CPPv4N5ARealaSERK10ExpressionI1T4ExprE-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv415NoTapeException" title="NoTapeException (C++ class) — Exception thrown if an AReal object is created without an active tape for the current thread (debug-mode only)."><span class="n">NoTapeException</span></a></code></span> – If there is no active tape for the current thread
+(debug mode only)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5ARealD0Ev">
+<span id="_CPPv3N5ARealD0Ev"></span><span id="_CPPv2N5ARealD0Ev"></span><span id="AReal::~AReal"></span><span class="sig-name descname"><span class="n">~AReal</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N5ARealD0Ev" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destructor.</p>
+</dd></dl>
+
+<h3 id="values-and-derivatives">Values and Derivatives<a class="headerlink" href="#values-and-derivatives" title="Permalink to this headline">¶</a></h3>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4NK5AReal8getValueEv">
+<span id="_CPPv3NK5AReal8getValueEv"></span><span id="_CPPv2NK5AReal8getValueEv"></span><span id="AReal::getValueC"></span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">getValue</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK5AReal8getValueEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of this object, as the underlying type.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4NK5AReal8getValueEv-returns">Returns<a class="headerlink" href="#_CPPv4NK5AReal8getValueEv-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p>The value of this object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4NK5AReal5valueEv">
+<span id="_CPPv3NK5AReal5valueEv"></span><span id="_CPPv2NK5AReal5valueEv"></span><span id="AReal::valueC"></span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="sig-name descname"><span class="n">value</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK5AReal5valueEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a const reference to the value of this object.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4NK5AReal5valueEv-returns">Returns<a class="headerlink" href="#_CPPv4NK5AReal5valueEv-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p>The value of this object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5AReal5valueEv">
+<span id="_CPPv3N5AReal5valueEv"></span><span id="_CPPv2N5AReal5valueEv"></span><span id="AReal::value"></span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="sig-name descname"><span class="n">value</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N5AReal5valueEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a reference to the value of this object, i.e. it is assignable</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N5AReal5valueEv-returns">Returns<a class="headerlink" href="#_CPPv4N5AReal5valueEv-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p>Reference to the value of this object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4NK5AReal13getDerivativeEv">
+<span id="_CPPv3NK5AReal13getDerivativeEv"></span><span id="_CPPv2NK5AReal13getDerivativeEv"></span><span id="AReal::getDerivativeC"></span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">getDerivative</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK5AReal13getDerivativeEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the stored derivative of this object.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4NK5AReal13getDerivativeEv-returns">Returns<a class="headerlink" href="#_CPPv4NK5AReal13getDerivativeEv-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p>The derivative (adjoint) of this object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4NK5AReal10derivativeEv">
+<span id="_CPPv3NK5AReal10derivativeEv"></span><span id="_CPPv2NK5AReal10derivativeEv"></span><span id="AReal::derivativeC"></span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="sig-name descname"><span class="n">derivative</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK5AReal10derivativeEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a const reference to the stored derivative of this object.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4NK5AReal10derivativeEv-returns">Returns<a class="headerlink" href="#_CPPv4NK5AReal10derivativeEv-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p>The derivative (adjoint) of this object</p>
+</dd>
+<dt class="field-even" id="_CPPv4NK5AReal10derivativeEv-throws">Throws<a class="headerlink" href="#_CPPv4NK5AReal10derivativeEv-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – If the derivatives have not been initialized yet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5AReal10derivativeEv">
+<span id="_CPPv3N5AReal10derivativeEv"></span><span id="_CPPv2N5AReal10derivativeEv"></span><span id="AReal::derivative"></span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="sig-name descname"><span class="n">derivative</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N5AReal10derivativeEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a reference to the stored derivative of this object, i.e., it is assignable.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N5AReal10derivativeEv-returns">Returns<a class="headerlink" href="#_CPPv4N5AReal10derivativeEv-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p>A reference to the derivative (adjoint) of this object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5AReal13setDerivativeERK1T">
+<span id="_CPPv3N5AReal13setDerivativeERK1T"></span><span id="_CPPv2N5AReal13setDerivativeERK1T"></span><span id="AReal::setDerivative__TCR"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">setDerivative</span></span><span><span class="p">(</span><span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N5AReal13setDerivativeERK1T-p-a" title="AReal::setDerivative::a (C++ function parameter) — The value to assign to the derivative."><span class="n sig-param">a</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N5AReal13setDerivativeERK1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the derivative of this object. This is the same as calling <code class="docutils literal notranslate"><span class="pre">derivative()</span> <span class="pre">=</span> <span class="pre">a</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N5AReal13setDerivativeERK1T-parameters">Parameters<a class="headerlink" href="#_CPPv4N5AReal13setDerivativeERK1T-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N5AReal13setDerivativeERK1T-p-a"><span class="k">const</span><span class="w">   </span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">   </span><span class="p">&amp;</span><span class="n sig-param sig-name">a</span><a class="headerlink" href="#_CPPv4N5AReal13setDerivativeERK1T-p-a" title="Permalink to this definition">¶</a></dt><dd><p>The value to assign to the derivative.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N5AReal10setAdjointERK1T">
+<span id="_CPPv3N5AReal10setAdjointERK1T"></span><span id="_CPPv2N5AReal10setAdjointERK1T"></span><span id="AReal::setAdjoint__TCR"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">setAdjoint</span></span><span><span class="p">(</span><span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N5AReal10setAdjointERK1T" title="AReal::setAdjoint::a (C++ function parameter)"><span class="n sig-param">a</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N5AReal10setAdjointERK1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synonym for <code class="docutils literal notranslate"><span class="pre">setDerivative(a)</span></code>.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4NK5AReal12shouldRecordEv">
+<span id="_CPPv3NK5AReal12shouldRecordEv"></span><span id="_CPPv2NK5AReal12shouldRecordEv"></span><span id="AReal::shouldRecordC"></span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">shouldRecord</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK5AReal12shouldRecordEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the variable has been registered with a tape and should therefore
+be recorded.</p>
+</dd></dl>
+
+<h2 id="other-operations">Other Operations<a class="headerlink" href="#other-operations" title="Permalink to this headline">¶</a></h2>
+<p>In addition, <a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AReal</span></code></a> supports all other mathematical arithmetic operations,
+such as <code class="docutils literal notranslate"><span class="pre">operator+=</span></code> and friends.
+Also, as <a class="desctype reference internal" href="#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AReal</span></code></a> is an <a class="desctype reference internal" href="expression.html#_CPPv4I00E10Expression" title="Expression (C++ class) — Represents a mathematical expression in a type. Active data types, such as AReal and FReal, as well as all mathematical expressions inherit from this class. Therefore all mathematical operations are defined on this type, rather than any specific derived class."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Expression</span></code></a>,
+all free math functions defined for expressions also work on instances of this class.</p>
+
+
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      July  2022
+    
+  </small>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="interface.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: AD Mode Interface" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              AD Mode Interface
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="freal.html" class="md-footer__link md-footer__link--next" aria-label="Next: Forward Mode Type FReal" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Forward Mode Type FReal
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2010-2022, Xcelerit Computing Ltd.
+        
+    </div>
+  
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../static/javascripts/bundle.dc1bded0.min.js"></script>
+    
+  </body>
+</html>

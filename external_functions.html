@@ -1,0 +1,860 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="">
+    
+    
+      
+        <title>External Functions - XAD Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="static/stylesheets/main.2014a6d7.min.css">
+      
+        
+        <link rel="stylesheet" href="static/stylesheets/palette.92c9fe4a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="static/style.css" />
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-321978698"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-321978698",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-321978698"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#example-algorithm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="static/logo.svg" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            XAD Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              External Functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="static/logo.svg" alt="logo">
+    </a>
+    XAD Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="intro.html" class="md-nav__link">
+        <span title="intro (document)" class="md-ellipsis">Introduction</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aad.html" class="md-nav__link">
+        <span title="aad (document)" class="md-ellipsis">Algorithmic Differentiation Background</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basic.html" class="md-nav__link">
+        <span title="basic (document)" class="md-ellipsis">Basic Usage</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span title="external_functions (document)" class="md-ellipsis">External Functions</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span title="external_functions (document)" class="md-ellipsis">External Functions</span>
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">Example Algorithm</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-function-for-adjoint-mode" class="md-nav__link">
+    <span class="md-ellipsis">External Function For Adjoint Mode</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Function For Adjoint Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computeexternal-method" class="md-nav__link">
+    <span class="md-ellipsis">compute<wbr>External Method</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computeadjoint-method" class="md-nav__link">
+    <span class="md-ellipsis">compute<wbr>Adjoint Method</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrapper-function" class="md-nav__link">
+    <span class="md-ellipsis">Wrapper Function</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#call-site" class="md-nav__link">
+    <span class="md-ellipsis">Call-<wbr>Site</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-function-for-forward-mode" class="md-nav__link">
+    <span class="md-ellipsis">External Function For Forward Mode</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checkpointing.html" class="md-nav__link">
+        <span title="checkpointing (document)" class="md-ellipsis">Checkpointing</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="higher_order.html" class="md-nav__link">
+        <span title="higher_order (document)" class="md-ellipsis">Higher-<wbr>Order Derivatives</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="smoothed_math.html" class="md-nav__link">
+        <span title="smoothed_math (document)" class="md-ellipsis">Handling Discontinuities</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference.html" class="md-nav__link">
+        <span title="reference (document)" class="md-ellipsis">Reference</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="license.html" class="md-nav__link">
+        <span title="license (document)" class="md-ellipsis">GNU Free Documentation License</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">Example Algorithm</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-function-for-adjoint-mode" class="md-nav__link">
+    <span class="md-ellipsis">External Function For Adjoint Mode</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Function For Adjoint Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computeexternal-method" class="md-nav__link">
+    <span class="md-ellipsis">compute<wbr>External Method</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computeadjoint-method" class="md-nav__link">
+    <span class="md-ellipsis">compute<wbr>Adjoint Method</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrapper-function" class="md-nav__link">
+    <span class="md-ellipsis">Wrapper Function</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#call-site" class="md-nav__link">
+    <span class="md-ellipsis">Call-<wbr>Site</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-function-for-forward-mode" class="md-nav__link">
+    <span class="md-ellipsis">External Function For Forward Mode</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset" role="main">
+                
+
+
+  <h1 id="external-functions"><span id="external"></span>External Functions<a class="headerlink" href="#external-functions" title="Permalink to this headline">¶</a></h1>
+<p>Often parts of the algorithm to be differentiated are not available
+in source code.
+For example, a routine from an external math library may be called.
+Reimplementing it may not be desirable (for performance or development effort reasons),
+in which case the derivatives of this function need to be implemented
+manually in some form.</p>
+<p>This can be achieved by either:</p>
+<ul class="simple">
+<li><p>Applying finite differences to the library function (bumping),</p></li>
+<li><p>Implementing the adjoint code of the function by hand, or</p></li>
+<li><p>Computing the derivatives analytically, possibly using other library functions.</p></li>
+</ul>
+<p>In these cases,
+the <em>external function interface</em> of XAD can be used to integrate
+the manual derivatives, which is described below.
+With the same technique,
+performance- or memory-critical parts of the application may be hand-tuned.</p>
+<h2 id="example-algorithm">Example Algorithm<a class="headerlink" href="#example-algorithm" title="Permalink to this headline">¶</a></h2>
+<p>We pick an example algorithm which computes the length of a multi dimensional
+vector.
+This is defined as:</p>
+<div class="math">
+<p><img src="images/math/7d7156cb038f2c51e63201a6c9c85aff80885e91.svg" alt="y = \sqrt{\sum_0^{N-1} x_i^2}"/></p>
+</div><p>The goal is to compute the derivatives of <code class="docutils literal notranslate"><span class="pre">y</span></code> with respect to all
+input vector elements using adjoint mode.</p>
+<p>The algorithm can be implemented in C++ code as:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">xsqr</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">xsqr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+<span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">sum_elements</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>For this example, we assume that the <code class="docutils literal notranslate"><span class="pre">sum_elements</span></code> is an external function
+implemented in a library that we do not have source code of.
+It has the prototype:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="nf">sum_elements</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</div>
+<h2 id="external-function-for-adjoint-mode">External Function For Adjoint Mode<a class="headerlink" href="#external-function-for-adjoint-mode" title="Permalink to this headline">¶</a></h2>
+<p>To use the external function, we follow this procedure:</p>
+<ol class="arabic simple">
+<li><p>At the point of the call, convert the values of the input active variables
+to the underlying plain data type (<code class="docutils literal notranslate"><span class="pre">double</span></code>)</p></li>
+<li><p>Call the external function passively</p></li>
+<li><p>Assign the result values to active output variables so the tape recording
+can continue</p></li>
+<li><p>Store the tape slots of the inputs and outputs with a checkpoint callback object
+and register it with the tape.</p></li>
+<li><p>When computing adjoints, this callback needs to load the adjoint of the outputs,
+propagate to them to the inputs manually,
+and increment the input adjoints by these values.</p></li>
+</ol>
+<p>We put all the functionality into a callback object.
+We derive from the <a class="desctype reference internal" href="ref/chkpt_cb.html#_CPPv4I0E18CheckpointCallback" title="CheckpointCallback (C++ class) — Base class of any checkpoint callbacks associated with the given TapeType."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">CheckpointCallback</span></code></a> base class
+and implement at least the virtual method <a class="reference internal" href="ref/chkpt_cb.html#_CPPv4N18CheckpointCallback14computeAdjointEP8TapeType" title="CheckpointCallback::computeAdjoint (C++ function) — This function is called by XAD during rolling back the tape, giving a reference to itself. Gives weak exception guarantee - if this user-implemented function throws an exception, the tape is in an undefined state and needs to be reset/re-initialized before it can be used again."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CheckpointCallback::computeAdjoint()</span></code></a>.
+This method gets called during tape rollback.
+We also place the forward computation within the same object
+(this could also be done outside of the callback class).
+The declaration of our callback class looks like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Tape</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ExternalSumElementsCallback</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">xad</span><span class="o">::</span><span class="n">CheckpointCallback</span><span class="o">&lt;</span><span class="n">Tape</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Tape</span><span class="o">::</span><span class="n">slot_type</span><span class="w">   </span><span class="n">slot_type</span><span class="p">;</span><span class="w">    </span><span class="c1">// type for slot in the tape</span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Tape</span><span class="o">::</span><span class="n">value_type</span><span class="w">  </span><span class="n">value_type</span><span class="p">;</span><span class="w">   </span><span class="c1">// double</span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Tape</span><span class="o">::</span><span class="n">active_type</span><span class="w"> </span><span class="n">active_type</span><span class="p">;</span><span class="w">  </span><span class="c1">// AReal&lt;double&gt;</span>
+
+<span class="w">  </span><span class="n">active_type</span><span class="w"> </span><span class="nf">computeExternal</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">active_type</span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w">  </span><span class="c1">// forward computation</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">computeAdjoint</span><span class="p">(</span><span class="n">Tape</span><span class="o">*</span><span class="w"> </span><span class="n">tape</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w">                  </span><span class="c1">// adjoint computation</span>
+
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">slot_type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">inputSlots_</span><span class="p">;</span><span class="w">              </span><span class="c1">// slots of the inputs in tape</span>
+<span class="w">  </span><span class="n">slot_type</span><span class="w"> </span><span class="n">outputSlot_</span><span class="p">;</span><span class="w">                           </span><span class="c1">// slot of the output in tape</span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>We declare it as a template for arbitrary tape types,
+which is good practice as it allows to reuse
+this implementation with higher order derivatives too.</p>
+<h3 id="computeexternal-method"><code class="docutils literal notranslate"><span class="pre">computeExternal</span></code> Method<a class="headerlink" href="#computeexternal-method" title="Permalink to this headline">¶</a></h3>
+<p>Within the <code class="docutils literal notranslate"><span class="pre">computeExternal</span></code> method,
+we first store the slots in the tape for the input variables,
+as we will need them during adjoint computation to increment the corresponding
+adjoints.
+We use the <code class="docutils literal notranslate"><span class="pre">inputSlots_</span></code> member vector to keep this information:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">inputSlots_</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">getSlot</span><span class="p">());</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>Then we create a copy of the active inputs and store them in a vector of passive
+values,
+with which we can call the external function:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">value_type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">x_p</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">x_p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+
+<span class="n">value_type</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum_elements</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>We now need to store this result in an active variable,
+register it as an output of the external function
+(to allow the tape to continue recording dependent variables),
+and keep its slot in the tape for the later adjoint computation:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">active_type</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"></span>
+<span class="n">Tape</span><span class="o">::</span><span class="n">getActive</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">registerOutput</span><span class="p">(</span><span class="n">ret</span><span class="p">);</span><span class="w"></span>
+<span class="n">outputSlot_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ret</span><span class="p">.</span><span class="n">getSlot</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>Finally we need to insert the callback into the tape,
+hence requesting it to be called during adjoint rollback of the tape,
+and return:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">Tape</span><span class="o">::</span><span class="n">getActive</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">insertCallback</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+<span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</div>
+<h3 id="computeadjoint-method"><code class="docutils literal notranslate"><span class="pre">computeAdjoint</span></code> Method<a class="headerlink" href="#computeadjoint-method" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">computeAdjoint</span></code> method gets called by XAD during tape rollback.
+We need to override this method and implement the manual adjoint code.
+For a simple sum operation, this is straightforward:
+all input adjoints are equal to the output adjoint since all
+partial derivatives are 1.
+Thus we need to obtain the output adjoint and increment all input adjoints by
+this value:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">value_type</span><span class="w"> </span><span class="n">output_adj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tape</span><span class="o">-&gt;</span><span class="n">getAndResetOutputAdjoint</span><span class="p">(</span><span class="n">outputSlot_</span><span class="p">);</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">inputSlots_</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">tape</span><span class="o">-&gt;</span><span class="n">incrementAdjoint</span><span class="p">(</span><span class="n">inputSlots_</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">output_adj</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>The function <a class="reference internal" href="ref/tape.html#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type" title="Tape::getAndResetOutputAdjoint (C++ function) — Obtains and resets the output adjoint to 0"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Tape::getAndResetOutputAdjoint()</span></code></a> obtains the
+adjoint value corresponding to the given slot and resets it to zero.
+This reset is necessary in general as the output variable may
+have been overwriting other values in the forward computation.
+The <a class="reference internal" href="ref/tape.html#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T" title="Tape::incrementAdjoint (C++ function) — Increments the adjoint of the given slot by the value x."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Tape::incrementAdjoint()</span></code></a> function simply
+increments the adjoint with the given slot by the given value.</p>
+<h3 id="wrapper-function">Wrapper Function<a class="headerlink" href="#wrapper-function" title="Permalink to this headline">¶</a></h3>
+<p>With the checkpointing callback class in place,
+we can implement a <code class="docutils literal notranslate"><span class="pre">sum_elements</span></code> overload for <a class="desctype reference internal" href="ref/areal.html#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AReal</span></code></a> that
+wraps the creation of this callback:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">xad</span><span class="o">::</span><span class="n">AReal</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sum_elements</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">xad</span><span class="o">::</span><span class="n">AReal</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">xad</span><span class="o">::</span><span class="n">AReal</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">tape_type</span><span class="w"> </span><span class="n">tape_type</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">tape_type</span><span class="o">*</span><span class="w"> </span><span class="n">tape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tape_type</span><span class="o">::</span><span class="n">getActive</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="n">ExternalSumElementsCallback</span><span class="o">&lt;</span><span class="n">tape_type</span><span class="o">&gt;*</span><span class="w"> </span><span class="n">ckp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ExternalSumElementsCallback</span><span class="o">&lt;</span><span class="n">tape_type</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">tape</span><span class="o">-&gt;</span><span class="n">pushCallback</span><span class="p">(</span><span class="n">ckp</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">ckp</span><span class="o">-&gt;</span><span class="n">computeExternal</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>This function dynamically allocates the checkpoint callback object
+and lets the tape manage its destruction through the <a class="reference internal" href="ref/tape.html#_CPPv4N4Tape12pushCallbackE13callback_type" title="Tape::pushCallback (C++ function) — Let this tape handle the de-allocation of the given callback."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Tape::pushCallback()</span></code></a>
+function.
+This call simply ensures that the callback object is destroyed
+when the tape is destroyed,
+making sure that no memory is leaked.
+If the callback object was managed elsewhere, this call would not be necessary.
+It then redirects the computation to the <code class="docutils literal notranslate"><span class="pre">computeExternal</span></code> function
+of the checkpoint callback class.
+Using this wrapper class, the <code class="docutils literal notranslate"><span class="pre">sum_elements</span></code> function can be used for active types
+in the same fashion as the original external function <code class="docutils literal notranslate"><span class="pre">sum_elements</span></code> for <code class="docutils literal notranslate"><span class="pre">double</span></code>.
+Defining it as a template allows us to re-use this function for higher-order derivatives,
+should we need them in future.</p>
+<h3 id="call-site">Call-Site<a class="headerlink" href="#call-site" title="Permalink to this headline">¶</a></h3>
+<p>The call site then can be implemented as
+(assuming that <code class="docutils literal notranslate"><span class="pre">x_ad</span></code> is the vector holding the independent variables, already registered on tape):</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">tape</span><span class="p">.</span><span class="n">newRecording</span><span class="p">();</span><span class="w"></span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">AD</span><span class="o">&gt;</span><span class="w"> </span><span class="n">xsqr</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">xsqr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x_ad</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x_ad</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+<span class="n">AD</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">sum_elements</span><span class="p">(</span><span class="n">xsqr</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">n</span><span class="p">));</span><span class="w"> </span><span class="c1">// calls external function wrapper</span>
+
+<span class="n">tape</span><span class="p">.</span><span class="n">registerOutput</span><span class="p">(</span><span class="n">y</span><span class="p">);</span><span class="w"></span>
+<span class="n">derivative</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
+<span class="n">tape</span><span class="p">.</span><span class="n">computeAdjoints</span><span class="p">();</span><span class="w"></span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;y = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;dy/dx&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">derivative</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>This follows exactly the same procedure as given in <a class="reference internal" href="basic.html#tutorial-adj"><span class="std std-ref">Adjoint Mode</span></a>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>This example is included with XAD (<a class="reference external" href="https://github.com/xcelerit/XAD/tree/main/samples/external_function">external_function</a>).</p>
+</div>
+<h2 id="external-function-for-forward-mode">External Function For Forward Mode<a class="headerlink" href="#external-function-for-forward-mode" title="Permalink to this headline">¶</a></h2>
+<p>Since forward mode involves no tape,
+a manual implementation of the derivative computation needs to be implemented
+together with computing the value.
+The manual derivatives can be updated directly in the output values
+using the <a class="reference internal" href="ref/complex.html#_CPPv4I0E10derivativeNSt7complexI1TEERKNSt7complexI5ARealI1TEEE" title="derivative (C++ function) — Returns the adjoints of the z variable, represented as a complex number of the underlying double type."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">derivative()</span></code></a> function.</p>
+<p>In our example, we can implement the external function in forward mode as:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">xad</span><span class="o">::</span><span class="n">FReal</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sum_elements</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">xad</span><span class="o">::</span><span class="n">FReal</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="n">xad</span><span class="o">::</span><span class="n">FReal</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">active_type</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">x_p</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">x_p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">T</span><span class="w"> </span><span class="n">y_p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum_elements</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">active_type</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_p</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">derivative</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">derivative</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>We first extract the passive values from the <code class="docutils literal notranslate"><span class="pre">x</span></code> vector and call the
+external library function to get the passive output value <code class="docutils literal notranslate"><span class="pre">y_p</span></code>.
+This value is then assigned to the active output variable <code class="docutils literal notranslate"><span class="pre">y</span></code>,
+which also initializes its derivative to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p>As we have a simple sum in this example,
+the derivative of the output
+is a sum of the derivatives of the inputs,
+which is computed by the loop in the end.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>This example is included with XAD (<code class="docutils literal notranslate"><span class="pre">external_function</span></code>).</p>
+</div>
+
+
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      July  2022
+    
+  </small>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="basic.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Basic Usage" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Basic Usage
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="checkpointing.html" class="md-footer__link md-footer__link--next" aria-label="Next: Checkpointing" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Checkpointing
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2010-2022, Xcelerit Computing Ltd.
+        
+    </div>
+  
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="static/javascripts/bundle.dc1bded0.min.js"></script>
+    
+  </body>
+</html>

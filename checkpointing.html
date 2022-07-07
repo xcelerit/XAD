@@ -1,0 +1,823 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="">
+    
+    
+      
+        <title>Checkpointing - XAD Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="static/stylesheets/main.2014a6d7.min.css">
+      
+        
+        <link rel="stylesheet" href="static/stylesheets/palette.92c9fe4a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="static/style.css" />
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-321978698"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-321978698",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-321978698"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#example-algorithm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="static/logo.svg" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            XAD Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Checkpointing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="static/logo.svg" alt="logo">
+    </a>
+    XAD Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="intro.html" class="md-nav__link">
+        <span title="intro (document)" class="md-ellipsis">Introduction</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aad.html" class="md-nav__link">
+        <span title="aad (document)" class="md-ellipsis">Algorithmic Differentiation Background</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basic.html" class="md-nav__link">
+        <span title="basic (document)" class="md-ellipsis">Basic Usage</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="external_functions.html" class="md-nav__link">
+        <span title="external_functions (document)" class="md-ellipsis">External Functions</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span title="checkpointing (document)" class="md-ellipsis">Checkpointing</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span title="checkpointing (document)" class="md-ellipsis">Checkpointing</span>
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">Example Algorithm</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoint-callback" class="md-nav__link">
+    <span class="md-ellipsis">Checkpoint Callback</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checkpoint Callback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computestage-method" class="md-nav__link">
+    <span class="md-ellipsis">compute<wbr>Stage Method</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computeadjoint-method" class="md-nav__link">
+    <span class="md-ellipsis">compute<wbr>Adjoint Method</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#call-site" class="md-nav__link">
+    <span class="md-ellipsis">Call-<wbr>Site</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">Other Usage Patterns</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="higher_order.html" class="md-nav__link">
+        <span title="higher_order (document)" class="md-ellipsis">Higher-<wbr>Order Derivatives</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="smoothed_math.html" class="md-nav__link">
+        <span title="smoothed_math (document)" class="md-ellipsis">Handling Discontinuities</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference.html" class="md-nav__link">
+        <span title="reference (document)" class="md-ellipsis">Reference</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="license.html" class="md-nav__link">
+        <span title="license (document)" class="md-ellipsis">GNU Free Documentation License</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">Example Algorithm</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoint-callback" class="md-nav__link">
+    <span class="md-ellipsis">Checkpoint Callback</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checkpoint Callback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computestage-method" class="md-nav__link">
+    <span class="md-ellipsis">compute<wbr>Stage Method</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computeadjoint-method" class="md-nav__link">
+    <span class="md-ellipsis">compute<wbr>Adjoint Method</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#call-site" class="md-nav__link">
+    <span class="md-ellipsis">Call-<wbr>Site</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">Other Usage Patterns</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset" role="main">
+                
+
+
+  <h1 id="checkpointing"><span id="id1"></span>Checkpointing<a class="headerlink" href="#checkpointing" title="Permalink to this headline">¶</a></h1>
+<p>Checkpointing is a technique to reduce the memory footprint of the tape
+in adjoint mode algorithmic differentiation.
+Instead of recording the full algorithm on tape,
+which can quickly result in gigabytes of memory in a large computation,
+the tape is recorded for specific stages of the algorithm, one at a time.
+This is illustrated in the following figure:</p>
+<a class="reference internal image-reference" href="images/checkpointing.svg"><img alt="Checkpointing" class="align-center" src="images/checkpointing.svg" width="70%" /></a>
+<p>The algorithm is divided into stages,
+where the input data of each stage is stored in a checkpoint
+and the outputs are computed passively (without recording on tape).
+Once the final output of the algorithm is computed,
+the adjoint of the output is initialized
+and at each checkpoint during tape rollback:</p>
+<ol class="arabic simple">
+<li><p>The inputs to the checkpoint are loaded,</p></li>
+<li><p>The operations of this stage only are recorded on tape,</p></li>
+<li><p>The output adjoints of this stage are initialized,</p></li>
+<li><p>The tape is rolled back for this stage, computing the adjoints of the stage inputs,</p></li>
+<li><p>The input adjoints are incremented by these values, and</p></li>
+<li><p>The tape is wiped before proceeding with the previous stage.</p></li>
+</ol>
+<p>Using this method,
+the tape memory is limited by the amount needed to record one algorithm stage
+instead of the full algorithm.
+However, each forward computation is computed twice,
+hence checkpointing trades computation for memory.</p>
+<p>In practice, as using less memory leads to higher cache-efficiency,
+checkpointing may be faster overall than recording the full algorithm
+even though more computations are performed.</p>
+<h2 id="example-algorithm">Example Algorithm<a class="headerlink" href="#example-algorithm" title="Permalink to this headline">¶</a></h2>
+<p>To demonstrate the checkpointing method,
+we choose a simple repeated application of the sine function to a single input:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">repeated_sin</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>We divide the for loop into equidistant stages and insert a checkpoint at each
+of these.</p>
+<h2 id="checkpoint-callback">Checkpoint Callback<a class="headerlink" href="#checkpoint-callback" title="Permalink to this headline">¶</a></h2>
+<p>To create a checkpoint,
+we need to store the inputs of the stage and the slots in the tape for the inputs
+and outputs in a callback object inheriting from <a class="desctype reference internal" href="ref/chkpt_cb.html#_CPPv4I0E18CheckpointCallback" title="CheckpointCallback (C++ class) — Base class of any checkpoint callbacks associated with the given TapeType."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">CheckpointCallback</span></code></a>.
+The virtual method <a class="reference internal" href="ref/chkpt_cb.html#_CPPv4N18CheckpointCallback14computeAdjointEP8TapeType" title="CheckpointCallback::computeAdjoint (C++ function) — This function is called by XAD during rolling back the tape, giving a reference to itself. Gives weak exception guarantee - if this user-implemented function throws an exception, the tape is in an undefined state and needs to be reset/re-initialized before it can be used again."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CheckpointCallback::computeAdjoint()</span></code></a>
+needs to be overridden to perform the per-stage adjoint computation.
+As all stages are identical, we choose to implement the functionality of all
+checkpoints within a single callback object
+and store the required inputs in a stack data structure.
+Alternatively we could have created a new checkpoint callback object at every
+checkpoint.
+The prototype for our callback is:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Tape</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">SinCheckpointCallback</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">xad</span><span class="o">::</span><span class="n">CheckpointCallback</span><span class="o">&lt;</span><span class="n">Tape</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Tape</span><span class="o">::</span><span class="n">slot_type</span><span class="w">   </span><span class="n">slot_type</span><span class="p">;</span><span class="w">    </span><span class="c1">// type for slot in the tape</span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Tape</span><span class="o">::</span><span class="n">value_type</span><span class="w">  </span><span class="n">value_type</span><span class="p">;</span><span class="w">   </span><span class="c1">// double</span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Tape</span><span class="o">::</span><span class="n">active_type</span><span class="w"> </span><span class="n">active_type</span><span class="p">;</span><span class="w">  </span><span class="c1">// AReal&lt;double&gt;</span>
+
+<span class="w">  </span><span class="n">active_type</span><span class="w"> </span><span class="nf">computeStage</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">active_type</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w">  </span><span class="c1">// forward computation</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">computeAdjoint</span><span class="p">(</span><span class="n">Tape</span><span class="o">*</span><span class="w"> </span><span class="n">tape</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w">        </span><span class="c1">// adjoint computation</span>
+
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">n_</span><span class="p">;</span><span class="w">                              </span><span class="c1">// number of iterations in this stage</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">stack</span><span class="o">&lt;</span><span class="n">value_type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">x_</span><span class="p">;</span><span class="w">                       </span><span class="c1">// input values for this</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">stack</span><span class="o">&lt;</span><span class="n">slot_type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">slots_</span><span class="p">;</span><span class="w">                    </span><span class="c1">// tape slots for input and output</span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>For convenience of implementation,
+we added the forward computation for one stage within the same class
+in the <code class="docutils literal notranslate"><span class="pre">computeStage</span></code> method,
+which could also be performed outside of the object.</p>
+<h3 id="computestage-method"><code class="docutils literal notranslate"><span class="pre">computeStage</span></code> Method<a class="headerlink" href="#computestage-method" title="Permalink to this headline">¶</a></h3>
+<p>Within the <code class="docutils literal notranslate"><span class="pre">computeStage</span></code> method,
+we first store the input value, the number of iterations,
+and the slots of the input in the checkpoint object:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">n_</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+<span class="n">slots_</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">getSlot</span><span class="p">());</span><span class="w"></span>
+<span class="n">value_type</span><span class="w"> </span><span class="n">x_p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<span class="n">x_</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">x_p</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>We then compute the stage with the passive variable (not recording on the tape):</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">repeated_sin</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x_p</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>The value of the output active variable needs to be updated with the result
+and we need to store the slot of the output variable in the checkpoint also:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">value</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x_p</span><span class="p">;</span><span class="w"></span>
+<span class="n">slots_</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">getSlot</span><span class="p">());</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>Note that we did not need to register <code class="docutils literal notranslate"><span class="pre">x</span></code> as an output with the tape here,
+as we had to do with the external functions example before,
+since the variable is already registered on tape (it’s both input and output).</p>
+<p>What is left is to register this callback object with the tape so that its
+<code class="docutils literal notranslate"><span class="pre">computeAdjoint</span></code> method is called at this point when the tape is rolled back:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">Tape</span><span class="o">::</span><span class="n">getActive</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">insertCallback</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</div>
+<h3 id="computeadjoint-method"><code class="docutils literal notranslate"><span class="pre">computeAdjoint</span></code> Method<a class="headerlink" href="#computeadjoint-method" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">computeAdjoint</span></code> method is called automatically by XAD
+at the checkpoints in the tape.
+We first need to load the inputs to this computation stage and
+obtain the adjoint of the output:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">slot_type</span><span class="w"> </span><span class="n">outputidx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slots_</span><span class="p">.</span><span class="n">top</span><span class="p">();</span><span class="w">  </span><span class="n">slots_</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span><span class="w"></span>
+<span class="n">slot_type</span><span class="w"> </span><span class="n">inputidx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slots_</span><span class="p">.</span><span class="n">top</span><span class="p">();</span><span class="w">   </span><span class="n">slots_</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n_</span><span class="p">.</span><span class="n">top</span><span class="p">();</span><span class="w">                    </span><span class="n">n_</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span><span class="w"></span>
+<span class="n">value_type</span><span class="w"> </span><span class="n">outputadj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tape</span><span class="o">-&gt;</span><span class="n">getAndResetOutputAdjoint</span><span class="p">(</span><span class="n">outputslot</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>The function <a class="reference internal" href="ref/tape.html#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type" title="Tape::getAndResetOutputAdjoint (C++ function) — Obtains and resets the output adjoint to 0"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Tape::getAndResetOutputAdjoint()</span></code></a> reads the adjoint
+corresponding to the slot given and resets it to 0.
+This reset is generally required as the variable corresponding to the slot
+may be re-used (overwritten) in the algorithm,
+as is the case in the <code class="docutils literal notranslate"><span class="pre">repeated_sin</span></code> function.</p>
+<p>We now want to use XAD to compute the adjoints just for this computation
+stage.
+This is performed by creating a nested recording within the global tape,
+than can be rolled back individually:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">active_type</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x_</span><span class="p">.</span><span class="n">top</span><span class="p">();</span><span class="w">                             </span><span class="c1">// local independent variable</span>
+<span class="n">x_</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span><span class="w"></span>
+<span class="n">tape</span><span class="o">-&gt;</span><span class="n">registerInput</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">                               </span><span class="c1">// need to register to record</span>
+
+<span class="n">xad</span><span class="o">::</span><span class="n">ScopedNestedRecording</span><span class="o">&lt;</span><span class="n">Tape</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nested</span><span class="p">(</span><span class="n">tape</span><span class="p">);</span><span class="w">        </span><span class="c1">// nested recording</span>
+<span class="n">repeated_sin</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x_ad</span><span class="p">);</span><span class="w">                                </span><span class="c1">// run actively</span>
+<span class="n">tape</span><span class="o">-&gt;</span><span class="n">registerOutput</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">                              </span><span class="c1">// register x as an output</span>
+<span class="n">derivative</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output_adj</span><span class="p">;</span><span class="w">                           </span><span class="c1">// set output adjoint</span>
+<span class="n">nested</span><span class="p">.</span><span class="n">computeAdjoints</span><span class="p">();</span><span class="w">                             </span><span class="c1">// rollback nested tape</span>
+
+<span class="n">nested</span><span class="p">.</span><span class="n">incrementAdjoint</span><span class="p">(</span><span class="n">inputslot</span><span class="p">,</span><span class="w"> </span><span class="n">derivative</span><span class="p">(</span><span class="n">x</span><span class="p">));</span><span class="w">    </span><span class="c1">// incr. input adjoint</span>
+</code></pre></div>
+</div>
+<p>In a similar fashion to simple adjoint mode (see <a class="reference internal" href="basic.html#tutorial-adj"><span class="std std-ref">Adjoint Mode</span></a>),
+we first initialize the local independent variables as active data types
+and start a nested recording.
+This is performed by creating a local object <code class="docutils literal notranslate"><span class="pre">nested</span></code> of type
+<a class="desctype reference internal" href="ref/tape.html#_CPPv4I0E21ScopedNestedRecording" title="ScopedNestedRecording (C++ class) — Convenience RAII class to ensure that a call to Tape&lt;T&gt;::newNestedRecording() is always followed by the corresponding Tape&lt;T&gt;::endNestedRecording()."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ScopedNestedRecording</span></code></a>,
+which wraps calls to <a class="reference internal" href="ref/tape.html#_CPPv4N4Tape18newNestedRecordingEv" title="Tape::newNestedRecording (C++ function) — Starts a new nested recording that can be rolled-back on its own. It must be ended with endNestedRecording()."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Tape::newNestedRecording()</span></code></a> in its constructor
+and <a class="reference internal" href="ref/tape.html#_CPPv4N4Tape18endNestedRecordingEv" title="Tape::endNestedRecording (C++ function) — Ends a nested recording."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Tape::endNestedRecording()</span></code></a> in its destructor.
+It is recommended to use the <a class="desctype reference internal" href="ref/tape.html#_CPPv4I0E21ScopedNestedRecording" title="ScopedNestedRecording (C++ class) — Convenience RAII class to ensure that a call to Tape&lt;T&gt;::newNestedRecording() is always followed by the corresponding Tape&lt;T&gt;::endNestedRecording()."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ScopedNestedRecording</span></code></a> for this
+purpose to make sure the nested recording is always finished when the scope is left.</p>
+<p>Next we record the operations for this stage by running the algorithm actively.
+We then set the adjoint of the output and compute the adjoints of the inputs.
+The adjoints of the inputs to this stage can then be incremented.</p>
+<p>Note that when the <code class="docutils literal notranslate"><span class="pre">nested</span></code> object goes out of scope,
+i.e. when its destructor is called,
+the nested tape for this computation stage is wiped and the memory can be
+reused for the previous stage.
+This saves overall memory.</p>
+<h2 id="call-site">Call-Site<a class="headerlink" href="#call-site" title="Permalink to this headline">¶</a></h2>
+<p>The full algorithm with checkpointing can then be initiated as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">tape_type</span><span class="w"> </span><span class="n">tape</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">AD</span><span class="w"> </span><span class="n">x_ad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">                             </span><span class="c1">// initialized indepedent variables</span>
+<span class="n">tape</span><span class="p">.</span><span class="n">registerInput</span><span class="p">(</span><span class="n">x_ad</span><span class="p">);</span><span class="w">                </span><span class="c1">// register with the tape</span>
+<span class="n">tape</span><span class="p">.</span><span class="n">newRecording</span><span class="p">();</span><span class="w">                     </span><span class="c1">// start recording derivatives</span>
+
+<span class="n">SinCheckpointCallback</span><span class="o">&lt;</span><span class="n">tape_type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">chkpt</span><span class="p">;</span><span class="w">  </span><span class="c1">// setup checkpointing object</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">checkpt_distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">                </span><span class="c1">// we checkpoint every 4 iterations</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">checkpt_distance</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">checkpt_distance</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">chkpt</span><span class="p">.</span><span class="n">computeStage</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">x_ad</span><span class="p">);</span><span class="w">             </span><span class="c1">// one computation stage</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">tape</span><span class="p">.</span><span class="n">registerOutput</span><span class="p">(</span><span class="n">x_ad</span><span class="p">);</span><span class="w"></span>
+<span class="n">derivative</span><span class="p">(</span><span class="n">x_ad</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
+<span class="n">tape</span><span class="p">.</span><span class="n">computeAdjoints</span><span class="p">();</span><span class="w"></span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;xout       = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">(</span><span class="n">x_ad</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;dxout/dxin = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">derivative</span><span class="p">(</span><span class="n">x_ad</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>This follows largely the same procedure as given in <a class="reference internal" href="basic.html#tutorial-adj"><span class="std std-ref">Adjoint Mode</span></a>,
+but setting up the checkpoint object and calling its <code class="docutils literal notranslate"><span class="pre">computeStage</span></code> member
+for every stage of the algorithm (4 iterations in this example).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important that the checkpoint callback object is valid when
+<a class="reference internal" href="ref/tape.html#_CPPv4N4Tape15computeAdjointsEv" title="Tape::computeAdjoints (C++ function) — Propagates adjoints by interpreting the operations on the tape."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Tape::computeAdjoints()</span></code></a> is called.
+It should not be destroyed before.</p>
+<p>See <a class="reference internal" href="ref/tape.html#ref-tape-ckpt-mem"><span class="std std-ref">Checkpoint Callback Memory Management</span></a> for how to use tape-based destruction with dynamically
+allocated checkpoint callbacks.</p>
+</div>
+<h2 id="other-usage-patterns">Other Usage Patterns<a class="headerlink" href="#other-usage-patterns" title="Permalink to this headline">¶</a></h2>
+<p>Alternative methods may be used to update the adjoints
+within a checkpoint’s <a class="reference internal" href="ref/chkpt_cb.html#_CPPv4N18CheckpointCallback14computeAdjointEP8TapeType" title="CheckpointCallback::computeAdjoint (C++ function) — This function is called by XAD during rolling back the tape, giving a reference to itself. Gives weak exception guarantee - if this user-implemented function throws an exception, the tape is in an undefined state and needs to be reset/re-initialized before it can be used again."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CheckpointCallback::computeAdjoint()</span></code></a> method,
+such as:</p>
+<ul class="simple">
+<li><p>Forward mode algorithmic differentiation within an outer adjoint mode</p></li>
+<li><p>Finite differences (bumping)</p></li>
+<li><p>Analytic derivatives</p></li>
+<li><p>External library functions (see <a class="reference internal" href="external_functions.html#external"><span class="std std-ref">External Functions</span></a>)</p></li>
+</ul>
+<p>Checkpointing can also be used recursively,
+i.e., new checkpoints are created within a nested tape in a checkpoint.</p>
+<p>The benefits of each of these approaches are highly application-dependent.</p>
+
+
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      July  2022
+    
+  </small>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="external_functions.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: External Functions" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              External Functions
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="higher_order.html" class="md-footer__link md-footer__link--next" aria-label="Next: Higher-Order Derivatives" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Higher-Order Derivatives
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2010-2022, Xcelerit Computing Ltd.
+        
+    </div>
+  
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="static/javascripts/bundle.dc1bded0.min.js"></script>
+    
+  </body>
+</html>

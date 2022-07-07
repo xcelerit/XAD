@@ -1,0 +1,1955 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="">
+    
+    
+      
+        <title>Mathematical Operations - XAD Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../static/stylesheets/main.2014a6d7.min.css">
+      
+        
+        <link rel="stylesheet" href="../static/stylesheets/palette.92c9fe4a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="../static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="../static/style.css" />
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-321978698"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-321978698",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-321978698"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#absolute-values-max-min-and-rounding" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="../static/logo.svg" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            XAD Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mathematical Operations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="../static/logo.svg" alt="logo">
+    </a>
+    XAD Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro.html" class="md-nav__link">
+        <span title="intro (document)" class="md-ellipsis">Introduction</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aad.html" class="md-nav__link">
+        <span title="aad (document)" class="md-ellipsis">Algorithmic Differentiation Background</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic.html" class="md-nav__link">
+        <span title="basic (document)" class="md-ellipsis">Basic Usage</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external_functions.html" class="md-nav__link">
+        <span title="external_functions (document)" class="md-ellipsis">External Functions</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checkpointing.html" class="md-nav__link">
+        <span title="checkpointing (document)" class="md-ellipsis">Checkpointing</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../higher_order.html" class="md-nav__link">
+        <span title="higher_order (document)" class="md-ellipsis">Higher-<wbr>Order Derivatives</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smoothed_math.html" class="md-nav__link">
+        <span title="smoothed_math (document)" class="md-ellipsis">Handling Discontinuities</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../reference.html"><span title="reference (document)" class="md-ellipsis">Reference</span></a>
+          
+            <label for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          <span title="reference (document)" class="md-ellipsis">Reference</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="headers.html" class="md-nav__link">
+        <span title="ref/headers (document)" class="md-ellipsis">Headers and Namespaces</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="interface.html" class="md-nav__link">
+        <span title="ref/interface (document)" class="md-ellipsis">AD Mode Interface</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="areal.html" class="md-nav__link">
+        <span title="ref/areal (document)" class="md-ellipsis">Adjoint Mode Type AReal</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="freal.html" class="md-nav__link">
+        <span title="ref/freal (document)" class="md-ellipsis">Forward Mode Type FReal</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="expression.html" class="md-nav__link">
+        <span title="ref/expression (document)" class="md-ellipsis">Expressions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span title="ref/math (document)" class="md-ellipsis">Mathematical Operations</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span title="ref/math (document)" class="md-ellipsis">Mathematical Operations</span>
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#absolute-values-max-min-and-rounding" class="md-nav__link">
+    <span class="md-ellipsis">Absolute Values, Max, Min, and Rounding</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Absolute Values, Max, Min, and Rounding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43abs1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="abs (C++ function) — Computes the absolute value of x." class="md-ellipsis">abs</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43max1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="max (C++ function) — Returns the maximum of x and y." class="md-ellipsis">max</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44fmax1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="fmax (C++ function) — Synonym for max()" class="md-ellipsis">fmax</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43min1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="min (C++ function) — Returns the minimum of x and y." class="md-ellipsis">min</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44fmin1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="fmin (C++ function) — Synonym for min()" class="md-ellipsis">fmin</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45floor1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="floor (C++ function) — Rounds towards negative infinity" class="md-ellipsis">floor</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44ceil1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ceil (C++ function) — Rounds towards positive infinity" class="md-ellipsis">ceil</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45trunc1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="trunc (C++ function) — Rounds towards 0" class="md-ellipsis">trunc</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45round1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="round (C++ function) — Round to the nearest integer value" class="md-ellipsis">round</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv46lround1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="lround (C++ function) — Like round(), but converting the result to a long type." class="md-ellipsis">lround</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv47llround1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="llround (C++ function) — Like round(), but converting the result to a long long type." class="md-ellipsis">llround</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44fmod1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="fmod (C++ function) — The floating-point remainder of the division operation x/y, i.e. exactly the value x - n*y, where n is x/y with its fractional part truncated." class="md-ellipsis">fmod</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv49remainder1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="remainder (C++ function) — The IEEE floating-point remainder of the division operation x/y, i.e. exactly the value x - n*y, where the value n is the integral value nearest the exact value x/y. When abs(n-x/y) = 0.5, the value n is chosen to be even." class="md-ellipsis">remainder</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv46remquo1T1TPi" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="remquo (C++ function) — Same as remainer(), but returns the integer factor n in addition." class="md-ellipsis">remquo</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44modf1TP1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="modf (C++ function) — Decomposes x into integral and fractional parts, each with the same type and sign as x. The integral part is stored in iptr." class="md-ellipsis">modf</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv49nextafter1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="nextafter (C++ function) — Returns the next representable value of from in the direction of to." class="md-ellipsis">nextafter</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigonometric-functions" class="md-nav__link">
+    <span class="md-ellipsis">Trigonometric Functions</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trigonometric Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv47degrees1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="degrees (C++ function) — Converts the given value in radians to degrees" class="md-ellipsis">degrees</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv47radians1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="radians (C++ function) — Converts the given value in degrees to radians" class="md-ellipsis">radians</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43cos1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="cos (C++ function) — Computes the cosine of x" class="md-ellipsis">cos</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43sin1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="sin (C++ function) — Computes the sine of x" class="md-ellipsis">sin</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43tan1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="tan (C++ function) — Computes the tangent of x" class="md-ellipsis">tan</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44asin1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="asin (C++ function) — Computes the inverse sine of x" class="md-ellipsis">asin</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44acos1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="acos (C++ function) — Computes the inverse cosine of x" class="md-ellipsis">acos</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44atan1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="atan (C++ function) — Computes the inverse tangent of x" class="md-ellipsis">atan</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45atan21T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="atan2 (C++ function) — Computes the four-quadrant inverse tangent of a point located at (x, y)." class="md-ellipsis">atan2</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44sinh1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="sinh (C++ function) — Computes the hyperbolic sine of x" class="md-ellipsis">sinh</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44cosh1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="cosh (C++ function) — Computes the hyperbolic cosine of x" class="md-ellipsis">cosh</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44tanh1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="tanh (C++ function) — Computes the tangent of x" class="md-ellipsis">tanh</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45asinh1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="asinh (C++ function) — Computes the inverse hyperbolic sine of x" class="md-ellipsis">asinh</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45acosh1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="acosh (C++ function) — Computes the inverse hyperbolic cosine of x" class="md-ellipsis">acosh</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45atanh1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="atanh (C++ function) — Computes the inverse hyperbolic tangent of x" class="md-ellipsis">atanh</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powers-exponentials-and-logarithms" class="md-nav__link">
+    <span class="md-ellipsis">Powers, Exponentials, and Logarithms</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Powers, Exponentials, and Logarithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43log1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="log (C++ function) — Computes the natural logarithm of x" class="md-ellipsis">log</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45log101T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="log10 (C++ function) — Computes the base 10 logarithm of x" class="md-ellipsis">log10</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44log21T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="log2 (C++ function) — Computes the base 2 logarithm of x" class="md-ellipsis">log2</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43exp1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="exp (C++ function) — Computes the exponential of x (base e)" class="md-ellipsis">exp</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45expm11T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="expm1 (C++ function) — Computes exp(x) - 1 with higher precision around 0" class="md-ellipsis">expm1</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44exp21T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="exp2 (C++ function) — Computes 2 to the power of x" class="md-ellipsis">exp2</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45log1p1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="log1p (C++ function) — Computes log(1 + x) with higher precision around 0" class="md-ellipsis">log1p</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44sqrt1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="sqrt (C++ function) — Computes the square root of x" class="md-ellipsis">sqrt</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44cbrt1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="cbrt (C++ function) — Computes the cubic root of x" class="md-ellipsis">cbrt</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43pow1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="pow (C++ function) — Computes x to the power of y" class="md-ellipsis">pow</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45ldexp1Ti" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ldexp (C++ function) — Multiplies x by two to the power of exp" class="md-ellipsis">ldexp</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45frexp1TPi" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="frexp (C++ function) — Decomposes the given floating point value arg into a normalised fraction and an integral power of two." class="md-ellipsis">frexp</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45ilogb1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ilogb (C++ function) — Returns the integral part of the logarithm of abs(x), using FLT_RADIX as base for the log." class="md-ellipsis">ilogb</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv46scalbn1Ti" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="scalbn (C++ function) — Calculates arg * pow(FLT_RADIX, exp)." class="md-ellipsis">scalbn</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-functions" class="md-nav__link">
+    <span class="md-ellipsis">Error Functions</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43erf1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="erf (C++ function) — Computes the error function of x, if provided by the compiler&#39;s math library." class="md-ellipsis">erf</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44erfc1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="erfc (C++ function) — Computes the complementary error function of x, if provided by the compiler&#39;s math library." class="md-ellipsis">erfc</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floating-point-classification" class="md-nav__link">
+    <span class="md-ellipsis">Floating Point Classification</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Floating Point Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45isinf1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="isinf (C++ function) — Check if value is infinity (positive or negative)" class="md-ellipsis">isinf</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45isnan1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="isnan (C++ function) — Check if value is NaN" class="md-ellipsis">isnan</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv48isfinite1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="isfinite (C++ function) — Check if value is finite (not infinite and not NaN)" class="md-ellipsis">isfinite</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv47signbit1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="signbit (C++ function) — Returns true if x is negative and false otherwise. Also detects sign bit of zeros." class="md-ellipsis">signbit</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv48isnormal1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="isnormal (C++ function) — Checks if the value is a normal floating point number, i.e. not zero, subnormal, infinite, or NaN." class="md-ellipsis">isnormal</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="complex.html" class="md-nav__link">
+        <span title="ref/complex (document)" class="md-ellipsis">Complex</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="smooth-math.html" class="md-nav__link">
+        <span title="ref/smooth-math (document)" class="md-ellipsis">Smoothed Mathematical Functions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="global.html" class="md-nav__link">
+        <span title="ref/global (document)" class="md-ellipsis">Global Functions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tape.html" class="md-nav__link">
+        <span title="ref/tape (document)" class="md-ellipsis">Tape</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chkpt_cb.html" class="md-nav__link">
+        <span title="ref/chkpt_cb (document)" class="md-ellipsis">Checkpoint<wbr>Callback</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exceptions.html" class="md-nav__link">
+        <span title="ref/exceptions (document)" class="md-ellipsis">Exceptions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="version.html" class="md-nav__link">
+        <span title="ref/version (document)" class="md-ellipsis">Version Information</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license.html" class="md-nav__link">
+        <span title="license (document)" class="md-ellipsis">GNU Free Documentation License</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#absolute-values-max-min-and-rounding" class="md-nav__link">
+    <span class="md-ellipsis">Absolute Values, Max, Min, and Rounding</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Absolute Values, Max, Min, and Rounding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43abs1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="abs (C++ function) — Computes the absolute value of x." class="md-ellipsis">abs</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43max1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="max (C++ function) — Returns the maximum of x and y." class="md-ellipsis">max</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44fmax1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="fmax (C++ function) — Synonym for max()" class="md-ellipsis">fmax</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43min1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="min (C++ function) — Returns the minimum of x and y." class="md-ellipsis">min</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44fmin1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="fmin (C++ function) — Synonym for min()" class="md-ellipsis">fmin</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45floor1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="floor (C++ function) — Rounds towards negative infinity" class="md-ellipsis">floor</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44ceil1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ceil (C++ function) — Rounds towards positive infinity" class="md-ellipsis">ceil</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45trunc1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="trunc (C++ function) — Rounds towards 0" class="md-ellipsis">trunc</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45round1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="round (C++ function) — Round to the nearest integer value" class="md-ellipsis">round</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv46lround1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="lround (C++ function) — Like round(), but converting the result to a long type." class="md-ellipsis">lround</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv47llround1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="llround (C++ function) — Like round(), but converting the result to a long long type." class="md-ellipsis">llround</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44fmod1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="fmod (C++ function) — The floating-point remainder of the division operation x/y, i.e. exactly the value x - n*y, where n is x/y with its fractional part truncated." class="md-ellipsis">fmod</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv49remainder1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="remainder (C++ function) — The IEEE floating-point remainder of the division operation x/y, i.e. exactly the value x - n*y, where the value n is the integral value nearest the exact value x/y. When abs(n-x/y) = 0.5, the value n is chosen to be even." class="md-ellipsis">remainder</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv46remquo1T1TPi" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="remquo (C++ function) — Same as remainer(), but returns the integer factor n in addition." class="md-ellipsis">remquo</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44modf1TP1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="modf (C++ function) — Decomposes x into integral and fractional parts, each with the same type and sign as x. The integral part is stored in iptr." class="md-ellipsis">modf</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv49nextafter1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="nextafter (C++ function) — Returns the next representable value of from in the direction of to." class="md-ellipsis">nextafter</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigonometric-functions" class="md-nav__link">
+    <span class="md-ellipsis">Trigonometric Functions</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trigonometric Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv47degrees1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="degrees (C++ function) — Converts the given value in radians to degrees" class="md-ellipsis">degrees</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv47radians1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="radians (C++ function) — Converts the given value in degrees to radians" class="md-ellipsis">radians</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43cos1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="cos (C++ function) — Computes the cosine of x" class="md-ellipsis">cos</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43sin1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="sin (C++ function) — Computes the sine of x" class="md-ellipsis">sin</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43tan1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="tan (C++ function) — Computes the tangent of x" class="md-ellipsis">tan</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44asin1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="asin (C++ function) — Computes the inverse sine of x" class="md-ellipsis">asin</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44acos1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="acos (C++ function) — Computes the inverse cosine of x" class="md-ellipsis">acos</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44atan1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="atan (C++ function) — Computes the inverse tangent of x" class="md-ellipsis">atan</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45atan21T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="atan2 (C++ function) — Computes the four-quadrant inverse tangent of a point located at (x, y)." class="md-ellipsis">atan2</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44sinh1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="sinh (C++ function) — Computes the hyperbolic sine of x" class="md-ellipsis">sinh</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44cosh1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="cosh (C++ function) — Computes the hyperbolic cosine of x" class="md-ellipsis">cosh</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44tanh1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="tanh (C++ function) — Computes the tangent of x" class="md-ellipsis">tanh</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45asinh1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="asinh (C++ function) — Computes the inverse hyperbolic sine of x" class="md-ellipsis">asinh</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45acosh1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="acosh (C++ function) — Computes the inverse hyperbolic cosine of x" class="md-ellipsis">acosh</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45atanh1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="atanh (C++ function) — Computes the inverse hyperbolic tangent of x" class="md-ellipsis">atanh</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powers-exponentials-and-logarithms" class="md-nav__link">
+    <span class="md-ellipsis">Powers, Exponentials, and Logarithms</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Powers, Exponentials, and Logarithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43log1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="log (C++ function) — Computes the natural logarithm of x" class="md-ellipsis">log</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45log101T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="log10 (C++ function) — Computes the base 10 logarithm of x" class="md-ellipsis">log10</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44log21T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="log2 (C++ function) — Computes the base 2 logarithm of x" class="md-ellipsis">log2</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43exp1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="exp (C++ function) — Computes the exponential of x (base e)" class="md-ellipsis">exp</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45expm11T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="expm1 (C++ function) — Computes exp(x) - 1 with higher precision around 0" class="md-ellipsis">expm1</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44exp21T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="exp2 (C++ function) — Computes 2 to the power of x" class="md-ellipsis">exp2</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45log1p1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="log1p (C++ function) — Computes log(1 + x) with higher precision around 0" class="md-ellipsis">log1p</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44sqrt1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="sqrt (C++ function) — Computes the square root of x" class="md-ellipsis">sqrt</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44cbrt1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="cbrt (C++ function) — Computes the cubic root of x" class="md-ellipsis">cbrt</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43pow1T1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="pow (C++ function) — Computes x to the power of y" class="md-ellipsis">pow</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45ldexp1Ti" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ldexp (C++ function) — Multiplies x by two to the power of exp" class="md-ellipsis">ldexp</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45frexp1TPi" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="frexp (C++ function) — Decomposes the given floating point value arg into a normalised fraction and an integral power of two." class="md-ellipsis">frexp</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45ilogb1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ilogb (C++ function) — Returns the integral part of the logarithm of abs(x), using FLT_RADIX as base for the log." class="md-ellipsis">ilogb</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv46scalbn1Ti" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="scalbn (C++ function) — Calculates arg * pow(FLT_RADIX, exp)." class="md-ellipsis">scalbn</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-functions" class="md-nav__link">
+    <span class="md-ellipsis">Error Functions</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv43erf1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="erf (C++ function) — Computes the error function of x, if provided by the compiler&#39;s math library." class="md-ellipsis">erf</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44erfc1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="erfc (C++ function) — Computes the complementary error function of x, if provided by the compiler&#39;s math library." class="md-ellipsis">erfc</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floating-point-classification" class="md-nav__link">
+    <span class="md-ellipsis">Floating Point Classification</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Floating Point Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45isinf1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="isinf (C++ function) — Check if value is infinity (positive or negative)" class="md-ellipsis">isinf</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv45isnan1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="isnan (C++ function) — Check if value is NaN" class="md-ellipsis">isnan</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv48isfinite1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="isfinite (C++ function) — Check if value is finite (not infinite and not NaN)" class="md-ellipsis">isfinite</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv47signbit1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="signbit (C++ function) — Returns true if x is negative and false otherwise. Also detects sign bit of zeros." class="md-ellipsis">signbit</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv48isnormal1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="isnormal (C++ function) — Checks if the value is a normal floating point number, i.e. not zero, subnormal, infinite, or NaN." class="md-ellipsis">isnormal</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset" role="main">
+                
+
+
+  <h1 id="mathematical-operations"><span id="ref-math"></span>Mathematical Operations<a class="headerlink" href="#mathematical-operations" title="Permalink to this headline">¶</a></h1>
+<p>In the following, the data types <code class="docutils literal notranslate"><span class="pre">T</span></code>
+refer to arithmetic data types on which the operation is defined mathematically.
+This includes the active XAD types as well as the standard passive types.</p>
+<p>The functions listed here are defined in the <code class="docutils literal notranslate"><span class="pre">xad</span></code> namespace,
+and C++ ADL rules (argument-dependent lookup) typically find these functions
+automatically if they are applied to XAD types.
+However, for this the calls must be unqualified, i.e. without a namespace specifier.</p>
+<p>Alternatively, fully qualified names work as usual (e.g. <code class="cpp-expr sig sig-inline cpp highlight"><span class="n">xad</span><span class="p">::</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code>),
+also for <code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
+<p>For convenience, if the header <code class="docutils literal notranslate"><span class="pre">XAD/StdCompatibility.hpp</span></code> is included,
+the XAD variables are imported into the <code class="cpp-expr sig sig-inline cpp highlight"><span class="n">std</span></code> namespace,
+so that existing calls to <code class="cpp-expr sig sig-inline cpp highlight"><span class="n">std</span><span class="p">::</span><a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/sin" title="std::sin (C++ standard function)"><span class="n">sin</span></a></code> and similar functions are working as expected.</p>
+<h2 id="absolute-values-max-min-and-rounding">Absolute Values, Max, Min, and Rounding<a class="headerlink" href="#absolute-values-max-min-and-rounding" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv43abs1T">
+<span id="_CPPv33abs1T"></span><span id="_CPPv23abs1T"></span><span id="abs__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">abs</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43abs1T" title="abs::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43abs1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the absolute value of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>Note that for defined second-order derivatives, this computes <code class="docutils literal notranslate"><span class="pre">(x&gt;0)-(x&lt;0)</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv43max1T1T">
+<span id="_CPPv33max1T1T"></span><span id="_CPPv23max1T1T"></span><span id="max__T.T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">max</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43max1T1T" title="max::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43max1T1T" title="max::y (C++ function parameter)"><span class="n sig-param">y</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43max1T1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the maximum of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<p>Note that for well-defined second order derivative, this is implemented as
+<code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">+</span> <span class="pre">y</span> <span class="pre">+</span> <span class="pre">abs(x-y))</span> <span class="pre">/</span> <span class="pre">2</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44fmax1T1T">
+<span id="_CPPv34fmax1T1T"></span><span id="_CPPv24fmax1T1T"></span><span id="fmax__T.T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">fmax</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44fmax1T1T" title="fmax::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44fmax1T1T" title="fmax::y (C++ function parameter)"><span class="n sig-param">y</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44fmax1T1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synonym for <a class="reference internal" href="#_CPPv43max1T1T" title="max (C++ function) — Returns the maximum of x and y."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">max()</span></code></a></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv43min1T1T">
+<span id="_CPPv33min1T1T"></span><span id="_CPPv23min1T1T"></span><span id="min__T.T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">min</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43min1T1T" title="min::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43min1T1T" title="min::y (C++ function parameter)"><span class="n sig-param">y</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43min1T1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the minimum of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<p>Note that for well-defined second order derivative, this is implemented as
+<code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">+</span> <span class="pre">y</span> <span class="pre">-</span> <span class="pre">abs(x-y))</span> <span class="pre">/</span> <span class="pre">2</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44fmin1T1T">
+<span id="_CPPv34fmin1T1T"></span><span id="_CPPv24fmin1T1T"></span><span id="fmin__T.T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">fmin</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44fmin1T1T" title="fmin::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44fmin1T1T" title="fmin::y (C++ function parameter)"><span class="n sig-param">y</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44fmin1T1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synonym for <a class="reference internal" href="#_CPPv43min1T1T" title="min (C++ function) — Returns the minimum of x and y."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">min()</span></code></a></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45floor1T">
+<span id="_CPPv35floor1T"></span><span id="_CPPv25floor1T"></span><span id="floor__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">floor</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45floor1T" title="floor::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45floor1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rounds towards negative infinity</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44ceil1T">
+<span id="_CPPv34ceil1T"></span><span id="_CPPv24ceil1T"></span><span id="ceil__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">ceil</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44ceil1T" title="ceil::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44ceil1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rounds towards positive infinity</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45trunc1T">
+<span id="_CPPv35trunc1T"></span><span id="_CPPv25trunc1T"></span><span id="trunc__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">trunc</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45trunc1T" title="trunc::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45trunc1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rounds towards 0</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45round1T">
+<span id="_CPPv35round1T"></span><span id="_CPPv25round1T"></span><span id="round__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">round</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45round1T" title="round::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45round1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Round to the nearest integer value</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv46lround1T">
+<span id="_CPPv36lround1T"></span><span id="_CPPv26lround1T"></span><span id="lround__T"></span><span class="kt">long</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">lround</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv46lround1T" title="lround::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv46lround1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like <a class="reference internal" href="#_CPPv45round1T" title="round (C++ function) — Round to the nearest integer value"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">round()</span></code></a>, but converting the result to a <code class="docutils literal notranslate"><span class="pre">long</span></code> type.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv47llround1T">
+<span id="_CPPv37llround1T"></span><span id="_CPPv27llround1T"></span><span id="llround__T"></span><span class="kt">long</span><span class="w">&nbsp;</span><span class="kt">long</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">llround</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv47llround1T" title="llround::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv47llround1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like <a class="reference internal" href="#_CPPv45round1T" title="round (C++ function) — Round to the nearest integer value"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">round()</span></code></a>, but converting the result to a <code class="docutils literal notranslate"><span class="pre">long</span> <span class="pre">long</span></code> type.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44fmod1T1T">
+<span id="_CPPv34fmod1T1T"></span><span id="_CPPv24fmod1T1T"></span><span id="fmod__T.T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">fmod</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44fmod1T1T" title="fmod::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44fmod1T1T" title="fmod::y (C++ function parameter)"><span class="n sig-param">y</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44fmod1T1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>The floating-point remainder of the division operation <code class="docutils literal notranslate"><span class="pre">x/y</span></code>, i.e.
+exactly the value <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">n*y</span></code>, where <code class="docutils literal notranslate"><span class="pre">n</span></code> is <code class="docutils literal notranslate"><span class="pre">x/y</span></code> with its fractional
+part truncated.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv49remainder1T1T">
+<span id="_CPPv39remainder1T1T"></span><span id="_CPPv29remainder1T1T"></span><span id="remainder__T.T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">remainder</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv49remainder1T1T" title="remainder::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv49remainder1T1T" title="remainder::y (C++ function parameter)"><span class="n sig-param">y</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv49remainder1T1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IEEE floating-point remainder of the division operation <code class="docutils literal notranslate"><span class="pre">x/y</span></code>, i.e.
+exactly the value <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">n*y</span></code>, where the value <code class="docutils literal notranslate"><span class="pre">n</span></code> is the integral value
+nearest the exact value <code class="docutils literal notranslate"><span class="pre">x/y</span></code>.
+When <code class="docutils literal notranslate"><span class="pre">abs(n-x/y)</span> <span class="pre">=</span> <span class="pre">0.5</span></code>, the value n is chosen to be even.</p>
+<p>In contrast to <a class="reference internal" href="#_CPPv44fmod1T1T" title="fmod (C++ function) — The floating-point remainder of the division operation x/y, i.e. exactly the value x - n*y, where n is x/y with its fractional part truncated."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">fmod()</span></code></a>,
+the returned value is not guaranteed to have the same sign as <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv46remquo1T1TPi">
+<span id="_CPPv36remquo1T1TPi"></span><span id="_CPPv26remquo1T1TPi"></span><span id="remquo__T.T.iP"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">remquo</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv46remquo1T1TPi" title="remquo::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv46remquo1T1TPi" title="remquo::y (C++ function parameter)"><span class="n sig-param">y</span></a></span><span class="p">,</span><span><span class="kt">&nbsp;int</span><span class="w">&nbsp;</span><span class="p">*</span><a class="n sig-param reference internal" href="#_CPPv46remquo1T1TPi" title="remquo::n (C++ function parameter)"><span class="n sig-param">n</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv46remquo1T1TPi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">remainer()</span></code>, but returns the integer factor <cite>n</cite> in
+addition.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44modf1TP1T">
+<span id="_CPPv34modf1TP1T"></span><span id="_CPPv24modf1TP1T"></span><span id="modf__T.TP"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">modf</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44modf1TP1T" title="modf::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><span class="p">*</span><a class="n sig-param reference internal" href="#_CPPv44modf1TP1T" title="modf::iptr (C++ function parameter)"><span class="n sig-param">iptr</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44modf1TP1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decomposes <code class="docutils literal notranslate"><span class="pre">x</span></code> into integral and fractional parts, each with the same
+type and sign as <code class="docutils literal notranslate"><span class="pre">x</span></code>. The integral part is stored in <code class="docutils literal notranslate"><span class="pre">iptr</span></code>.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv49nextafter1T1T">
+<span id="_CPPv39nextafter1T1T"></span><span id="_CPPv29nextafter1T1T"></span><span id="nextafter__T.T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">nextafter</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv49nextafter1T1T" title="nextafter::from (C++ function parameter)"><span class="n sig-param">from</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv49nextafter1T1T" title="nextafter::to (C++ function parameter)"><span class="n sig-param">to</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv49nextafter1T1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the next representable value of <code class="docutils literal notranslate"><span class="pre">from</span></code> in the direction of <code class="docutils literal notranslate"><span class="pre">to</span></code>.</p>
+<p>Mathmatically, the difference of <code class="docutils literal notranslate"><span class="pre">from</span></code> to the return value is very small.
+For derivatives, we therefore consider them both the same and calculate
+derivative accordingly.</p>
+</dd></dl>
+
+<h2 id="trigonometric-functions">Trigonometric Functions<a class="headerlink" href="#trigonometric-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv47degrees1T">
+<span id="_CPPv37degrees1T"></span><span id="_CPPv27degrees1T"></span><span id="degrees__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">degrees</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv47degrees1T" title="degrees::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv47degrees1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts the given value in radians to degrees</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv47radians1T">
+<span id="_CPPv37radians1T"></span><span id="_CPPv27radians1T"></span><span id="radians__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">radians</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv47radians1T" title="radians::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv47radians1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts the given value in degrees to radians</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv43cos1T">
+<span id="_CPPv33cos1T"></span><span id="_CPPv23cos1T"></span><span id="cos__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">cos</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43cos1T" title="cos::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43cos1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the cosine of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv43sin1T">
+<span id="_CPPv33sin1T"></span><span id="_CPPv23sin1T"></span><span id="sin__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">sin</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43sin1T" title="sin::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43sin1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the sine of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv43tan1T">
+<span id="_CPPv33tan1T"></span><span id="_CPPv23tan1T"></span><span id="tan__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">tan</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43tan1T" title="tan::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43tan1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the tangent of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44asin1T">
+<span id="_CPPv34asin1T"></span><span id="_CPPv24asin1T"></span><span id="asin__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">asin</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44asin1T" title="asin::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44asin1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the inverse sine of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44acos1T">
+<span id="_CPPv34acos1T"></span><span id="_CPPv24acos1T"></span><span id="acos__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">acos</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44acos1T" title="acos::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44acos1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the inverse cosine of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44atan1T">
+<span id="_CPPv34atan1T"></span><span id="_CPPv24atan1T"></span><span id="atan__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">atan</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44atan1T" title="atan::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44atan1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the inverse tangent of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45atan21T1T">
+<span id="_CPPv35atan21T1T"></span><span id="_CPPv25atan21T1T"></span><span id="atan2__T.T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">atan2</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45atan21T1T" title="atan2::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45atan21T1T" title="atan2::y (C++ function parameter)"><span class="n sig-param">y</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45atan21T1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the four-quadrant inverse tangent of a point located at <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code>.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44sinh1T">
+<span id="_CPPv34sinh1T"></span><span id="_CPPv24sinh1T"></span><span id="sinh__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">sinh</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44sinh1T" title="sinh::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44sinh1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the hyperbolic sine of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44cosh1T">
+<span id="_CPPv34cosh1T"></span><span id="_CPPv24cosh1T"></span><span id="cosh__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">cosh</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44cosh1T" title="cosh::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44cosh1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the hyperbolic cosine of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44tanh1T">
+<span id="_CPPv34tanh1T"></span><span id="_CPPv24tanh1T"></span><span id="tanh__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">tanh</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44tanh1T" title="tanh::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44tanh1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the tangent of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45asinh1T">
+<span id="_CPPv35asinh1T"></span><span id="_CPPv25asinh1T"></span><span id="asinh__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">asinh</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45asinh1T" title="asinh::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45asinh1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the inverse hyperbolic sine of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45acosh1T">
+<span id="_CPPv35acosh1T"></span><span id="_CPPv25acosh1T"></span><span id="acosh__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">acosh</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45acosh1T" title="acosh::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45acosh1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the inverse hyperbolic cosine of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45atanh1T">
+<span id="_CPPv35atanh1T"></span><span id="_CPPv25atanh1T"></span><span id="atanh__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">atanh</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45atanh1T" title="atanh::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45atanh1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the inverse hyperbolic tangent of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<h2 id="powers-exponentials-and-logarithms">Powers, Exponentials, and Logarithms<a class="headerlink" href="#powers-exponentials-and-logarithms" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv43log1T">
+<span id="_CPPv33log1T"></span><span id="_CPPv23log1T"></span><span id="log__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">log</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43log1T" title="log::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43log1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the natural logarithm of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45log101T">
+<span id="_CPPv35log101T"></span><span id="_CPPv25log101T"></span><span id="log10__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">log10</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45log101T" title="log10::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45log101T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the base 10 logarithm of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44log21T">
+<span id="_CPPv34log21T"></span><span id="_CPPv24log21T"></span><span id="log2__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">log2</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44log21T" title="log2::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44log21T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the base 2 logarithm of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv43exp1T">
+<span id="_CPPv33exp1T"></span><span id="_CPPv23exp1T"></span><span id="exp__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">exp</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43exp1T" title="exp::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43exp1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the exponential of <code class="docutils literal notranslate"><span class="pre">x</span></code> (base e)</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45expm11T">
+<span id="_CPPv35expm11T"></span><span id="_CPPv25expm11T"></span><span id="expm1__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">expm1</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45expm11T" title="expm1::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45expm11T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes <code class="docutils literal notranslate"><span class="pre">exp(x)</span> <span class="pre">-</span> <span class="pre">1</span></code> with higher precision around 0</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44exp21T">
+<span id="_CPPv34exp21T"></span><span id="_CPPv24exp21T"></span><span id="exp2__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">exp2</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44exp21T" title="exp2::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44exp21T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes 2 to the power of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45log1p1T">
+<span id="_CPPv35log1p1T"></span><span id="_CPPv25log1p1T"></span><span id="log1p__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">log1p</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45log1p1T" title="log1p::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45log1p1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes <code class="docutils literal notranslate"><span class="pre">log(1</span> <span class="pre">+</span> <span class="pre">x)</span></code> with higher precision around 0</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44sqrt1T">
+<span id="_CPPv34sqrt1T"></span><span id="_CPPv24sqrt1T"></span><span id="sqrt__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">sqrt</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44sqrt1T" title="sqrt::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44sqrt1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the square root of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44cbrt1T">
+<span id="_CPPv34cbrt1T"></span><span id="_CPPv24cbrt1T"></span><span id="cbrt__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">cbrt</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44cbrt1T" title="cbrt::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44cbrt1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the cubic root of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv43pow1T1T">
+<span id="_CPPv33pow1T1T"></span><span id="_CPPv23pow1T1T"></span><span id="pow__T.T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">pow</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43pow1T1T" title="pow::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43pow1T1T" title="pow::y (C++ function parameter)"><span class="n sig-param">y</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43pow1T1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes <code class="docutils literal notranslate"><span class="pre">x</span></code> to the power of <code class="docutils literal notranslate"><span class="pre">y</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45ldexp1Ti">
+<span id="_CPPv35ldexp1Ti"></span><span id="_CPPv25ldexp1Ti"></span><span id="ldexp__T.i"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">ldexp</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45ldexp1Ti" title="ldexp::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="kt">&nbsp;int</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45ldexp1Ti" title="ldexp::exp (C++ function parameter)"><span class="n sig-param">exp</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45ldexp1Ti" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplies <code class="docutils literal notranslate"><span class="pre">x</span></code> by two to the power of <code class="docutils literal notranslate"><span class="pre">exp</span></code></p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45frexp1TPi">
+<span id="_CPPv35frexp1TPi"></span><span id="_CPPv25frexp1TPi"></span><span id="frexp__T.iP"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">frexp</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45frexp1TPi" title="frexp::arg (C++ function parameter)"><span class="n sig-param">arg</span></a></span><span class="p">,</span><span><span class="kt">&nbsp;int</span><span class="w">&nbsp;</span><span class="p">*</span><a class="n sig-param reference internal" href="#_CPPv45frexp1TPi" title="frexp::exp (C++ function parameter)"><span class="n sig-param">exp</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45frexp1TPi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decomposes the given floating point value arg into a normalised fraction
+and an integral power of two.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45ilogb1T">
+<span id="_CPPv35ilogb1T"></span><span id="_CPPv25ilogb1T"></span><span id="ilogb__T"></span><span class="kt">int</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">ilogb</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45ilogb1T" title="ilogb::arg (C++ function parameter)"><span class="n sig-param">arg</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45ilogb1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the integral part of the logarithm of <code class="docutils literal notranslate"><span class="pre">abs(x)</span></code>,
+using <code class="docutils literal notranslate"><span class="pre">FLT_RADIX</span></code> as base for the log.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv46scalbn1Ti">
+<span id="_CPPv36scalbn1Ti"></span><span id="_CPPv26scalbn1Ti"></span><span id="scalbn__T.i"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">scalbn</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv46scalbn1Ti" title="scalbn::arg (C++ function parameter)"><span class="n sig-param">arg</span></a></span><span class="p">,</span><span><span class="kt">&nbsp;int</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv46scalbn1Ti" title="scalbn::exp (C++ function parameter)"><span class="n sig-param">exp</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv46scalbn1Ti" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">arg</span> <span class="pre">*</span> <span class="pre">pow(FLT_RADIX,</span> <span class="pre">exp)</span></code>.</p>
+</dd></dl>
+
+<h2 id="error-functions">Error Functions<a class="headerlink" href="#error-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv43erf1T">
+<span id="_CPPv33erf1T"></span><span id="_CPPv23erf1T"></span><span id="erf__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">erf</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43erf1T" title="erf::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43erf1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the error function of <code class="docutils literal notranslate"><span class="pre">x</span></code>, if provided by the compiler’s math
+library.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44erfc1T">
+<span id="_CPPv34erfc1T"></span><span id="_CPPv24erfc1T"></span><span id="erfc__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">erfc</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv44erfc1T" title="erfc::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv44erfc1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the complementary error function of <code class="docutils literal notranslate"><span class="pre">x</span></code>, if provided by the compiler’s math
+library.</p>
+</dd></dl>
+
+<h2 id="floating-point-classification">Floating Point Classification<a class="headerlink" href="#floating-point-classification" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45isinf1T">
+<span id="_CPPv35isinf1T"></span><span id="_CPPv25isinf1T"></span><span id="isinf__T"></span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">isinf</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45isinf1T" title="isinf::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45isinf1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if value is infinity (positive or negative)</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv45isnan1T">
+<span id="_CPPv35isnan1T"></span><span id="_CPPv25isnan1T"></span><span id="isnan__T"></span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">isnan</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45isnan1T" title="isnan::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45isnan1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if value is NaN</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv48isfinite1T">
+<span id="_CPPv38isfinite1T"></span><span id="_CPPv28isfinite1T"></span><span id="isfinite__T"></span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">isfinite</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv48isfinite1T" title="isfinite::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv48isfinite1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if value is finite (not infinite and not NaN)</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv47signbit1T">
+<span id="_CPPv37signbit1T"></span><span id="_CPPv27signbit1T"></span><span id="signbit__T"></span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">signbit</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv47signbit1T" title="signbit::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv47signbit1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if <code class="docutils literal notranslate"><span class="pre">x</span></code> is negative and false otherwise. Also detects sign bit of zeros.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv48isnormal1T">
+<span id="_CPPv38isnormal1T"></span><span id="_CPPv28isnormal1T"></span><span id="isnormal__T"></span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">isnormal</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv48isnormal1T" title="isnormal::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv48isnormal1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the value is a normal floating point number, i.e.
+not zero, subnormal, infinite, or NaN.</p>
+</dd></dl>
+
+
+
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      July  2022
+    
+  </small>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="expression.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Expressions" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Expressions
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="complex.html" class="md-footer__link md-footer__link--next" aria-label="Next: Complex" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Complex
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2010-2022, Xcelerit Computing Ltd.
+        
+    </div>
+  
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../static/javascripts/bundle.dc1bded0.min.js"></script>
+    
+  </body>
+</html>

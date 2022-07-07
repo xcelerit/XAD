@@ -1,0 +1,3280 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="">
+    
+    
+      
+        <title>Tape - XAD Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../static/stylesheets/main.2014a6d7.min.css">
+      
+        
+        <link rel="stylesheet" href="../static/stylesheets/palette.92c9fe4a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="../static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="../static/style.css" />
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-321978698"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-321978698",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-321978698"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="../static/logo.svg" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            XAD Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tape
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="../static/logo.svg" alt="logo">
+    </a>
+    XAD Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro.html" class="md-nav__link">
+        <span title="intro (document)" class="md-ellipsis">Introduction</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aad.html" class="md-nav__link">
+        <span title="aad (document)" class="md-ellipsis">Algorithmic Differentiation Background</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic.html" class="md-nav__link">
+        <span title="basic (document)" class="md-ellipsis">Basic Usage</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external_functions.html" class="md-nav__link">
+        <span title="external_functions (document)" class="md-ellipsis">External Functions</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checkpointing.html" class="md-nav__link">
+        <span title="checkpointing (document)" class="md-ellipsis">Checkpointing</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../higher_order.html" class="md-nav__link">
+        <span title="higher_order (document)" class="md-ellipsis">Higher-<wbr>Order Derivatives</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smoothed_math.html" class="md-nav__link">
+        <span title="smoothed_math (document)" class="md-ellipsis">Handling Discontinuities</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../reference.html"><span title="reference (document)" class="md-ellipsis">Reference</span></a>
+          
+            <label for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          <span title="reference (document)" class="md-ellipsis">Reference</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="headers.html" class="md-nav__link">
+        <span title="ref/headers (document)" class="md-ellipsis">Headers and Namespaces</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="interface.html" class="md-nav__link">
+        <span title="ref/interface (document)" class="md-ellipsis">AD Mode Interface</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="areal.html" class="md-nav__link">
+        <span title="ref/areal (document)" class="md-ellipsis">Adjoint Mode Type AReal</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="freal.html" class="md-nav__link">
+        <span title="ref/freal (document)" class="md-ellipsis">Forward Mode Type FReal</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="expression.html" class="md-nav__link">
+        <span title="ref/expression (document)" class="md-ellipsis">Expressions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="math.html" class="md-nav__link">
+        <span title="ref/math (document)" class="md-ellipsis">Mathematical Operations</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="complex.html" class="md-nav__link">
+        <span title="ref/complex (document)" class="md-ellipsis">Complex</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="smooth-math.html" class="md-nav__link">
+        <span title="ref/smooth-math (document)" class="md-ellipsis">Smoothed Mathematical Functions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="global.html" class="md-nav__link">
+        <span title="ref/global (document)" class="md-ellipsis">Global Functions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span title="ref/tape (document)" class="md-ellipsis">Tape</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span title="ref/tape (document)" class="md-ellipsis">Tape</span>
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">Overview</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0E4Tape" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="Tape (C++ class) — Tape data type to record operations for adjoint computations, using the underlying scalar type T (which may in turn be an active type for higher-order derivative calculations)." class="md-ellipsis">Tape</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">Members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">Types</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape9size_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::size_type (C++ type) — Type for sizes" class="md-ellipsis">size_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape9slot_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable" class="md-ellipsis">slot_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13position_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::position_type (C++ type) — Type to represent a position in the tape (same as slot_type)" class="md-ellipsis">position_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape11active_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::active_type (C++ type) — Active data type that records on this type of tape" class="md-ellipsis">active_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape10value_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::value_type (C++ type) — The value type of the tape, i.e. T" class="md-ellipsis">value_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape9tape_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::tape_type (C++ type) — The tape&#39;s type itself - for generic code" class="md-ellipsis">tape_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13callback_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::callback_type (C++ type) — The callback type used for checkpoints" class="md-ellipsis">callback_<wbr>type</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construct-destruct-and-assign" class="md-nav__link">
+    <span class="md-ellipsis">Construct, Destruct, and Assign</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Construct, Destruct, and Assign">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape4TapeEb" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::Tape (C++ function) — Constructs a new tape, and activates it if needed." class="md-ellipsis">Tape</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tape">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape4TapeEb-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4TapeD0Ev" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::~Tape (C++ function) — Destructor." class="md-ellipsis">~Tape</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape4TapeERR4Tape" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::Tape (C++ function) — Move-constructor." class="md-ellipsis">Tape</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4TapeaSERR4Tape" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::operator= (C++ function) — Move-assign." class="md-ellipsis">operator=</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording-control" class="md-nav__link">
+    <span class="md-ellipsis">Recording Control</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recording Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape8activateEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::activate (C++ function) — Sets a global thread-local pointer to this tape instance, resulting all registerInput calls and operations of active data types depending on such inputs to get associated with this tape instance." class="md-ellipsis">activate</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="activate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape8activateEv-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape10deactivateEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::deactivate (C++ function) — Resets the global thread-local pointer to NULL, hence deactivating this tape." class="md-ellipsis">deactivate</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape8isActiveEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::isActive (C++ function) — Check if the current instance is the currently active tape." class="md-ellipsis">is<wbr>Active</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="isActive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape8isActiveEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape9getActiveEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getActive (C++ function) — Get a pointer to the currently active tape." class="md-ellipsis">get<wbr>Active</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getActive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape9getActiveEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13registerInputER11active_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerInput (C++ function) — Register the given variable with the tape and start recording dependents of it. A call to this function or its overloads is required in order to calculate adjoints." class="md-ellipsis">register<wbr>Input</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0EN4Tape14registerInputsEvRNSt6vectorI5InnerEE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerInputs (C++ function) — Convenience function to register all variables in a vector as an input." class="md-ellipsis">register<wbr>Inputs</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0EN4Tape14registerInputsEv2It2It" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerInputs (C++ function) — Convenience iterator interface to register variables in a range with the tape." class="md-ellipsis">register<wbr>Inputs</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13registerInputERNSt7complexI11active_typeEE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerInput (C++ function) — Register a complex-valued input." class="md-ellipsis">register<wbr>Input</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape14registerOutputER11active_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerOutput (C++ function) — Register the given variable as an output with the tape. A call to this function or its overloads is required in order to allow seeding derivatives (adjoints)." class="md-ellipsis">register<wbr>Output</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0EN4Tape15registerOutputsEvRNSt6vectorI5InnerEE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerOutputs (C++ function) — Convenience function to register all variables in a vector as an input." class="md-ellipsis">register<wbr>Outputs</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0EN4Tape15registerOutputsEv2It2It" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerOutputs (C++ function) — Convenience iterator interface to register variables in a range with the tape." class="md-ellipsis">register<wbr>Outputs</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape14registerOutputERNSt7complexI11active_typeEE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerOutput (C++ function) — Register a complex-valued output." class="md-ellipsis">register<wbr>Output</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape12newRecordingEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::newRecording (C++ function) — Start recording derivatives." class="md-ellipsis">new<wbr>Recording</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape15computeAdjointsEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::computeAdjoints (C++ function) — Propagates adjoints by interpreting the operations on the tape." class="md-ellipsis">compute<wbr>Adjoints</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="computeAdjoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape15computeAdjointsEv-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape11getPositionEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getPosition (C++ function) — Returns the current position in the tape as an opaque integer (its value is internal and should not be relied upon in client code). This posiiton can later be used in the methods clearDerivativesAfter, resetTo, and computeAdjointsTo." class="md-ellipsis">get<wbr>Position</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape21clearDerivativesAfterE13position_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::clearDerivativesAfter (C++ function) — Clears all derivatives after the given position in the tape (resets them to zero). Derivatives before this point keep their value, meaning that further calls to computeAdjoints will potentially increment these adjoints further." class="md-ellipsis">clear<wbr>Derivatives<wbr>After</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape7resetToE13position_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::resetTo (C++ function) — Resets the tape back to the given position. All statements recorded after this point will be discarded." class="md-ellipsis">reset<wbr>To</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape17computeAdjointsToE13position_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::computeAdjointsTo (C++ function) — Like computeAdjoints, but stops rolling back the adjoints at the given position in the tape." class="md-ellipsis">compute<wbr>Adjoints<wbr>To</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape8clearAllEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::clearAll (C++ function) — Clears the stored tape info and brings it back to its initial state." class="md-ellipsis">clear<wbr>All</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derivatives" class="md-nav__link">
+    <span class="md-ellipsis">Derivatives</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Derivatives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape10derivativeE9slot_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::derivative (C++ function) — Get a reference to the derivative associated with the slot s." class="md-ellipsis">derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="derivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape10derivativeE9slot_type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape10derivativeE9slot_type-p-s" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::derivative::s (C++ function parameter) — The slot of the derivative" class="md-ellipsis">s</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape10derivativeE9slot_type-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape10derivativeE9slot_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::derivative (C++ function) — Get a const reference to the derivative associated with the slot s." class="md-ellipsis">derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="derivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape10derivativeE9slot_type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape10derivativeE9slot_type-p-s" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::derivative::s (C++ function parameter) — The slot of the derivative" class="md-ellipsis">s</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape10derivativeE9slot_type-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape13getDerivativeE9slot_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getDerivative (C++ function) — Get the value of the derivative associated with the slot s." class="md-ellipsis">get<wbr>Derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getDerivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape13getDerivativeE9slot_type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape13getDerivativeE9slot_type-p-s" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::getDerivative::s (C++ function parameter) — The slot of the derivative" class="md-ellipsis">s</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape13getDerivativeE9slot_type-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::setDerivative (C++ function) — Set the value of the derivative associated with the slot s." class="md-ellipsis">set<wbr>Derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setDerivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-s" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::setDerivative::s (C++ function parameter) — The slot of the derivative" class="md-ellipsis">s</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-v" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::setDerivative::v (C++ function parameter) — The value to assign to the derivative" class="md-ellipsis">v</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape16clearDerivativesEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::clearDerivatives (C++ function) — Resets all stored derivatives to 0 (but leaving the recorded data in place). This can be used to calculate derivatives w.r.t. multiple outputs, as the same tape can be rolled back multiple times." class="md-ellipsis">clear<wbr>Derivatives</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">Status</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape11printStatusEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::printStatus (C++ function) — Prints the number of recorded operations, statements, and registered variables to stdout." class="md-ellipsis">print<wbr>Status</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape9getMemoryEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getMemory (C++ function) — Returns the memory in bytes that is occupied by the tape." class="md-ellipsis">get<wbr>Memory</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getMemory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape9getMemoryEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkpointing" class="md-nav__link">
+    <span class="md-ellipsis">Checkpointing</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checkpointing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape14insertCallbackE13callback_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::insertCallback (C++ function) — Insert a checkpoint callback into the tape." class="md-ellipsis">insert<wbr>Callback</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="insertCallback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape14insertCallbackE13callback_type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape14insertCallbackE13callback_type-p-cb" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::insertCallback::cb (C++ function parameter) — Pointer to a CheckpointCallback instance." class="md-ellipsis">cb</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getAndResetOutputAdjoint (C++ function) — Obtains and resets the output adjoint to 0" class="md-ellipsis">get<wbr>And<wbr>Reset<wbr>Output<wbr>Adjoint</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getAndResetOutputAdjoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-p-slot" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::getAndResetOutputAdjoint::slot (C++ function parameter) — The slot of the output variable." class="md-ellipsis">slot</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::incrementAdjoint (C++ function) — Increments the adjoint of the given slot by the value x." class="md-ellipsis">increment<wbr>Adjoint</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="incrementAdjoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-slot" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::incrementAdjoint::slot (C++ function parameter) — Slot of the input variable to increment" class="md-ellipsis">slot</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-x" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::incrementAdjoint::x (C++ function parameter) — The value to be added to the adjoint" class="md-ellipsis">x</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape18newNestedRecordingEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::newNestedRecording (C++ function) — Starts a new nested recording that can be rolled-back on its own. It must be ended with endNestedRecording()." class="md-ellipsis">new<wbr>Nested<wbr>Recording</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape18endNestedRecordingEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::endNestedRecording (C++ function) — Ends a nested recording." class="md-ellipsis">end<wbr>Nested<wbr>Recording</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkpoint-callback-memory-management" class="md-nav__link">
+    <span class="md-ellipsis">Checkpoint Callback Memory Management</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checkpoint Callback Memory Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape12pushCallbackE13callback_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::pushCallback (C++ function) — Let this tape handle the de-allocation of the given callback." class="md-ellipsis">push<wbr>Callback</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pushCallback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape12pushCallbackE13callback_type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape12pushCallbackE13callback_type-p-cb" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::pushCallback::cb (C++ function parameter) — Pointer to a dynamically-allocated checkpoint callback" class="md-ellipsis">cb</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape15getLastCallbackEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getLastCallback (C++ function) — Obtains the last CheckpointCallback object that has been pushed with pushCallback()." class="md-ellipsis">get<wbr>Last<wbr>Callback</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getLastCallback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape15getLastCallbackEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape15getLastCallbackEv-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape15getNumCallbacksEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getNumCallbacks (C++ function) — Gets the number of callback objects that have been pushed by pushCallback()" class="md-ellipsis">get<wbr>Num<wbr>Callbacks</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getNumCallbacks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape15getNumCallbacksEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape13haveCallbacksEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::haveCallbacks (C++ function) — Checks if there have been any checkpoint callbacks registered by pushCallback()" class="md-ellipsis">have<wbr>Callbacks</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="haveCallbacks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape13haveCallbacksEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape11popCallbackEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::popCallback (C++ function) — Removes the callback object that has been last pushed by pushCallback()" class="md-ellipsis">pop<wbr>Callback</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="popCallback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape11popCallbackEv-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-tape" class="md-nav__link">
+    <span class="md-ellipsis">Nested Tape</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nested Tape">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0E21ScopedNestedRecording" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="ScopedNestedRecording (C++ class) — Convenience RAII class to ensure that a call to Tape&lt;T&gt;::newNestedRecording() is always followed by the corresponding Tape&lt;T&gt;::endNestedRecording()." class="md-ellipsis">Scoped<wbr>Nested<wbr>Recording</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ScopedNestedRecording">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ScopedNestedRecording::ScopedNestedRecording (C++ function) — Start a new nested recording on the given tape and track it with this object." class="md-ellipsis">Scoped<wbr>Nested<wbr>Recording</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ScopedNestedRecording">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-p-t" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="ScopedNestedRecording::ScopedNestedRecording::t (C++ function parameter) — pointer to the associated tape" class="md-ellipsis">t</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecordingD0Ev" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ScopedNestedRecording::~ScopedNestedRecording (C++ function) — Ends the nested recording with the associated tape" class="md-ellipsis">~Scoped<wbr>Nested<wbr>Recording</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording15computeAdjointsEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ScopedNestedRecording::computeAdjoints (C++ function) — Computes adjoints within the nested recording" class="md-ellipsis">compute<wbr>Adjoints</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording16incrementAdjointEN8TapeType9slot_typeERKN8TapeType10value_typeE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ScopedNestedRecording::incrementAdjoint (C++ function) — Increment the adjoint given by the slot by the given value. See Tape&lt;T&gt;::incrementAdjoint() for details." class="md-ellipsis">increment<wbr>Adjoint</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording7getTapeEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ScopedNestedRecording::getTape (C++ function) — Returns the underlying tape for this nested recording." class="md-ellipsis">get<wbr>Tape</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getTape">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording7getTapeEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chkpt_cb.html" class="md-nav__link">
+        <span title="ref/chkpt_cb (document)" class="md-ellipsis">Checkpoint<wbr>Callback</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exceptions.html" class="md-nav__link">
+        <span title="ref/exceptions (document)" class="md-ellipsis">Exceptions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="version.html" class="md-nav__link">
+        <span title="ref/version (document)" class="md-ellipsis">Version Information</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license.html" class="md-nav__link">
+        <span title="license (document)" class="md-ellipsis">GNU Free Documentation License</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">Overview</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0E4Tape" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="Tape (C++ class) — Tape data type to record operations for adjoint computations, using the underlying scalar type T (which may in turn be an active type for higher-order derivative calculations)." class="md-ellipsis">Tape</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">Members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">Types</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape9size_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::size_type (C++ type) — Type for sizes" class="md-ellipsis">size_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape9slot_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable" class="md-ellipsis">slot_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13position_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::position_type (C++ type) — Type to represent a position in the tape (same as slot_type)" class="md-ellipsis">position_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape11active_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::active_type (C++ type) — Active data type that records on this type of tape" class="md-ellipsis">active_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape10value_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::value_type (C++ type) — The value type of the tape, i.e. T" class="md-ellipsis">value_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape9tape_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::tape_type (C++ type) — The tape&#39;s type itself - for generic code" class="md-ellipsis">tape_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13callback_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="Tape::callback_type (C++ type) — The callback type used for checkpoints" class="md-ellipsis">callback_<wbr>type</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construct-destruct-and-assign" class="md-nav__link">
+    <span class="md-ellipsis">Construct, Destruct, and Assign</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Construct, Destruct, and Assign">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape4TapeEb" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::Tape (C++ function) — Constructs a new tape, and activates it if needed." class="md-ellipsis">Tape</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tape">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape4TapeEb-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4TapeD0Ev" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::~Tape (C++ function) — Destructor." class="md-ellipsis">~Tape</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape4TapeERR4Tape" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::Tape (C++ function) — Move-constructor." class="md-ellipsis">Tape</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4TapeaSERR4Tape" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::operator= (C++ function) — Move-assign." class="md-ellipsis">operator=</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording-control" class="md-nav__link">
+    <span class="md-ellipsis">Recording Control</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recording Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape8activateEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::activate (C++ function) — Sets a global thread-local pointer to this tape instance, resulting all registerInput calls and operations of active data types depending on such inputs to get associated with this tape instance." class="md-ellipsis">activate</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="activate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape8activateEv-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape10deactivateEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::deactivate (C++ function) — Resets the global thread-local pointer to NULL, hence deactivating this tape." class="md-ellipsis">deactivate</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape8isActiveEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::isActive (C++ function) — Check if the current instance is the currently active tape." class="md-ellipsis">is<wbr>Active</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="isActive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape8isActiveEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape9getActiveEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getActive (C++ function) — Get a pointer to the currently active tape." class="md-ellipsis">get<wbr>Active</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getActive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape9getActiveEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13registerInputER11active_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerInput (C++ function) — Register the given variable with the tape and start recording dependents of it. A call to this function or its overloads is required in order to calculate adjoints." class="md-ellipsis">register<wbr>Input</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0EN4Tape14registerInputsEvRNSt6vectorI5InnerEE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerInputs (C++ function) — Convenience function to register all variables in a vector as an input." class="md-ellipsis">register<wbr>Inputs</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0EN4Tape14registerInputsEv2It2It" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerInputs (C++ function) — Convenience iterator interface to register variables in a range with the tape." class="md-ellipsis">register<wbr>Inputs</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13registerInputERNSt7complexI11active_typeEE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerInput (C++ function) — Register a complex-valued input." class="md-ellipsis">register<wbr>Input</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape14registerOutputER11active_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerOutput (C++ function) — Register the given variable as an output with the tape. A call to this function or its overloads is required in order to allow seeding derivatives (adjoints)." class="md-ellipsis">register<wbr>Output</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0EN4Tape15registerOutputsEvRNSt6vectorI5InnerEE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerOutputs (C++ function) — Convenience function to register all variables in a vector as an input." class="md-ellipsis">register<wbr>Outputs</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0EN4Tape15registerOutputsEv2It2It" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerOutputs (C++ function) — Convenience iterator interface to register variables in a range with the tape." class="md-ellipsis">register<wbr>Outputs</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape14registerOutputERNSt7complexI11active_typeEE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::registerOutput (C++ function) — Register a complex-valued output." class="md-ellipsis">register<wbr>Output</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape12newRecordingEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::newRecording (C++ function) — Start recording derivatives." class="md-ellipsis">new<wbr>Recording</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape15computeAdjointsEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::computeAdjoints (C++ function) — Propagates adjoints by interpreting the operations on the tape." class="md-ellipsis">compute<wbr>Adjoints</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="computeAdjoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape15computeAdjointsEv-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape11getPositionEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getPosition (C++ function) — Returns the current position in the tape as an opaque integer (its value is internal and should not be relied upon in client code). This posiiton can later be used in the methods clearDerivativesAfter, resetTo, and computeAdjointsTo." class="md-ellipsis">get<wbr>Position</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape21clearDerivativesAfterE13position_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::clearDerivativesAfter (C++ function) — Clears all derivatives after the given position in the tape (resets them to zero). Derivatives before this point keep their value, meaning that further calls to computeAdjoints will potentially increment these adjoints further." class="md-ellipsis">clear<wbr>Derivatives<wbr>After</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape7resetToE13position_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::resetTo (C++ function) — Resets the tape back to the given position. All statements recorded after this point will be discarded." class="md-ellipsis">reset<wbr>To</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape17computeAdjointsToE13position_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::computeAdjointsTo (C++ function) — Like computeAdjoints, but stops rolling back the adjoints at the given position in the tape." class="md-ellipsis">compute<wbr>Adjoints<wbr>To</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape8clearAllEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::clearAll (C++ function) — Clears the stored tape info and brings it back to its initial state." class="md-ellipsis">clear<wbr>All</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derivatives" class="md-nav__link">
+    <span class="md-ellipsis">Derivatives</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Derivatives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape10derivativeE9slot_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::derivative (C++ function) — Get a reference to the derivative associated with the slot s." class="md-ellipsis">derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="derivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape10derivativeE9slot_type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape10derivativeE9slot_type-p-s" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::derivative::s (C++ function parameter) — The slot of the derivative" class="md-ellipsis">s</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape10derivativeE9slot_type-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape10derivativeE9slot_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::derivative (C++ function) — Get a const reference to the derivative associated with the slot s." class="md-ellipsis">derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="derivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape10derivativeE9slot_type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape10derivativeE9slot_type-p-s" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::derivative::s (C++ function parameter) — The slot of the derivative" class="md-ellipsis">s</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape10derivativeE9slot_type-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape13getDerivativeE9slot_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getDerivative (C++ function) — Get the value of the derivative associated with the slot s." class="md-ellipsis">get<wbr>Derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getDerivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape13getDerivativeE9slot_type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape13getDerivativeE9slot_type-p-s" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::getDerivative::s (C++ function parameter) — The slot of the derivative" class="md-ellipsis">s</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape13getDerivativeE9slot_type-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::setDerivative (C++ function) — Set the value of the derivative associated with the slot s." class="md-ellipsis">set<wbr>Derivative</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setDerivative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-s" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::setDerivative::s (C++ function parameter) — The slot of the derivative" class="md-ellipsis">s</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-v" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::setDerivative::v (C++ function parameter) — The value to assign to the derivative" class="md-ellipsis">v</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape16clearDerivativesEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::clearDerivatives (C++ function) — Resets all stored derivatives to 0 (but leaving the recorded data in place). This can be used to calculate derivatives w.r.t. multiple outputs, as the same tape can be rolled back multiple times." class="md-ellipsis">clear<wbr>Derivatives</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">Status</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape11printStatusEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::printStatus (C++ function) — Prints the number of recorded operations, statements, and registered variables to stdout." class="md-ellipsis">print<wbr>Status</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape9getMemoryEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getMemory (C++ function) — Returns the memory in bytes that is occupied by the tape." class="md-ellipsis">get<wbr>Memory</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getMemory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape9getMemoryEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkpointing" class="md-nav__link">
+    <span class="md-ellipsis">Checkpointing</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checkpointing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape14insertCallbackE13callback_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::insertCallback (C++ function) — Insert a checkpoint callback into the tape." class="md-ellipsis">insert<wbr>Callback</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="insertCallback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape14insertCallbackE13callback_type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape14insertCallbackE13callback_type-p-cb" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::insertCallback::cb (C++ function parameter) — Pointer to a CheckpointCallback instance." class="md-ellipsis">cb</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getAndResetOutputAdjoint (C++ function) — Obtains and resets the output adjoint to 0" class="md-ellipsis">get<wbr>And<wbr>Reset<wbr>Output<wbr>Adjoint</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getAndResetOutputAdjoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-p-slot" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::getAndResetOutputAdjoint::slot (C++ function parameter) — The slot of the output variable." class="md-ellipsis">slot</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::incrementAdjoint (C++ function) — Increments the adjoint of the given slot by the value x." class="md-ellipsis">increment<wbr>Adjoint</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="incrementAdjoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-slot" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::incrementAdjoint::slot (C++ function parameter) — Slot of the input variable to increment" class="md-ellipsis">slot</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-x" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::incrementAdjoint::x (C++ function parameter) — The value to be added to the adjoint" class="md-ellipsis">x</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape18newNestedRecordingEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::newNestedRecording (C++ function) — Starts a new nested recording that can be rolled-back on its own. It must be ended with endNestedRecording()." class="md-ellipsis">new<wbr>Nested<wbr>Recording</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape18endNestedRecordingEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::endNestedRecording (C++ function) — Ends a nested recording." class="md-ellipsis">end<wbr>Nested<wbr>Recording</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkpoint-callback-memory-management" class="md-nav__link">
+    <span class="md-ellipsis">Checkpoint Callback Memory Management</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checkpoint Callback Memory Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape12pushCallbackE13callback_type" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::pushCallback (C++ function) — Let this tape handle the de-allocation of the given callback." class="md-ellipsis">push<wbr>Callback</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pushCallback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape12pushCallbackE13callback_type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape12pushCallbackE13callback_type-p-cb" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Tape::pushCallback::cb (C++ function parameter) — Pointer to a dynamically-allocated checkpoint callback" class="md-ellipsis">cb</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape15getLastCallbackEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getLastCallback (C++ function) — Obtains the last CheckpointCallback object that has been pushed with pushCallback()." class="md-ellipsis">get<wbr>Last<wbr>Callback</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getLastCallback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape15getLastCallbackEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape15getLastCallbackEv-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape15getNumCallbacksEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::getNumCallbacks (C++ function) — Gets the number of callback objects that have been pushed by pushCallback()" class="md-ellipsis">get<wbr>Num<wbr>Callbacks</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getNumCallbacks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape15getNumCallbacksEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape13haveCallbacksEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::haveCallbacks (C++ function) — Checks if there have been any checkpoint callbacks registered by pushCallback()" class="md-ellipsis">have<wbr>Callbacks</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="haveCallbacks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4NK4Tape13haveCallbacksEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape11popCallbackEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Tape::popCallback (C++ function) — Removes the callback object that has been last pushed by pushCallback()" class="md-ellipsis">pop<wbr>Callback</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="popCallback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N4Tape11popCallbackEv-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-tape" class="md-nav__link">
+    <span class="md-ellipsis">Nested Tape</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nested Tape">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0E21ScopedNestedRecording" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="ScopedNestedRecording (C++ class) — Convenience RAII class to ensure that a call to Tape&lt;T&gt;::newNestedRecording() is always followed by the corresponding Tape&lt;T&gt;::endNestedRecording()." class="md-ellipsis">Scoped<wbr>Nested<wbr>Recording</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ScopedNestedRecording">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ScopedNestedRecording::ScopedNestedRecording (C++ function) — Start a new nested recording on the given tape and track it with this object." class="md-ellipsis">Scoped<wbr>Nested<wbr>Recording</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ScopedNestedRecording">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-p-t" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="ScopedNestedRecording::ScopedNestedRecording::t (C++ function parameter) — pointer to the associated tape" class="md-ellipsis">t</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecordingD0Ev" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ScopedNestedRecording::~ScopedNestedRecording (C++ function) — Ends the nested recording with the associated tape" class="md-ellipsis">~Scoped<wbr>Nested<wbr>Recording</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording15computeAdjointsEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ScopedNestedRecording::computeAdjoints (C++ function) — Computes adjoints within the nested recording" class="md-ellipsis">compute<wbr>Adjoints</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording16incrementAdjointEN8TapeType9slot_typeERKN8TapeType10value_typeE" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ScopedNestedRecording::incrementAdjoint (C++ function) — Increment the adjoint given by the slot by the given value. See Tape&lt;T&gt;::incrementAdjoint() for details." class="md-ellipsis">increment<wbr>Adjoint</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording7getTapeEv" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="ScopedNestedRecording::getTape (C++ function) — Returns the underlying tape for this nested recording." class="md-ellipsis">get<wbr>Tape</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getTape">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N21ScopedNestedRecording7getTapeEv-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset" role="main">
+                
+
+
+  <h1 id="tape"><span id="ref-tape"></span>Tape<a class="headerlink" href="#tape" title="Permalink to this headline">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp class objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4I0E4Tape">
+<span id="_CPPv3I0E4Tape"></span><span id="_CPPv2I0E4Tape"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a></span></span><span class="p">&gt;</span><span class="k"><br>class</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">Tape</span></span><a class="headerlink" href="#_CPPv4I0E4Tape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tape data type to record operations for adjoint computations,
+using the underlying scalar type <cite>T</cite> (which may in turn be an active type
+for higher-order derivative calculations).</p>
+<p>Typical usage:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">Tape</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tape</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// initialize independent variables</span>
+<span class="n">AReal</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12.1</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// register independents with the tape</span>
+<span class="n">tape</span><span class="p">.</span><span class="n">registerInput</span><span class="p">(</span><span class="n">x1</span><span class="p">);</span><span class="w"></span>
+<span class="n">tape</span><span class="p">.</span><span class="n">registerInput</span><span class="p">(</span><span class="n">x2</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// start recording derivatives on tape</span>
+<span class="n">tape</span><span class="p">.</span><span class="n">newRecording</span><span class="p">();</span><span class="w"></span>
+<span class="n">AReal</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x1</span><span class="o">*</span><span class="n">x2</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// register output and set adjoint values</span>
+<span class="n">tape</span><span class="p">.</span><span class="n">registerOutput</span><span class="p">(</span><span class="n">y</span><span class="p">);</span><span class="w"></span>
+<span class="n">derivative</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// compute the adjoints of the independent variables</span>
+<span class="n">tape</span><span class="p">.</span><span class="n">computeAdjoints</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// output/use results</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;y = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;dy/dx1 = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">derivative</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;dy/dx2 = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">derivative</span><span class="p">(</span><span class="n">x2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>For usability, it is recommended to use the type definitions in
+<a class="reference internal" href="interface.html#ref-interface"><span class="std std-ref">AD Mode Interface</span></a> instead of declaring this tape type directly.</p>
+</dd></dl>
+
+<h2 id="members">Members<a class="headerlink" href="#members" title="Permalink to this headline">¶</a></h2>
+<h3 id="types">Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h3>
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape9size_typeE">
+<span id="_CPPv3N4Tape9size_typeE"></span><span id="_CPPv2N4Tape9size_typeE"></span><span id="Tape::size_type"></span><span class="k">type</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">size_type</span></span><a class="headerlink" href="#_CPPv4N4Tape9size_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type for sizes</p>
+</dd></dl>
+
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape9slot_typeE">
+<span id="_CPPv3N4Tape9slot_typeE"></span><span id="_CPPv2N4Tape9slot_typeE"></span><span id="Tape::slot_type"></span><span class="k">type</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">slot_type</span></span><a class="headerlink" href="#_CPPv4N4Tape9slot_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type used to represent a slot of a specific active variable</p>
+</dd></dl>
+
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape13position_typeE">
+<span id="_CPPv3N4Tape13position_typeE"></span><span id="_CPPv2N4Tape13position_typeE"></span><span id="Tape::position_type"></span><span class="k">type</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">position_type</span></span><a class="headerlink" href="#_CPPv4N4Tape13position_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type to represent a position in the tape (same as <cite>slot_type</cite>)</p>
+</dd></dl>
+
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape11active_typeE">
+<span id="_CPPv3N4Tape11active_typeE"></span><span id="_CPPv2N4Tape11active_typeE"></span><span id="Tape::active_type"></span><span class="k">typedef</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="areal.html#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><span class="n">AReal</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">&gt;</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">active_type</span></span><a class="headerlink" href="#_CPPv4N4Tape11active_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Active data type that records on this type of tape</p>
+</dd></dl>
+
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape10value_typeE">
+<span id="_CPPv3N4Tape10value_typeE"></span><span id="_CPPv2N4Tape10value_typeE"></span><span id="Tape::value_type"></span><span class="k">typedef</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">value_type</span></span><a class="headerlink" href="#_CPPv4N4Tape10value_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value type of the tape, i.e. <code class="docutils literal notranslate"><span class="pre">T</span></code></p>
+</dd></dl>
+
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape9tape_typeE">
+<span id="_CPPv3N4Tape9tape_typeE"></span><span id="_CPPv2N4Tape9tape_typeE"></span><span id="Tape::tape_type"></span><span class="k">typedef</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape (C++ class) — Tape data type to record operations for adjoint computations, using the underlying scalar type T (which may in turn be an active type for higher-order derivative calculations)."><span class="n">Tape</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">&gt;</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">tape_type</span></span><a class="headerlink" href="#_CPPv4N4Tape9tape_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tape’s type itself - for generic code</p>
+</dd></dl>
+
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape13callback_typeE">
+<span id="_CPPv3N4Tape13callback_typeE"></span><span id="_CPPv2N4Tape13callback_typeE"></span><span id="Tape::callback_type"></span><span class="k">typedef</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="chkpt_cb.html#_CPPv4I0E18CheckpointCallback" title="CheckpointCallback (C++ class) — Base class of any checkpoint callbacks associated with the given TapeType."><span class="n">CheckpointCallback</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4N4Tape9tape_typeE" title="Tape::tape_type (C++ type) — The tape's type itself - for generic code"><span class="n">tape_type</span></a><span class="p">&gt;</span><span class="w">&nbsp;</span><span class="p">*</span><span class="sig-name descname"><span class="n">callback_type</span></span><a class="headerlink" href="#_CPPv4N4Tape13callback_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The callback type used for checkpoints</p>
+</dd></dl>
+
+<h3 id="construct-destruct-and-assign">Construct, Destruct, and Assign<a class="headerlink" href="#construct-destruct-and-assign" title="Permalink to this headline">¶</a></h3>
+<p>A tape can be created and moved, but it is not copyable.</p>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape4TapeEb">
+<span id="_CPPv3N4Tape4TapeEb"></span><span id="_CPPv2N4Tape4TapeEb"></span><span id="Tape::Tape__b"></span><span><span class="k">explicit</span></span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">Tape</span></span><span><span class="p">(</span><span><span class="kt">bool</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape4TapeEb" title="Tape::Tape::activate (C++ function parameter)"><span class="n sig-param">activate</span></a><span class="w">&nbsp;</span><span class="p">=</span><span class="w">&nbsp;</span><span class="k">true</span></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape4TapeEb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a new tape, and activates it if needed.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">active</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, a global thread-local pointer is
+set to this constructed instance, resulting all operations and instantiations
+of active data types that follow
+to get automatically associated with this tape instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N4Tape4TapeEb-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape4TapeEb-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv417TapeAlreadyActive" title="TapeAlreadyActive (C++ class) — Exception that is thrown when a tape is attempted to be activated while another one is already active for the current thread."><span class="n">TapeAlreadyActive</span></a></code></span> – if <cite>activate</cite> is true and another tape is already active
+for the current thread</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4TapeD0Ev">
+<span id="_CPPv3N4TapeD0Ev"></span><span id="_CPPv2N4TapeD0Ev"></span><span id="Tape::~Tape"></span><span class="sig-name descname"><span class="n">~Tape</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4TapeD0Ev" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destructor.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape4TapeERR4Tape">
+<span id="_CPPv3N4Tape4TapeERR4Tape"></span><span id="_CPPv2N4Tape4TapeERR4Tape"></span><span id="Tape::Tape__TapeRR"></span><span class="sig-name descname"><span class="n">Tape</span></span><span><span class="p">(</span><span><a class="reference internal" href="#_CPPv4N4Tape4TapeERR4Tape" title="Tape::Tape (C++ function) — Move-constructor."><span class="n">Tape</span></a><span class="p">&nbsp;&amp;</span><span class="p">&amp;</span></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape4TapeERR4Tape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move-constructor.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4TapeaSERR4Tape">
+<span id="_CPPv3N4TapeaSERR4Tape"></span><span id="_CPPv2N4TapeaSERR4Tape"></span><span id="Tape::assign-operator__TapeRR"></span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape (C++ class) — Tape data type to record operations for adjoint computations, using the underlying scalar type T (which may in turn be an active type for higher-order derivative calculations)."><span class="n">Tape</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="sig-name descname"><span class="k">operator</span><span class="o">=</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape (C++ class) — Tape data type to record operations for adjoint computations, using the underlying scalar type T (which may in turn be an active type for higher-order derivative calculations)."><span class="n">Tape</span></a><span class="p">&nbsp;&amp;</span><span class="p">&amp;</span></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4TapeaSERR4Tape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move-assign.</p>
+</dd></dl>
+
+<h3 id="recording-control">Recording Control<a class="headerlink" href="#recording-control" title="Permalink to this headline">¶</a></h3>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape8activateEv">
+<span id="_CPPv3N4Tape8activateEv"></span><span id="_CPPv2N4Tape8activateEv"></span><span id="Tape::activate"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">activate</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape8activateEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a global thread-local pointer to this tape instance,
+resulting all <code class="docutils literal notranslate"><span class="pre">registerInput</span></code> calls and operations of
+active data types depending on such inputs to get associated
+with this tape instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N4Tape8activateEv-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape8activateEv-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv417TapeAlreadyActive" title="TapeAlreadyActive (C++ class) — Exception that is thrown when a tape is attempted to be activated while another one is already active for the current thread."><span class="n">TapeAlreadyActive</span></a></code></span> – if another tape is already active for the current thread</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape10deactivateEv">
+<span id="_CPPv3N4Tape10deactivateEv"></span><span id="_CPPv2N4Tape10deactivateEv"></span><span id="Tape::deactivate"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">deactivate</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape10deactivateEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the global thread-local pointer to NULL, hence deactivating this
+tape.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4NK4Tape8isActiveEv">
+<span id="_CPPv3NK4Tape8isActiveEv"></span><span id="_CPPv2NK4Tape8isActiveEv"></span><span id="Tape::isActiveC"></span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">isActive</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK4Tape8isActiveEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the current instance is the currently active tape.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4NK4Tape8isActiveEv-returns">Returns<a class="headerlink" href="#_CPPv4NK4Tape8isActiveEv-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the this instance is active</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape9getActiveEv">
+<span id="_CPPv3N4Tape9getActiveEv"></span><span id="_CPPv2N4Tape9getActiveEv"></span><span id="Tape::getActive"></span><span class="k">static</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape (C++ class) — Tape data type to record operations for adjoint computations, using the underlying scalar type T (which may in turn be an active type for higher-order derivative calculations)."><span class="n">Tape</span></a><span class="w">&nbsp;</span><span class="p">*</span><span class="sig-name descname"><span class="n">getActive</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape9getActiveEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a pointer to the currently active tape.</p>
+<p>Note that this is a thread-local pointer - calling this function in different
+threads gives different results.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N4Tape9getActiveEv-returns">Returns<a class="headerlink" href="#_CPPv4N4Tape9getActiveEv-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p>Pointer to the currently-active thread-local tape - or <code class="docutils literal notranslate"><span class="pre">nullptr</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape13registerInputER11active_type">
+<span id="_CPPv3N4Tape13registerInputER11active_type"></span><span id="_CPPv2N4Tape13registerInputER11active_type"></span><span id="Tape::registerInput__active_typeR"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">registerInput</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape11active_typeE" title="Tape::active_type (C++ type) — Active data type that records on this type of tape"><span class="n">active_type</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape13registerInputER11active_type" title="Tape::registerInput::inp (C++ function parameter)"><span class="n sig-param">inp</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape13registerInputER11active_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register the given variable with the tape and start recording dependents of it.
+A call to this function or its overloads is required in order to calculate adjoints.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4I0EN4Tape14registerInputsEvRNSt6vectorI5InnerEE">
+<span id="_CPPv3I0EN4Tape14registerInputsERNSt6vectorI5InnerEE"></span><span id="_CPPv2I0EN4Tape14registerInputsERNSt6vectorI5InnerEE"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0EN4Tape14registerInputsEvRNSt6vectorI5InnerEE" title="Tape::registerInputs::Inner (C++ type template parameter)"><span class="n">Inner</span></a></span></span><span class="p">&gt;</span><span class="kt"><br>void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">registerInputs</span></span><span><span class="p">(</span><span><span class="n">std</span><span class="p">::</span><a class="desctype reference external" href="https://en.cppreference.com/w/cpp/container/vector" title="std::vector (C++ standard class)"><span class="n">vector</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4I0EN4Tape14registerInputsEvRNSt6vectorI5InnerEE" title="Tape::registerInputs::Inner (C++ type template parameter)"><span class="n">Inner</span></a><span class="p">&gt;</span><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4I0EN4Tape14registerInputsEvRNSt6vectorI5InnerEE" title="Tape::registerInputs::v (C++ function parameter)"><span class="n sig-param">v</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4I0EN4Tape14registerInputsEvRNSt6vectorI5InnerEE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience function to register all variables in a vector as an input.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4I0EN4Tape14registerInputsEv2It2It">
+<span id="_CPPv3I0EN4Tape14registerInputsE2It2It"></span><span id="_CPPv2I0EN4Tape14registerInputsE2It2It"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0EN4Tape14registerInputsEv2It2It" title="Tape::registerInputs::It (C++ type template parameter)"><span class="n">It</span></a></span></span><span class="p">&gt;</span><span class="kt"><br>void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">registerInputs</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4I0EN4Tape14registerInputsEv2It2It" title="Tape::registerInputs::It (C++ type template parameter)"><span class="n">It</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4I0EN4Tape14registerInputsEv2It2It" title="Tape::registerInputs::first (C++ function parameter)"><span class="n sig-param">first</span></a></span><span class="p">,</span><span><a class="desctype reference internal" href="#_CPPv4I0EN4Tape14registerInputsEv2It2It" title="Tape::registerInputs::It (C++ type template parameter)"><span class="n">&nbsp;It</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4I0EN4Tape14registerInputsEv2It2It" title="Tape::registerInputs::last (C++ function parameter)"><span class="n sig-param">last</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4I0EN4Tape14registerInputsEv2It2It" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience iterator interface to register variables in a range with the tape.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape13registerInputERNSt7complexI11active_typeEE">
+<span id="_CPPv3N4Tape13registerInputERNSt7complexI11active_typeEE"></span><span id="_CPPv2N4Tape13registerInputERNSt7complexI11active_typeEE"></span><span id="Tape::registerInput__std::complex:active_type:R"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">registerInput</span></span><span><span class="p">(</span><span><span class="n">std</span><span class="p">::</span><a class="desctype reference external" href="https://en.cppreference.com/w/cpp/numeric/complex" title="std::complex (C++ standard class)"><span class="n">complex</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4N4Tape11active_typeE" title="Tape::active_type (C++ type) — Active data type that records on this type of tape"><span class="n">active_type</span></a><span class="p">&gt;</span><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape13registerInputERNSt7complexI11active_typeEE" title="Tape::registerInput::inp (C++ function parameter)"><span class="n sig-param">inp</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape13registerInputERNSt7complexI11active_typeEE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a complex-valued input.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape14registerOutputER11active_type">
+<span id="_CPPv3N4Tape14registerOutputER11active_type"></span><span id="_CPPv2N4Tape14registerOutputER11active_type"></span><span id="Tape::registerOutput__active_typeR"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">registerOutput</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape11active_typeE" title="Tape::active_type (C++ type) — Active data type that records on this type of tape"><span class="n">active_type</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape14registerOutputER11active_type" title="Tape::registerOutput::inp (C++ function parameter)"><span class="n sig-param">inp</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape14registerOutputER11active_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register the given variable as an output with the tape.
+A call to this function or its overloads is required in order to allow seeding derivatives (adjoints).</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4I0EN4Tape15registerOutputsEvRNSt6vectorI5InnerEE">
+<span id="_CPPv3I0EN4Tape15registerOutputsERNSt6vectorI5InnerEE"></span><span id="_CPPv2I0EN4Tape15registerOutputsERNSt6vectorI5InnerEE"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0EN4Tape15registerOutputsEvRNSt6vectorI5InnerEE" title="Tape::registerOutputs::Inner (C++ type template parameter)"><span class="n">Inner</span></a></span></span><span class="p">&gt;</span><span class="kt"><br>void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">registerOutputs</span></span><span><span class="p">(</span><span><span class="n">std</span><span class="p">::</span><a class="desctype reference external" href="https://en.cppreference.com/w/cpp/container/vector" title="std::vector (C++ standard class)"><span class="n">vector</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4I0EN4Tape15registerOutputsEvRNSt6vectorI5InnerEE" title="Tape::registerOutputs::Inner (C++ type template parameter)"><span class="n">Inner</span></a><span class="p">&gt;</span><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4I0EN4Tape15registerOutputsEvRNSt6vectorI5InnerEE" title="Tape::registerOutputs::v (C++ function parameter)"><span class="n sig-param">v</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4I0EN4Tape15registerOutputsEvRNSt6vectorI5InnerEE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience function to register all variables in a vector as an input.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4I0EN4Tape15registerOutputsEv2It2It">
+<span id="_CPPv3I0EN4Tape15registerOutputsE2It2It"></span><span id="_CPPv2I0EN4Tape15registerOutputsE2It2It"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0EN4Tape15registerOutputsEv2It2It" title="Tape::registerOutputs::It (C++ type template parameter)"><span class="n">It</span></a></span></span><span class="p">&gt;</span><span class="kt"><br>void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">registerOutputs</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4I0EN4Tape15registerOutputsEv2It2It" title="Tape::registerOutputs::It (C++ type template parameter)"><span class="n">It</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4I0EN4Tape15registerOutputsEv2It2It" title="Tape::registerOutputs::first (C++ function parameter)"><span class="n sig-param">first</span></a></span><span class="p">,</span><span><a class="desctype reference internal" href="#_CPPv4I0EN4Tape15registerOutputsEv2It2It" title="Tape::registerOutputs::It (C++ type template parameter)"><span class="n">&nbsp;It</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4I0EN4Tape15registerOutputsEv2It2It" title="Tape::registerOutputs::last (C++ function parameter)"><span class="n sig-param">last</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4I0EN4Tape15registerOutputsEv2It2It" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience iterator interface to register variables in a range with the tape.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape14registerOutputERNSt7complexI11active_typeEE">
+<span id="_CPPv3N4Tape14registerOutputERNSt7complexI11active_typeEE"></span><span id="_CPPv2N4Tape14registerOutputERNSt7complexI11active_typeEE"></span><span id="Tape::registerOutput__std::complex:active_type:R"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">registerOutput</span></span><span><span class="p">(</span><span><span class="n">std</span><span class="p">::</span><a class="desctype reference external" href="https://en.cppreference.com/w/cpp/numeric/complex" title="std::complex (C++ standard class)"><span class="n">complex</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4N4Tape11active_typeE" title="Tape::active_type (C++ type) — Active data type that records on this type of tape"><span class="n">active_type</span></a><span class="p">&gt;</span><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape14registerOutputERNSt7complexI11active_typeEE" title="Tape::registerOutput::inp (C++ function parameter)"><span class="n sig-param">inp</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape14registerOutputERNSt7complexI11active_typeEE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a complex-valued output.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape12newRecordingEv">
+<span id="_CPPv3N4Tape12newRecordingEv"></span><span id="_CPPv2N4Tape12newRecordingEv"></span><span id="Tape::newRecording"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">newRecording</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape12newRecordingEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start recording derivatives.</p>
+<p>This function should be called <em>after</em> the independent variables are
+initialized and registered,
+as the <a class="reference internal" href="#_CPPv4N4Tape15computeAdjointsEv" title="Tape::computeAdjoints (C++ function) — Propagates adjoints by interpreting the operations on the tape."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">computeAdjoints()</span></code></a> method will roll back the adjoints until
+the point where <a class="reference internal" href="#_CPPv4N4Tape12newRecordingEv" title="Tape::newRecording (C++ function) — Start recording derivatives."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">newRecording()</span></code></a> was called.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape15computeAdjointsEv">
+<span id="_CPPv3N4Tape15computeAdjointsEv"></span><span id="_CPPv2N4Tape15computeAdjointsEv"></span><span id="Tape::computeAdjoints"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">computeAdjoints</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape15computeAdjointsEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Propagates adjoints by interpreting the operations on the tape.</p>
+<p>This function should be called after the output derivatives (adjoints)
+have been initialized to a non-zero value.</p>
+<p>After this call, the derivatives of the independent variables are set and
+can be obtained.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N4Tape15computeAdjointsEv-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape15computeAdjointsEv-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv425DerivativesNotInitialized" title="DerivativesNotInitialized (C++ class) — Exception thrown if adjoints are attempted to be computed without setting at least one derivative first."><span class="n">DerivativesNotInitialized</span></a></code></span> – If called without setting any derivative first.
+Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape11getPositionEv">
+<span id="_CPPv3N4Tape11getPositionEv"></span><span id="_CPPv2N4Tape11getPositionEv"></span><span id="Tape::getPosition"></span><a class="desctype reference internal" href="#_CPPv4N4Tape13position_typeE" title="Tape::position_type (C++ type) — Type to represent a position in the tape (same as slot_type)"><span class="n">position_type</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">getPosition</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape11getPositionEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current position in the tape as an opaque integer (its value is
+internal and should not be relied upon in client code).
+This posiiton can later be used in the methods <code class="docutils literal notranslate"><span class="pre">clearDerivativesAfter</span></code>,
+<code class="docutils literal notranslate"><span class="pre">resetTo</span></code>, and <code class="docutils literal notranslate"><span class="pre">computeAdjointsTo</span></code>.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape21clearDerivativesAfterE13position_type">
+<span id="_CPPv3N4Tape21clearDerivativesAfterE13position_type"></span><span id="_CPPv2N4Tape21clearDerivativesAfterE13position_type"></span><span id="Tape::clearDerivativesAfter__position_type"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">clearDerivativesAfter</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape13position_typeE" title="Tape::position_type (C++ type) — Type to represent a position in the tape (same as slot_type)"><span class="n">position_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape21clearDerivativesAfterE13position_type" title="Tape::clearDerivativesAfter::pos (C++ function parameter)"><span class="n sig-param">pos</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape21clearDerivativesAfterE13position_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears all derivatives after the given position in the tape (resets them to zero).
+Derivatives before this point keep their value, meaning that further calls
+to <code class="docutils literal notranslate"><span class="pre">computeAdjoints</span></code> will potentially increment these adjoints further.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape7resetToE13position_type">
+<span id="_CPPv3N4Tape7resetToE13position_type"></span><span id="_CPPv2N4Tape7resetToE13position_type"></span><span id="Tape::resetTo__position_type"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">resetTo</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape13position_typeE" title="Tape::position_type (C++ type) — Type to represent a position in the tape (same as slot_type)"><span class="n">position_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape7resetToE13position_type" title="Tape::resetTo::pos (C++ function parameter)"><span class="n sig-param">pos</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape7resetToE13position_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the tape back to the given position. All statements recorded after this point
+will be discarded.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If variables registered after the given postion (are dependent variables computed
+after this position) are used again after a call to <code class="docutils literal notranslate"><span class="pre">resetTo</span></code>,
+the behaviour is undefined, as their slot in the tape is no longer valid.</p>
+</div>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape17computeAdjointsToE13position_type">
+<span id="_CPPv3N4Tape17computeAdjointsToE13position_type"></span><span id="_CPPv2N4Tape17computeAdjointsToE13position_type"></span><span id="Tape::computeAdjointsTo__position_type"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">computeAdjointsTo</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape13position_typeE" title="Tape::position_type (C++ type) — Type to represent a position in the tape (same as slot_type)"><span class="n">position_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape17computeAdjointsToE13position_type" title="Tape::computeAdjointsTo::pos (C++ function parameter)"><span class="n sig-param">pos</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape17computeAdjointsToE13position_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like <code class="docutils literal notranslate"><span class="pre">computeAdjoints</span></code>, but stops rolling back the adjoints at the given position
+in the tape.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape8clearAllEv">
+<span id="_CPPv3N4Tape8clearAllEv"></span><span id="_CPPv2N4Tape8clearAllEv"></span><span id="Tape::clearAll"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">clearAll</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape8clearAllEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the stored tape info and brings it back to its initial state.</p>
+<p>While this clears the content, it leaves allocated memory untouched.
+This may be a performance gain compared to repeated construction/destruction
+of tapes of the same time, for example in a path-wise AD Monte-Carlo.</p>
+</dd></dl>
+
+<h3 id="derivatives">Derivatives<a class="headerlink" href="#derivatives" title="Permalink to this headline">¶</a></h3>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape10derivativeE9slot_type">
+<span id="_CPPv3N4Tape10derivativeE9slot_type"></span><span id="_CPPv2N4Tape10derivativeE9slot_type"></span><span id="Tape::derivative__slot_type"></span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="sig-name descname"><span class="n">derivative</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape10derivativeE9slot_type-p-s" title="Tape::derivative::s (C++ function parameter) — The slot of the derivative"><span class="n sig-param">s</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape10derivativeE9slot_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a reference to the derivative associated with the slot <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N4Tape10derivativeE9slot_type-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape10derivativeE9slot_type-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N4Tape10derivativeE9slot_type-p-s"><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">   </span><span class="n sig-param sig-name">s</span><a class="headerlink" href="#_CPPv4N4Tape10derivativeE9slot_type-p-s" title="Permalink to this definition">¶</a></dt><dd><p>The slot of the derivative</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4N4Tape10derivativeE9slot_type-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape10derivativeE9slot_type-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – if the given slot is not associated with a stored derivative. (Only
+thrown in debug mode,
+otherwise the behaviour is undefined in this case)
+Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4NK4Tape10derivativeE9slot_type">
+<span id="_CPPv3NK4Tape10derivativeE9slot_type"></span><span id="_CPPv2NK4Tape10derivativeE9slot_type"></span><span id="Tape::derivative__slot_typeC"></span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="sig-name descname"><span class="n">derivative</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4NK4Tape10derivativeE9slot_type-p-s" title="Tape::derivative::s (C++ function parameter) — The slot of the derivative"><span class="n sig-param">s</span></a></span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK4Tape10derivativeE9slot_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a const reference to the derivative associated with the slot <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4NK4Tape10derivativeE9slot_type-parameters">Parameters<a class="headerlink" href="#_CPPv4NK4Tape10derivativeE9slot_type-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4NK4Tape10derivativeE9slot_type-p-s"><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">   </span><span class="n sig-param sig-name">s</span><a class="headerlink" href="#_CPPv4NK4Tape10derivativeE9slot_type-p-s" title="Permalink to this definition">¶</a></dt><dd><p>The slot of the derivative</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4NK4Tape10derivativeE9slot_type-throws">Throws<a class="headerlink" href="#_CPPv4NK4Tape10derivativeE9slot_type-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – if the given slot is not associated with a stored derivative. (Only
+thrown in debug mode,
+otherwise the behaviour is undefined in this case)
+Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4NK4Tape13getDerivativeE9slot_type">
+<span id="_CPPv3NK4Tape13getDerivativeE9slot_type"></span><span id="_CPPv2NK4Tape13getDerivativeE9slot_type"></span><span id="Tape::getDerivative__slot_typeC"></span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">getDerivative</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4NK4Tape13getDerivativeE9slot_type-p-s" title="Tape::getDerivative::s (C++ function parameter) — The slot of the derivative"><span class="n sig-param">s</span></a></span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK4Tape13getDerivativeE9slot_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the derivative associated with the slot <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4NK4Tape13getDerivativeE9slot_type-parameters">Parameters<a class="headerlink" href="#_CPPv4NK4Tape13getDerivativeE9slot_type-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4NK4Tape13getDerivativeE9slot_type-p-s"><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">   </span><span class="n sig-param sig-name">s</span><a class="headerlink" href="#_CPPv4NK4Tape13getDerivativeE9slot_type-p-s" title="Permalink to this definition">¶</a></dt><dd><p>The slot of the derivative</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4NK4Tape13getDerivativeE9slot_type-throws">Throws<a class="headerlink" href="#_CPPv4NK4Tape13getDerivativeE9slot_type-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – if the given slot is not associated with a stored derivative. (Only
+thrown in debug mode,
+otherwise the behaviour is undefined in this case)
+Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape13setDerivativeE9slot_typeRK1T">
+<span id="_CPPv3N4Tape13setDerivativeE9slot_typeRK1T"></span><span id="_CPPv2N4Tape13setDerivativeE9slot_typeRK1T"></span><span id="Tape::setDerivative__slot_type.TCR"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">setDerivative</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-s" title="Tape::setDerivative::s (C++ function parameter) — The slot of the derivative"><span class="n sig-param">s</span></a></span><span class="p">,</span><span><span class="k">&nbsp;const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-v" title="Tape::setDerivative::v (C++ function parameter) — The value to assign to the derivative"><span class="n sig-param">v</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the derivative associated with the slot <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-s"><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">   </span><span class="n sig-param sig-name">s</span><a class="headerlink" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-s" title="Permalink to this definition">¶</a></dt><dd><p>The slot of the derivative</p>
+</dd>
+<dt id="_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-v"><span class="k">const</span><span class="w">   </span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">   </span><span class="p">&amp;</span><span class="n sig-param sig-name">v</span><a class="headerlink" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-v" title="Permalink to this definition">¶</a></dt><dd><p>The value to assign to the derivative</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – if the given slot is not associated with a stored derivative. (Only
+thrown in debug mode,
+otherwise the behaviour is undefined in this case)
+Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape16clearDerivativesEv">
+<span id="_CPPv3N4Tape16clearDerivativesEv"></span><span id="_CPPv2N4Tape16clearDerivativesEv"></span><span id="Tape::clearDerivatives"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">clearDerivatives</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape16clearDerivativesEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets all stored derivatives to 0 (but leaving the recorded data in place).
+This can be used to calculate derivatives w.r.t. multiple outputs,
+as the same tape can be rolled back multiple times.</p>
+</dd></dl>
+
+<h3 id="status">Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h3>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4NK4Tape11printStatusEv">
+<span id="_CPPv3NK4Tape11printStatusEv"></span><span id="_CPPv2NK4Tape11printStatusEv"></span><span id="Tape::printStatusC"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">printStatus</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK4Tape11printStatusEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints the number of recorded operations, statements, and registered variables
+to stdout.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4NK4Tape9getMemoryEv">
+<span id="_CPPv3NK4Tape9getMemoryEv"></span><span id="_CPPv2NK4Tape9getMemoryEv"></span><span id="Tape::getMemoryC"></span><span class="n">std</span><span class="p">::</span><a class="desctype reference external" href="https://en.cppreference.com/w/cpp/types/size_t" title="std::size_t (C++ standard type alias)"><span class="n">size_t</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">getMemory</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK4Tape9getMemoryEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the memory in bytes that is occupied by the tape.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4NK4Tape9getMemoryEv-returns">Returns<a class="headerlink" href="#_CPPv4NK4Tape9getMemoryEv-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p>Memory in bytes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<h3 id="checkpointing">Checkpointing<a class="headerlink" href="#checkpointing" title="Permalink to this headline">¶</a></h3>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape14insertCallbackE13callback_type">
+<span id="_CPPv3N4Tape14insertCallbackE13callback_type"></span><span id="_CPPv2N4Tape14insertCallbackE13callback_type"></span><span id="Tape::insertCallback__callback_type"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">insertCallback</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape13callback_typeE" title="Tape::callback_type (C++ type) — The callback type used for checkpoints"><span class="n">callback_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape14insertCallbackE13callback_type-p-cb" title="Tape::insertCallback::cb (C++ function parameter) — Pointer to a CheckpointCallback instance."><span class="n sig-param">cb</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape14insertCallbackE13callback_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a checkpoint callback into the tape.</p>
+<p>During computing adjoints (<a class="reference internal" href="#_CPPv4N4Tape15computeAdjointsEv" title="Tape::computeAdjoints (C++ function) — Propagates adjoints by interpreting the operations on the tape."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">computeAdjoints()</span></code></a>),
+this callback is called when the tape reaches the current position,
+allowing users to implement their own adjoint computation.</p>
+<p>Note that the parameter is provided by pointer, but the tape does not take
+ownership.
+It is the responsibility of the user to free the memory for the callback object.
+Alternatively, the <a class="reference internal" href="#ref-tape-ckpt-mem"><span class="std std-ref">Checkpoint Callback Memory Management</span></a> API can be used to have the
+tape destroy the callbacks automatically.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N4Tape14insertCallbackE13callback_type-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape14insertCallbackE13callback_type-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N4Tape14insertCallbackE13callback_type-p-cb"><a class="desctype reference internal" href="#_CPPv4N4Tape13callback_typeE" title="Tape::callback_type (C++ type) — The callback type used for checkpoints"><span class="n">callback_type</span></a><span class="w">   </span><span class="n sig-param sig-name">cb</span><a class="headerlink" href="#_CPPv4N4Tape14insertCallbackE13callback_type-p-cb" title="Permalink to this definition">¶</a></dt><dd><p>Pointer to a <a class="desctype reference internal" href="chkpt_cb.html#_CPPv4I0E18CheckpointCallback" title="CheckpointCallback (C++ class) — Base class of any checkpoint callbacks associated with the given TapeType."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">CheckpointCallback</span></code></a> instance.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type">
+<span id="_CPPv3N4Tape24getAndResetOutputAdjointE9slot_type"></span><span id="_CPPv2N4Tape24getAndResetOutputAdjointE9slot_type"></span><span id="Tape::getAndResetOutputAdjoint__slot_type"></span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">getAndResetOutputAdjoint</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-p-slot" title="Tape::getAndResetOutputAdjoint::slot (C++ function parameter) — The slot of the output variable."><span class="n sig-param">slot</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains and resets the output adjoint to 0</p>
+<p>This function should be called by <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CheckpointCallback&lt;TapeType&gt;::computeAdjoints()</span></code>
+to get the current value of the adjoint.
+It also resets its adjoint to 0 on the tape to allow re-use of that variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-p-slot"><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">   </span><span class="n sig-param sig-name">slot</span><a class="headerlink" href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-p-slot" title="Permalink to this definition">¶</a></dt><dd><p>The slot of the output variable.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-returns">Returns<a class="headerlink" href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p>The value of the variable’s derivative (i.e. its adjoint)</p>
+</dd>
+<dt class="field-odd" id="_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – If the given slot is not associated with a stored derivative.
+(Only thrown in debug mode, otherwise the behaviour is undefined)
+Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T">
+<span id="_CPPv3N4Tape16incrementAdjointE9slot_typeRK1T"></span><span id="_CPPv2N4Tape16incrementAdjointE9slot_typeRK1T"></span><span id="Tape::incrementAdjoint__slot_type.TCR"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">incrementAdjoint</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-slot" title="Tape::incrementAdjoint::slot (C++ function parameter) — Slot of the input variable to increment"><span class="n sig-param">slot</span></a></span><span class="p">,</span><span><span class="k">&nbsp;const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-x" title="Tape::incrementAdjoint::x (C++ function parameter) — The value to be added to the adjoint"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increments the adjoint of the given slot by the value <cite>x</cite>.</p>
+<p>This function should be called at the end of a <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CheckpointCallback&lt;TapeType&gt;::computeAdjoints()</span></code>
+implementation, to update the input adjoints with the
+computed adjoint increments.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-slot"><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">   </span><span class="n sig-param sig-name">slot</span><a class="headerlink" href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-slot" title="Permalink to this definition">¶</a></dt><dd><p>Slot of the input variable to increment</p>
+</dd>
+<dt id="_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-x"><span class="k">const</span><span class="w">   </span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">   </span><span class="p">&amp;</span><span class="n sig-param sig-name">x</span><a class="headerlink" href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-x" title="Permalink to this definition">¶</a></dt><dd><p>The value to be added to the adjoint</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – If the given slot is not associated with a stored derivative.
+(Only thrown in debug mode, otherwise the behaviour is undefined)
+Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape18newNestedRecordingEv">
+<span id="_CPPv3N4Tape18newNestedRecordingEv"></span><span id="_CPPv2N4Tape18newNestedRecordingEv"></span><span id="Tape::newNestedRecording"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">newNestedRecording</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape18newNestedRecordingEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a new nested recording that can be rolled-back on its own.
+It must be ended with <a class="reference internal" href="#_CPPv4N4Tape18endNestedRecordingEv" title="Tape::endNestedRecording (C++ function) — Ends a nested recording."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">endNestedRecording()</span></code></a>.</p>
+<p>It is intended for use within a <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CheckpointCallback&lt;TapeType&gt;::computeAdjoints()</span></code>
+implementation,
+when from a checkpoint, the adjoints are computed using XAD in a nested
+recording.</p>
+<p>To avoid forgetting the call to <a class="reference internal" href="#_CPPv4N4Tape18endNestedRecordingEv" title="Tape::endNestedRecording (C++ function) — Ends a nested recording."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">endNestedRecording()</span></code></a>, consider
+using the RAII class <a class="desctype reference internal" href="#_CPPv4I0E21ScopedNestedRecording" title="ScopedNestedRecording (C++ class) — Convenience RAII class to ensure that a call to Tape&lt;T&gt;::newNestedRecording() is always followed by the corresponding Tape&lt;T&gt;::endNestedRecording()."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ScopedNestedRecording</span></code></a>.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape18endNestedRecordingEv">
+<span id="_CPPv3N4Tape18endNestedRecordingEv"></span><span id="_CPPv2N4Tape18endNestedRecordingEv"></span><span id="Tape::endNestedRecording"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">endNestedRecording</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape18endNestedRecordingEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends a nested recording.</p>
+</dd></dl>
+
+<h3 id="checkpoint-callback-memory-management"><span id="ref-tape-ckpt-mem"></span>Checkpoint Callback Memory Management<a class="headerlink" href="#checkpoint-callback-memory-management" title="Permalink to this headline">¶</a></h3>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape12pushCallbackE13callback_type">
+<span id="_CPPv3N4Tape12pushCallbackE13callback_type"></span><span id="_CPPv2N4Tape12pushCallbackE13callback_type"></span><span id="Tape::pushCallback__callback_type"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">pushCallback</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape13callback_typeE" title="Tape::callback_type (C++ type) — The callback type used for checkpoints"><span class="n">callback_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape12pushCallbackE13callback_type-p-cb" title="Tape::pushCallback::cb (C++ function parameter) — Pointer to a dynamically-allocated checkpoint callback"><span class="n sig-param">cb</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape12pushCallbackE13callback_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Let this tape handle the de-allocation of the given callback.</p>
+<p>When the tape is destructed, it also destructs all callbacks that have been
+registered using this function.</p>
+<p>Use this if checkpoints are created in a stateless function to avoid
+having to track and destroy checkpoint callbacks manually.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N4Tape12pushCallbackE13callback_type-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape12pushCallbackE13callback_type-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N4Tape12pushCallbackE13callback_type-p-cb"><a class="desctype reference internal" href="#_CPPv4N4Tape13callback_typeE" title="Tape::callback_type (C++ type) — The callback type used for checkpoints"><span class="n">callback_type</span></a><span class="w">   </span><span class="n sig-param sig-name">cb</span><a class="headerlink" href="#_CPPv4N4Tape12pushCallbackE13callback_type-p-cb" title="Permalink to this definition">¶</a></dt><dd><p>Pointer to a dynamically-allocated checkpoint callback</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape15getLastCallbackEv">
+<span id="_CPPv3N4Tape15getLastCallbackEv"></span><span id="_CPPv2N4Tape15getLastCallbackEv"></span><span id="Tape::getLastCallback"></span><a class="desctype reference internal" href="#_CPPv4N4Tape13callback_typeE" title="Tape::callback_type (C++ type) — The callback type used for checkpoints"><span class="n">callback_type</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">getLastCallback</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape15getLastCallbackEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains the last <a class="desctype reference internal" href="chkpt_cb.html#_CPPv4I0E18CheckpointCallback" title="CheckpointCallback (C++ class) — Base class of any checkpoint callbacks associated with the given TapeType."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">CheckpointCallback</span></code></a> object that has been pushed
+with <a class="reference internal" href="#_CPPv4N4Tape12pushCallbackE13callback_type" title="Tape::pushCallback (C++ function) — Let this tape handle the de-allocation of the given callback."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">pushCallback()</span></code></a>.</p>
+<p>This can be useful if multiple subsequent checkpoints can be added to the
+same checkpoint callback object.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N4Tape15getLastCallbackEv-returns">Returns<a class="headerlink" href="#_CPPv4N4Tape15getLastCallbackEv-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p>Pointer to the last callback object that has been pushed.</p>
+</dd>
+<dt class="field-even" id="_CPPv4N4Tape15getLastCallbackEv-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape15getLastCallbackEv-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – if the callback stack is empty
+Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4NK4Tape15getNumCallbacksEv">
+<span id="_CPPv3NK4Tape15getNumCallbacksEv"></span><span id="_CPPv2NK4Tape15getNumCallbacksEv"></span><span id="Tape::getNumCallbacksC"></span><a class="desctype reference internal" href="#_CPPv4N4Tape9size_typeE" title="Tape::size_type (C++ type) — Type for sizes"><span class="n">size_type</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">getNumCallbacks</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK4Tape15getNumCallbacksEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the number of callback objects that have been pushed by
+<a class="reference internal" href="#_CPPv4N4Tape12pushCallbackE13callback_type" title="Tape::pushCallback (C++ function) — Let this tape handle the de-allocation of the given callback."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">pushCallback()</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4NK4Tape15getNumCallbacksEv-returns">Returns<a class="headerlink" href="#_CPPv4NK4Tape15getNumCallbacksEv-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p>Number of callback objects registered</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4NK4Tape13haveCallbacksEv">
+<span id="_CPPv3NK4Tape13haveCallbacksEv"></span><span id="_CPPv2NK4Tape13haveCallbacksEv"></span><span id="Tape::haveCallbacksC"></span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">haveCallbacks</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK4Tape13haveCallbacksEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if there have been any checkpoint callbacks registered by
+<a class="reference internal" href="#_CPPv4N4Tape12pushCallbackE13callback_type" title="Tape::pushCallback (C++ function) — Let this tape handle the de-allocation of the given callback."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">pushCallback()</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4NK4Tape13haveCallbacksEv-returns">Returns<a class="headerlink" href="#_CPPv4NK4Tape13haveCallbacksEv-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if there is at least one pushed callback object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape11popCallbackEv">
+<span id="_CPPv3N4Tape11popCallbackEv"></span><span id="_CPPv2N4Tape11popCallbackEv"></span><span id="Tape::popCallback"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">popCallback</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape11popCallbackEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the callback object that has been last pushed by
+<a class="reference internal" href="#_CPPv4N4Tape12pushCallbackE13callback_type" title="Tape::pushCallback (C++ function) — Let this tape handle the de-allocation of the given callback."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">pushCallback()</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N4Tape11popCallbackEv-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape11popCallbackEv-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – if the stack of callbacks is empty
+Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<h2 id="nested-tape">Nested Tape<a class="headerlink" href="#nested-tape" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp class objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4I0E21ScopedNestedRecording">
+<span id="_CPPv3I0E21ScopedNestedRecording"></span><span id="_CPPv2I0E21ScopedNestedRecording"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0E21ScopedNestedRecording" title="ScopedNestedRecording::TapeType (C++ type template parameter)"><span class="n">TapeType</span></a></span></span><span class="p">&gt;</span><span class="k"><br>class</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">ScopedNestedRecording</span></span><a class="headerlink" href="#_CPPv4I0E21ScopedNestedRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience RAII class to ensure that a call to <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Tape&lt;T&gt;::newNestedRecording()</span></code>
+is always followed by the corresponding <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Tape&lt;T&gt;::endNestedRecording()</span></code>.</p>
+<p>It should be constructed on the stack. On creation it starts a nested
+recording on the corresponding tape, and on destruction it ends the nested
+recording.
+This is useful for checkpoint callbacks, i.e. within the implementation of
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CheckpointCallback&lt;TapeType&gt;::computeAdjoints()</span></code>.</p>
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType">
+<span id="_CPPv3N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType"></span><span id="_CPPv2N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType"></span><span id="ScopedNestedRecording::ScopedNestedRecording__TapeTypeP"></span><span class="sig-name descname"><span class="n">ScopedNestedRecording</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4I0E21ScopedNestedRecording" title="ScopedNestedRecording::TapeType (C++ type template parameter)"><span class="n">TapeType</span></a><span class="w">&nbsp;</span><span class="p">*</span><a class="n sig-param reference internal" href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-p-t" title="ScopedNestedRecording::ScopedNestedRecording::t (C++ function parameter) — pointer to the associated tape"><span class="n sig-param">t</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start a new nested recording on the given tape and track it with this object.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-parameters">Parameters<a class="headerlink" href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="api-field highlight simple">
+<dt id="_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-p-t"><a class="desctype reference internal" href="#_CPPv4I0E21ScopedNestedRecording" title="ScopedNestedRecording::TapeType (C++ type template parameter)"><span class="n">TapeType</span></a><span class="w">   </span><span class="p">*</span><span class="n sig-param sig-name">t</span><a class="headerlink" href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-p-t" title="Permalink to this definition">¶</a></dt><dd><p>pointer to the associated tape</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N21ScopedNestedRecordingD0Ev">
+<span id="_CPPv3N21ScopedNestedRecordingD0Ev"></span><span id="_CPPv2N21ScopedNestedRecordingD0Ev"></span><span id="ScopedNestedRecording::~ScopedNestedRecording"></span><span class="sig-name descname"><span class="n">~ScopedNestedRecording</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N21ScopedNestedRecordingD0Ev" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends the nested recording with the associated tape</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N21ScopedNestedRecording15computeAdjointsEv">
+<span id="_CPPv3N21ScopedNestedRecording15computeAdjointsEv"></span><span id="_CPPv2N21ScopedNestedRecording15computeAdjointsEv"></span><span id="ScopedNestedRecording::computeAdjoints"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">computeAdjoints</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N21ScopedNestedRecording15computeAdjointsEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes adjoints within the nested recording</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N21ScopedNestedRecording16incrementAdjointEN8TapeType9slot_typeERKN8TapeType10value_typeE">
+<span id="_CPPv3N21ScopedNestedRecording16incrementAdjointEN8TapeType9slot_typeERKN8TapeType10value_typeE"></span><span id="_CPPv2N21ScopedNestedRecording16incrementAdjointEN8TapeType9slot_typeERKN8TapeType10value_typeE"></span><span id="ScopedNestedRecording::incrementAdjoint__TapeType::slot_type.TapeType::value_typeCR"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">incrementAdjoint</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4I0E21ScopedNestedRecording" title="ScopedNestedRecording::TapeType (C++ type template parameter)"><span class="n">TapeType</span></a><span class="p">::</span><span class="n">slot_type</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N21ScopedNestedRecording16incrementAdjointEN8TapeType9slot_typeERKN8TapeType10value_typeE" title="ScopedNestedRecording::incrementAdjoint::slot (C++ function parameter)"><span class="n sig-param">slot</span></a></span><span class="p">,</span><span><span class="k"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E21ScopedNestedRecording" title="ScopedNestedRecording::TapeType (C++ type template parameter)"><span class="n">TapeType</span></a><span class="p">::</span><span class="n">value_type</span><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N21ScopedNestedRecording16incrementAdjointEN8TapeType9slot_typeERKN8TapeType10value_typeE" title="ScopedNestedRecording::incrementAdjoint::value (C++ function parameter)"><span class="n sig-param">value</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N21ScopedNestedRecording16incrementAdjointEN8TapeType9slot_typeERKN8TapeType10value_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increment the adjoint given by the slot by the given value.
+See <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Tape&lt;T&gt;::incrementAdjoint()</span></code> for details.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N21ScopedNestedRecording7getTapeEv">
+<span id="_CPPv3N21ScopedNestedRecording7getTapeEv"></span><span id="_CPPv2N21ScopedNestedRecording7getTapeEv"></span><span id="ScopedNestedRecording::getTape"></span><a class="desctype reference internal" href="#_CPPv4I0E21ScopedNestedRecording" title="ScopedNestedRecording::TapeType (C++ type template parameter)"><span class="n">TapeType</span></a><span class="w">&nbsp;</span><span class="p">*</span><span class="sig-name descname"><span class="n">getTape</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N21ScopedNestedRecording7getTapeEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the underlying tape for this nested recording.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N21ScopedNestedRecording7getTapeEv-returns">Returns<a class="headerlink" href="#_CPPv4N21ScopedNestedRecording7getTapeEv-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p>Pointer to the underlying tape</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+
+
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      July  2022
+    
+  </small>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="global.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Global Functions" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Global Functions
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="chkpt_cb.html" class="md-footer__link md-footer__link--next" aria-label="Next: CheckpointCallback" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              CheckpointCallback
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2010-2022, Xcelerit Computing Ltd.
+        
+    </div>
+  
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../static/javascripts/bundle.dc1bded0.min.js"></script>
+    
+  </body>
+</html>

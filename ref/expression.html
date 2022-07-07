@@ -1,0 +1,1127 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="">
+    
+    
+      
+        <title>Expressions - XAD Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../static/stylesheets/main.2014a6d7.min.css">
+      
+        
+        <link rel="stylesheet" href="../static/stylesheets/palette.92c9fe4a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="../static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="../static/style.css" />
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-321978698"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-321978698",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-321978698"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#expression-template" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="../static/logo.svg" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            XAD Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Expressions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="../static/logo.svg" alt="logo">
+    </a>
+    XAD Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro.html" class="md-nav__link">
+        <span title="intro (document)" class="md-ellipsis">Introduction</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aad.html" class="md-nav__link">
+        <span title="aad (document)" class="md-ellipsis">Algorithmic Differentiation Background</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic.html" class="md-nav__link">
+        <span title="basic (document)" class="md-ellipsis">Basic Usage</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external_functions.html" class="md-nav__link">
+        <span title="external_functions (document)" class="md-ellipsis">External Functions</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checkpointing.html" class="md-nav__link">
+        <span title="checkpointing (document)" class="md-ellipsis">Checkpointing</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../higher_order.html" class="md-nav__link">
+        <span title="higher_order (document)" class="md-ellipsis">Higher-<wbr>Order Derivatives</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smoothed_math.html" class="md-nav__link">
+        <span title="smoothed_math (document)" class="md-ellipsis">Handling Discontinuities</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../reference.html"><span title="reference (document)" class="md-ellipsis">Reference</span></a>
+          
+            <label for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          <span title="reference (document)" class="md-ellipsis">Reference</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="headers.html" class="md-nav__link">
+        <span title="ref/headers (document)" class="md-ellipsis">Headers and Namespaces</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="interface.html" class="md-nav__link">
+        <span title="ref/interface (document)" class="md-ellipsis">AD Mode Interface</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="areal.html" class="md-nav__link">
+        <span title="ref/areal (document)" class="md-ellipsis">Adjoint Mode Type AReal</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="freal.html" class="md-nav__link">
+        <span title="ref/freal (document)" class="md-ellipsis">Forward Mode Type FReal</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span title="ref/expression (document)" class="md-ellipsis">Expressions</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span title="ref/expression (document)" class="md-ellipsis">Expressions</span>
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#expression-template" class="md-nav__link">
+    <span class="md-ellipsis">Expression Template</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expression Template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I00E10Expression" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="Expression (C++ class) — Represents a mathematical expression in a type. Active data types, such as AReal and FReal, as well as all mathematical expressions inherit from this class. Therefore all mathematical operations are defined on this type, rather than any specific derived class." class="md-ellipsis">Expression</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expression-traits" class="md-nav__link">
+    <span class="md-ellipsis">Expression Traits</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expression Traits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv49Direction" class="md-nav__link">
+    <span aria-label="C++ enum" class="objinfo-icon objinfo-icon__data" title="C++ enum">E</span><span title="Direction (C++ enum) — Enum to indicate the direction of algorithmic differentiation associated with a type." class="md-ellipsis">Direction</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Direction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N9Direction8DIR_NONEE" class="md-nav__link">
+    <span aria-label="C++ enumerator" class="objinfo-icon objinfo-icon__data" title="C++ enumerator">e</span><span title="Direction::DIR_NONE (C++ enumerator) — Not an algorithmic differentiation type" class="md-ellipsis">DIR_<wbr>NONE</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N9Direction11DIR_FORWARDE" class="md-nav__link">
+    <span aria-label="C++ enumerator" class="objinfo-icon objinfo-icon__data" title="C++ enumerator">e</span><span title="Direction::DIR_FORWARD (C++ enumerator) — Forward mode AD type" class="md-ellipsis">DIR_<wbr>FORWARD</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N9Direction11DIR_REVERSEE" class="md-nav__link">
+    <span aria-label="C++ enumerator" class="objinfo-icon objinfo-icon__data" title="C++ enumerator">e</span><span title="Direction::DIR_REVERSE (C++ enumerator) — Reverse mode AD type" class="md-ellipsis">DIR_<wbr>REVERSE</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0E10ExprTraits" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="ExprTraits (C++ class) — Main traits class to find out information about an expression type." class="md-ellipsis">Expr<wbr>Traits</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExprTraits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits6isExprE" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="ExprTraits::isExpr (C++ member) — True if the type is in fact an expression (or any XAD active variable)" class="md-ellipsis">is<wbr>Expr</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits12numVariablesE" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="ExprTraits::numVariables (C++ member) — Number of variables that are port of the expression" class="md-ellipsis">num<wbr>Variables</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits9isForwardE" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="ExprTraits::isForward (C++ member) — Boolean to represent if forward-mode AD" class="md-ellipsis">is<wbr>Forward</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits9isReverseE" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="ExprTraits::isReverse (C++ member) — Boolean to represent if adjoint mode AD" class="md-ellipsis">is<wbr>Reverse</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits9isLiteralE" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="ExprTraits::isLiteral (C++ member) — True if type is an elementary AD type (e.g. AReal)" class="md-ellipsis">is<wbr>Literal</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits11nested_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="ExprTraits::nested_type (C++ type) — The underlying double type of the expression, e.g. double for AReal&lt;double&gt;, or AReal&lt;FReal&lt;double&gt;&gt; (unwrapping all layers)" class="md-ellipsis">nested_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits10value_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="ExprTraits::value_type (C++ type) — The underlying active type of the expression, e.g. AReal&lt;double&gt; for a complex expression involving reverse mode active variables." class="md-ellipsis">value_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits11scalar_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="ExprTraits::scalar_type (C++ type) — The scalar type of the expression, unwrapping one layer in case of higher-order derivatives. For example, returns double for AReal&lt;double&gt;, and FReal&lt;double&gt; for AReal&lt;FReal&lt;double&gt;&gt; ." class="md-ellipsis">scalar_<wbr>type</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="math.html" class="md-nav__link">
+        <span title="ref/math (document)" class="md-ellipsis">Mathematical Operations</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="complex.html" class="md-nav__link">
+        <span title="ref/complex (document)" class="md-ellipsis">Complex</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="smooth-math.html" class="md-nav__link">
+        <span title="ref/smooth-math (document)" class="md-ellipsis">Smoothed Mathematical Functions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="global.html" class="md-nav__link">
+        <span title="ref/global (document)" class="md-ellipsis">Global Functions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tape.html" class="md-nav__link">
+        <span title="ref/tape (document)" class="md-ellipsis">Tape</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chkpt_cb.html" class="md-nav__link">
+        <span title="ref/chkpt_cb (document)" class="md-ellipsis">Checkpoint<wbr>Callback</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exceptions.html" class="md-nav__link">
+        <span title="ref/exceptions (document)" class="md-ellipsis">Exceptions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="version.html" class="md-nav__link">
+        <span title="ref/version (document)" class="md-ellipsis">Version Information</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license.html" class="md-nav__link">
+        <span title="license (document)" class="md-ellipsis">GNU Free Documentation License</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#expression-template" class="md-nav__link">
+    <span class="md-ellipsis">Expression Template</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expression Template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I00E10Expression" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="Expression (C++ class) — Represents a mathematical expression in a type. Active data types, such as AReal and FReal, as well as all mathematical expressions inherit from this class. Therefore all mathematical operations are defined on this type, rather than any specific derived class." class="md-ellipsis">Expression</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expression-traits" class="md-nav__link">
+    <span class="md-ellipsis">Expression Traits</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expression Traits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv49Direction" class="md-nav__link">
+    <span aria-label="C++ enum" class="objinfo-icon objinfo-icon__data" title="C++ enum">E</span><span title="Direction (C++ enum) — Enum to indicate the direction of algorithmic differentiation associated with a type." class="md-ellipsis">Direction</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Direction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N9Direction8DIR_NONEE" class="md-nav__link">
+    <span aria-label="C++ enumerator" class="objinfo-icon objinfo-icon__data" title="C++ enumerator">e</span><span title="Direction::DIR_NONE (C++ enumerator) — Not an algorithmic differentiation type" class="md-ellipsis">DIR_<wbr>NONE</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N9Direction11DIR_FORWARDE" class="md-nav__link">
+    <span aria-label="C++ enumerator" class="objinfo-icon objinfo-icon__data" title="C++ enumerator">e</span><span title="Direction::DIR_FORWARD (C++ enumerator) — Forward mode AD type" class="md-ellipsis">DIR_<wbr>FORWARD</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N9Direction11DIR_REVERSEE" class="md-nav__link">
+    <span aria-label="C++ enumerator" class="objinfo-icon objinfo-icon__data" title="C++ enumerator">e</span><span title="Direction::DIR_REVERSE (C++ enumerator) — Reverse mode AD type" class="md-ellipsis">DIR_<wbr>REVERSE</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0E10ExprTraits" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="ExprTraits (C++ class) — Main traits class to find out information about an expression type." class="md-ellipsis">Expr<wbr>Traits</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExprTraits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits6isExprE" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="ExprTraits::isExpr (C++ member) — True if the type is in fact an expression (or any XAD active variable)" class="md-ellipsis">is<wbr>Expr</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits12numVariablesE" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="ExprTraits::numVariables (C++ member) — Number of variables that are port of the expression" class="md-ellipsis">num<wbr>Variables</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits9isForwardE" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="ExprTraits::isForward (C++ member) — Boolean to represent if forward-mode AD" class="md-ellipsis">is<wbr>Forward</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits9isReverseE" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="ExprTraits::isReverse (C++ member) — Boolean to represent if adjoint mode AD" class="md-ellipsis">is<wbr>Reverse</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits9isLiteralE" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="ExprTraits::isLiteral (C++ member) — True if type is an elementary AD type (e.g. AReal)" class="md-ellipsis">is<wbr>Literal</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits11nested_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="ExprTraits::nested_type (C++ type) — The underlying double type of the expression, e.g. double for AReal&lt;double&gt;, or AReal&lt;FReal&lt;double&gt;&gt; (unwrapping all layers)" class="md-ellipsis">nested_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits10value_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="ExprTraits::value_type (C++ type) — The underlying active type of the expression, e.g. AReal&lt;double&gt; for a complex expression involving reverse mode active variables." class="md-ellipsis">value_<wbr>type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N10ExprTraits11scalar_typeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="ExprTraits::scalar_type (C++ type) — The scalar type of the expression, unwrapping one layer in case of higher-order derivatives. For example, returns double for AReal&lt;double&gt;, and FReal&lt;double&gt; for AReal&lt;FReal&lt;double&gt;&gt; ." class="md-ellipsis">scalar_<wbr>type</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset" role="main">
+                
+
+
+  <h1 id="expressions"><span id="ref-expression"></span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h1>
+<h2 id="expression-template">Expression Template<a class="headerlink" href="#expression-template" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp class objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4I00E10Expression">
+<span id="_CPPv3I00E10Expression"></span><span id="_CPPv2I00E10Expression"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I00E10Expression" title="Expression::T (C++ type template parameter)"><span class="n">T</span></a></span></span><span class="p">,</span><span class="w">&nbsp;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I00E10Expression" title="Expression::Derived (C++ type template parameter)"><span class="n">Derived</span></a></span></span><span class="p">&gt;</span><span class="k"><br>class</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">Expression</span></span><a class="headerlink" href="#_CPPv4I00E10Expression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a mathematical expression in a type.
+Active data types, such as <a class="desctype reference internal" href="areal.html#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AReal</span></code></a> and <a class="desctype reference internal" href="freal.html#_CPPv4I0E5FReal" title="FReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives for forward mode differentiation (without tape)"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FReal</span></code></a>,
+as well as all mathematical expressions inherit from this class.
+Therefore all mathematical operations are defined on this type, rather
+than any specific derived class.</p>
+<p>The derived classes are typically created transparently to the user.</p>
+<p>Note that this class uses the CRTP pattern, where <code class="docutils literal notranslate"><span class="pre">Derived</span></code> is
+the derived class itself, so that static polymorphism can be used.</p>
+</dd></dl>
+
+<p>All global arithmetic operations defined in C++ are specialized
+for <a class="desctype reference internal" href="#_CPPv4I00E10Expression" title="Expression (C++ class) — Represents a mathematical expression in a type. Active data types, such as AReal and FReal, as well as all mathematical expressions inherit from this class. Therefore all mathematical operations are defined on this type, rather than any specific derived class."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Expression</span></code></a>,
+so that <code class="docutils literal notranslate"><span class="pre">double</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code> can be replaced seamlessly with a XAD data type.
+This also includes comparisons.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="math.html#ref-math"><span class="std std-ref">Mathematical Operations</span></a></p>
+</div>
+<h2 id="expression-traits">Expression Traits<a class="headerlink" href="#expression-traits" title="Permalink to this headline">¶</a></h2>
+<p>XAD also defines expression traits to find out information about expressions
+in a templated context.
+This is typically only needed when custom functions dealing with the XAD
+expressions are added.</p>
+<dl class="cpp enum objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv49Direction">
+<span id="_CPPv39Direction"></span><span id="_CPPv29Direction"></span><span class="k">enum</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">Direction</span></span><a class="headerlink" href="#_CPPv49Direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enum to indicate the direction of algorithmic differentiation associated with a type.</p>
+<dl class="cpp enumerator objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N9Direction8DIR_NONEE">
+<span id="_CPPv3N9Direction8DIR_NONEE"></span><span id="_CPPv2N9Direction8DIR_NONEE"></span><span class="k">enumerator</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">DIR_NONE</span></span><a class="headerlink" href="#_CPPv4N9Direction8DIR_NONEE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Not an algorithmic differentiation type</p>
+</dd></dl>
+
+<dl class="cpp enumerator objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N9Direction11DIR_FORWARDE">
+<span id="_CPPv3N9Direction11DIR_FORWARDE"></span><span id="_CPPv2N9Direction11DIR_FORWARDE"></span><span class="k">enumerator</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">DIR_FORWARD</span></span><a class="headerlink" href="#_CPPv4N9Direction11DIR_FORWARDE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forward mode AD type</p>
+</dd></dl>
+
+<dl class="cpp enumerator objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N9Direction11DIR_REVERSEE">
+<span id="_CPPv3N9Direction11DIR_REVERSEE"></span><span id="_CPPv2N9Direction11DIR_REVERSEE"></span><span class="k">enumerator</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">DIR_REVERSE</span></span><a class="headerlink" href="#_CPPv4N9Direction11DIR_REVERSEE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reverse mode AD type</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp class objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4I0E10ExprTraits">
+<span id="_CPPv3I0E10ExprTraits"></span><span id="_CPPv2I0E10ExprTraits"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0E10ExprTraits" title="ExprTraits::T (C++ type template parameter)"><span class="n">T</span></a></span></span><span class="p">&gt;</span><span class="k"><br>class</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">ExprTraits</span></span><a class="headerlink" href="#_CPPv4I0E10ExprTraits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main traits class to find out information about an expression type.</p>
+<dl class="cpp member objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N10ExprTraits6isExprE">
+<span id="_CPPv3N10ExprTraits6isExprE"></span><span id="_CPPv2N10ExprTraits6isExprE"></span><span id="ExprTraits::isExpr__bC"></span><span class="k">static</span><span class="w">&nbsp;</span><span class="k">const</span><span class="w">&nbsp;</span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">isExpr</span></span><a class="headerlink" href="#_CPPv4N10ExprTraits6isExprE" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the type is in fact an expression (or any XAD active variable)</p>
+</dd></dl>
+
+<dl class="cpp member objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N10ExprTraits12numVariablesE">
+<span id="_CPPv3N10ExprTraits12numVariablesE"></span><span id="_CPPv2N10ExprTraits12numVariablesE"></span><span id="ExprTraits::numVariables__iC"></span><span class="k">static</span><span class="w">&nbsp;</span><span class="k">const</span><span class="w">&nbsp;</span><span class="kt">int</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">numVariables</span></span><a class="headerlink" href="#_CPPv4N10ExprTraits12numVariablesE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of variables that are port of the expression</p>
+</dd></dl>
+
+<dl class="cpp member objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N10ExprTraits9isForwardE">
+<span id="_CPPv3N10ExprTraits9isForwardE"></span><span id="_CPPv2N10ExprTraits9isForwardE"></span><span id="ExprTraits::isForward__bC"></span><span class="k">static</span><span class="w">&nbsp;</span><span class="k">const</span><span class="w">&nbsp;</span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">isForward</span></span><a class="headerlink" href="#_CPPv4N10ExprTraits9isForwardE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean to represent if forward-mode AD</p>
+</dd></dl>
+
+<dl class="cpp member objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N10ExprTraits9isReverseE">
+<span id="_CPPv3N10ExprTraits9isReverseE"></span><span id="_CPPv2N10ExprTraits9isReverseE"></span><span id="ExprTraits::isReverse__bC"></span><span class="k">static</span><span class="w">&nbsp;</span><span class="k">const</span><span class="w">&nbsp;</span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">isReverse</span></span><a class="headerlink" href="#_CPPv4N10ExprTraits9isReverseE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean to represent if adjoint mode AD</p>
+</dd></dl>
+
+<dl class="cpp member objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N10ExprTraits9isLiteralE">
+<span id="_CPPv3N10ExprTraits9isLiteralE"></span><span id="_CPPv2N10ExprTraits9isLiteralE"></span><span id="ExprTraits::isLiteral__bC"></span><span class="k">static</span><span class="w">&nbsp;</span><span class="k">const</span><span class="w">&nbsp;</span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">isLiteral</span></span><a class="headerlink" href="#_CPPv4N10ExprTraits9isLiteralE" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if type is an elementary AD type (e.g. <a class="desctype reference internal" href="areal.html#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AReal</span></code></a>)</p>
+</dd></dl>
+
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N10ExprTraits11nested_typeE">
+<span id="_CPPv3N10ExprTraits11nested_typeE"></span><span id="_CPPv2N10ExprTraits11nested_typeE"></span><span id="ExprTraits::nested_type"></span><span class="k">type</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">nested_type</span></span><a class="headerlink" href="#_CPPv4N10ExprTraits11nested_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The underlying double type of the expression, e.g. <code class="docutils literal notranslate"><span class="pre">double</span></code> for <a class="desctype reference internal" href="areal.html#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AReal&lt;double&gt;</span></code></a>,
+or <a class="desctype reference internal" href="areal.html#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AReal&lt;FReal&lt;double&gt;&gt;</span></code></a> (unwrapping all layers)</p>
+</dd></dl>
+
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N10ExprTraits10value_typeE">
+<span id="_CPPv3N10ExprTraits10value_typeE"></span><span id="_CPPv2N10ExprTraits10value_typeE"></span><span id="ExprTraits::value_type"></span><span class="k">type</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">value_type</span></span><a class="headerlink" href="#_CPPv4N10ExprTraits10value_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The underlying active type of the expression, e.g. <a class="desctype reference internal" href="areal.html#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AReal&lt;double&gt;</span></code></a>
+for a complex expression involving reverse mode active variables.</p>
+</dd></dl>
+
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N10ExprTraits11scalar_typeE">
+<span id="_CPPv3N10ExprTraits11scalar_typeE"></span><span id="_CPPv2N10ExprTraits11scalar_typeE"></span><span id="ExprTraits::scalar_type"></span><span class="k">type</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">scalar_type</span></span><a class="headerlink" href="#_CPPv4N10ExprTraits11scalar_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scalar type of the expression, unwrapping one layer in case of higher-order
+derivatives. For example, returns <code class="docutils literal notranslate"><span class="pre">double</span></code> for <a class="desctype reference internal" href="areal.html#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AReal&lt;double&gt;</span></code></a>,
+and <code class="docutils literal notranslate"><span class="pre">FReal&lt;double&gt;</span></code> for <a class="desctype reference internal" href="areal.html#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AReal&lt;FReal&lt;double&gt;&gt;</span></code></a> .</p>
+</dd></dl>
+
+</dd></dl>
+
+
+
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      July  2022
+    
+  </small>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="freal.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Forward Mode Type FReal" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Forward Mode Type FReal
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="math.html" class="md-footer__link md-footer__link--next" aria-label="Next: Mathematical Operations" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Mathematical Operations
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2010-2022, Xcelerit Computing Ltd.
+        
+    </div>
+  
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../static/javascripts/bundle.dc1bded0.min.js"></script>
+    
+  </body>
+</html>

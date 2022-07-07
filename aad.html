@@ -1,0 +1,828 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="">
+    
+    
+      
+        <title>Algorithmic Differentiation Background - XAD Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="static/stylesheets/main.2014a6d7.min.css">
+      
+        
+        <link rel="stylesheet" href="static/stylesheets/palette.92c9fe4a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="static/style.css" />
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-321978698"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-321978698",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-321978698"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#finite-differences" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="static/logo.svg" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            XAD Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Algorithmic Differentiation Background
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
+      <img src="static/logo.svg" alt="logo">
+    </a>
+    XAD Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/xcelerit/xad/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XAD
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="intro.html" class="md-nav__link">
+        <span title="intro (document)" class="md-ellipsis">Introduction</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span title="aad (document)" class="md-ellipsis">Algorithmic Differentiation Background</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span title="aad (document)" class="md-ellipsis">Algorithmic Differentiation Background</span>
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#finite-differences" class="md-nav__link">
+    <span class="md-ellipsis">Finite Differences</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forward-mode" class="md-nav__link">
+    <span class="md-ellipsis">Forward Mode</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forward Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theory" class="md-nav__link">
+    <span class="md-ellipsis">Theory</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">Example</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjoint-mode" class="md-nav__link">
+    <span class="md-ellipsis">Adjoint Mode</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjoint Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id1" class="md-nav__link">
+    <span class="md-ellipsis">Theory</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span class="md-ellipsis">Example</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#higher-orders" class="md-nav__link">
+    <span class="md-ellipsis">Higher Orders</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basic.html" class="md-nav__link">
+        <span title="basic (document)" class="md-ellipsis">Basic Usage</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="external_functions.html" class="md-nav__link">
+        <span title="external_functions (document)" class="md-ellipsis">External Functions</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checkpointing.html" class="md-nav__link">
+        <span title="checkpointing (document)" class="md-ellipsis">Checkpointing</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="higher_order.html" class="md-nav__link">
+        <span title="higher_order (document)" class="md-ellipsis">Higher-<wbr>Order Derivatives</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="smoothed_math.html" class="md-nav__link">
+        <span title="smoothed_math (document)" class="md-ellipsis">Handling Discontinuities</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference.html" class="md-nav__link">
+        <span title="reference (document)" class="md-ellipsis">Reference</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="license.html" class="md-nav__link">
+        <span title="license (document)" class="md-ellipsis">GNU Free Documentation License</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#finite-differences" class="md-nav__link">
+    <span class="md-ellipsis">Finite Differences</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forward-mode" class="md-nav__link">
+    <span class="md-ellipsis">Forward Mode</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forward Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theory" class="md-nav__link">
+    <span class="md-ellipsis">Theory</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">Example</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjoint-mode" class="md-nav__link">
+    <span class="md-ellipsis">Adjoint Mode</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjoint Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id1" class="md-nav__link">
+    <span class="md-ellipsis">Theory</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id2" class="md-nav__link">
+    <span class="md-ellipsis">Example</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#higher-orders" class="md-nav__link">
+    <span class="md-ellipsis">Higher Orders</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset" role="main">
+                
+
+
+  <h1 id="algorithmic-differentiation-background"><span id="aad"></span>Algorithmic Differentiation Background<a class="headerlink" href="#algorithmic-differentiation-background" title="Permalink to this headline">¶</a></h1>
+<p>As every computer program is made up of a series of simple arithmetic operations,
+i.e.</p>
+<div class="math">
+<p><img src="images/math/a166c27e9a28406473b3659a70b79002abf8351a.svg" alt="a \rightarrow b \rightarrow \ldots \rightarrow u \rightarrow v \rightarrow \ldots \rightarrow z"/></p>
+</div><p>where the inputs <img class="math" src="images/math/bcf3bb1a574bd438591bf4c34d1b556a196f6167.svg" alt="a"/> are modified in stages
+in order to get the final output <img class="math" src="images/math/9088946d67c3073e3d5bc4ef58d678de1a3a4a4c.svg" alt="z"/>.
+When the individual derivatives of each operation are known,
+the final derivative can be computed by recursive application of the chain rule.
+This is method is called <em>Algorithmic Differentiation</em>,
+with the modes <em>forward</em> (or tangent-linear), i.e., from inputs to outputs,
+and <em>adjoint</em> (or reverse) mode, i.e., from outputs to inputs.</p>
+<p>In this section,
+we introduce the underlying theory for computing derivatives of a computer program.
+We start with a review of the traditional finite difference method,
+often called <em>bumping</em>,
+before introducing forward and adjoint algorithmic differentiation.</p>
+<h2 id="finite-differences"><span id="aad-bump"></span>Finite Differences<a class="headerlink" href="#finite-differences" title="Permalink to this headline">¶</a></h2>
+<p>The traditional approach for computing these derivatives
+is by employing a finite difference approximation.
+That is, each of the input variables are <em>bumped</em> one by one
+and the change of the result is used to estimate the sensitivities:</p>
+<div class="math">
+<p><img src="images/math/f311308ceb20f6c235ef847fa0cbb3ec637435d8.svg" alt="\frac{\partial f(x,\bm y)}{\partial x} &amp;= \lim_{h\rightarrow 0}\frac{f(x+h,\bm y) - f(x,\bm y)}{h}\\
+\frac{\partial f(x,\bm y)}{\partial x} &amp;= \lim_{h\rightarrow 0} \frac{f(x+h,\bm y) - f(x-h,\bm y)}{2h}"/></p>
+</div><p>where <img class="math" src="images/math/8c74308524d2c7518844ffda12fc049abd90070e.svg" alt="f(x, \bm y)"/> is the function of which we are interested in derivatives
+with respect to the input parameter <img class="math" src="images/math/e0731fefacaa118be6d1ecdaa4092d32716e8790.svg" alt="x"/>.
+The vector-valued argument <img class="math" src="images/math/9d819783cc438691ca5454e4ad8439739ceec0b3.svg" alt="\bm y"/> denotes the remaining function parameters.
+The first equation represents <em>forward finite differences</em> and requires two
+evaluations of the function.
+The second equation gives <em>central finite differences</em>
+with potentially higher accuracy
+and requires two function evaluation for the derivative and another evaluation
+for the function’s value.</p>
+<p>In practice, the value <img class="math" src="images/math/af6626c508db219231fcba5b261fa27bdc6912c3.svg" alt="h"/> is chosen small enough to approximate the theoretical limit,
+but large enough to cause a detectable change of the result beyond typical numerical error levels.
+Clearly, this choice impacts the accuracy of the approximation.</p>
+<p>Further, this method implies that the function needs to be evaluated
+once for the result and once for each derivative that we are interested in.
+This results in a high overall computational complexity
+as soon as more than a few derivatives are needed.</p>
+<p>Thus, the finite differences approach has accuracy and performance limitations.</p>
+<h2 id="forward-mode"><span id="aad-fwd"></span>Forward Mode<a class="headerlink" href="#forward-mode" title="Permalink to this headline">¶</a></h2>
+<h3 id="theory">Theory<a class="headerlink" href="#theory" title="Permalink to this headline">¶</a></h3>
+<p>The forward mode defines <img class="math" src="images/math/f841aea311c4e75c70a0048f7c56ab05494b5bcd.svg" alt="\dot{u}"/>
+as the derivative of <img class="math" src="images/math/a0a62c9b78a92a040aeb86e651d3c6140041fcf0.svg" alt="u"/> with respect to <img class="math" src="images/math/bcf3bb1a574bd438591bf4c34d1b556a196f6167.svg" alt="a"/>, i.e.</p>
+<div class="math">
+<p><img src="images/math/b2b18c15f055c161481d075761b1ba133aaced31.svg" alt="\dot{u} = \frac{\partial u}{\partial a}"/></p>
+</div><p>Applying the chain rule of differentiation
+and assuming that the intermediate variables are vectors,
+the elements of <img class="math" src="images/math/53a80468a726de736cfe3e31b5b51966a29e6210.svg" alt="\dot{v}"/> can be calculated as</p>
+<div class="math">
+<p><img src="images/math/79e1e4b04ebfcf920c2cf42dad52a2c2622aa292.svg" alt="\dot{v}_{i} = \sum_j \frac{\partial v_{i}}{\partial u_{j}} \dot{u}_j"/></p>
+</div><p>Applying this to each step in the chain of operations from inputs to outputs,
+the value of <img class="math" src="images/math/967c9386a48b795b70609266e456e39467d93507.svg" alt="\dot{z}"/> can be calculated.
+This is the <em>forward mode</em> of algorithmic differentiation.</p>
+<p>For a function <img class="math" src="images/math/3aaf528805eecc78c728048ec74656ed8808434b.svg" alt="f\,{:}\,\mathbb{R}^n\,{\rightarrow}\,\mathbb{R}^m"/>,
+one application of the forward mode
+gives the sensitivities for all <img class="math" src="images/math/0541bd3ca64424b2b45ab42dc236b934f47bc754.svg" alt="m"/> outputs with respect to
+<em>one</em> input parameter.
+It needs to be re-evaluated <img class="math" src="images/math/9eae729219516ffac0f282e62444659aa54ac273.svg" alt="n"/> times to obtain all sensitivities.
+The computational cost is constant in the number of output variables <img class="math" src="images/math/0541bd3ca64424b2b45ab42dc236b934f47bc754.svg" alt="m"/>
+and linear in the number of input variables <img class="math" src="images/math/9eae729219516ffac0f282e62444659aa54ac273.svg" alt="n"/>.</p>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>We illustrate the forward mode on the example function:</p>
+<div class="math">
+<p><img src="images/math/896c46d59a7d7bdfec08d4672193c3b90fc499c1.svg" alt="z = \sin x_1 + x_1 x_2"/></p>
+</div><p>Which can be implemented in a computer program as:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">x1</span><span class="p">);</span><span class="w"></span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x2</span><span class="p">;</span><span class="w"></span>
+<span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>We are interested of the derivative with respect to <img class="math" src="images/math/567303b99967cc4ca70e30d6bf770752a78d7459.svg" alt="x1"/>
+for the input values <img class="math" src="images/math/80c85dd0fff01dedce113a37e3e82a584868ffd4.svg" alt="x_1 = \pi"/> and <img class="math" src="images/math/9cef52270ce8c3425a9f3431a87c69299ed7d414.svg" alt="x_2 = 2"/>.
+The following figure illustrates how the forward mode algorithm differentiation
+is applied to this problem:</p>
+<img alt="Forward mode example" class="align-center" src="images/forward_illustration.svg" /><p>On the left we see the computational graph representing the equation,
+and the table on the right illustrates the the steps performed.</p>
+<p>In step 0, we initialize the input values and we seed the derivatives
+of these inputs.
+As we are interested in the derivative w.r.t. <img class="math" src="images/math/72cf50a8f9e3a03259a823d3348ea95fbf645531.svg" alt="x_1"/>,
+we set its derivative to 1 while setting the other to 0.</p>
+<p>Next we compute <img class="math" src="images/math/bcf3bb1a574bd438591bf4c34d1b556a196f6167.svg" alt="a"/> by taking the sine function.
+The value of <img class="math" src="images/math/bcf3bb1a574bd438591bf4c34d1b556a196f6167.svg" alt="a"/> is zero,
+while <img class="math" src="images/math/c98e891c5cd66acfcfb644ac1e20853760dc4636.svg" alt="\dot{a}"/> is computed by multiplying
+the partial derivative of the sine w.r.t. to <img class="math" src="images/math/567303b99967cc4ca70e30d6bf770752a78d7459.svg" alt="x1"/>,
+i.e. the cosine, with <img class="math" src="images/math/368382942e41796b2868271481588693c01dcff2.svg" alt="\dot{x_1}"/>.
+This gives a value of  -1.</p>
+<p>In the next step, the value of <img class="math" src="images/math/c28db08c9f7ca70af82c200608ce75b6f6df6295.svg" alt="b"/> is computed as usual,
+and <img class="math" src="images/math/3ec5c0cd4618e8e2fbad9879769fb1a9dc247aa9.svg" alt="\dot{b}"/> is calculated similarly to <img class="math" src="images/math/c98e891c5cd66acfcfb644ac1e20853760dc4636.svg" alt="\dot{a}"/>,
+this time depending on both  <img class="math" src="images/math/368382942e41796b2868271481588693c01dcff2.svg" alt="\dot{x_1}"/> and <img class="math" src="images/math/a3c6b2f28b256d0f4dd1fb487698d5c8318873b2.svg" alt="\dot{x_2}"/>.
+This results in a value of 2.</p>
+<p>The final statement adds both <img class="math" src="images/math/bcf3bb1a574bd438591bf4c34d1b556a196f6167.svg" alt="a"/> and <img class="math" src="images/math/c28db08c9f7ca70af82c200608ce75b6f6df6295.svg" alt="b"/>,
+which gives the result of <img class="math" src="images/math/24c610528e8ba699d08a4ee076dc7ac62149ebc8.svg" alt="2\pi"/>.
+To calculate <img class="math" src="images/math/967c9386a48b795b70609266e456e39467d93507.svg" alt="\dot{z}"/>,
+we see that the  <img class="math" src="images/math/c98e891c5cd66acfcfb644ac1e20853760dc4636.svg" alt="\dot{a}"/> and <img class="math" src="images/math/3ec5c0cd4618e8e2fbad9879769fb1a9dc247aa9.svg" alt="\dot{b}"/>
+can simply be added
+since their partial derivatives are both 1.
+This gives a final derivative of 1.</p>
+<p>Hence:</p>
+<div class="math">
+<p><img src="images/math/4defe4a06ad6fadddde20a4f29d3affafa9a0aeb.svg" alt="\left.\frac{\partial z}{\partial x_1}\right|_{(\pi,2)} = 1"/></p>
+</div><p>which can be easily verified analytically.</p>
+<h2 id="adjoint-mode"><span id="add-adj"></span>Adjoint Mode<a class="headerlink" href="#adjoint-mode" title="Permalink to this headline">¶</a></h2>
+<h3 id="id1">Theory<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The adjoint mode applies the chain rule backwards,
+from outputs to inputs.
+Using standard notation, we define</p>
+<div class="math">
+<p><img src="images/math/533c7dd7138488d0b3164d0d109c4c7e0b90708f.svg" alt="\bar{u}_i = \frac{\partial z}{\partial u_i}"/></p>
+</div><p>where <img class="math" src="images/math/a03d49b7c344a3a503cfa761cdce88ce5f3a7cff.svg" alt="i"/> is the index in the vector <img class="math" src="images/math/22b983e809efeea615f6745ab8a7355a27040092.svg" alt="\bm u"/>.
+Applying the chain rule yields</p>
+<div class="math">
+<p><img src="images/math/a3f26bd2cebf251e94b50da05e40c42725e59bd6.svg" alt="\frac{\partial z}{\partial u_i} = \sum_j \frac{\partial z}{\partial v_j} \frac{\partial v_j}{\partial u_i}"/></p>
+</div><p>which leads to the <em>adjoint mode equation</em></p>
+<div class="math">
+<p><img src="images/math/1f547fbf35b4137cd59e6fee0e3d2a2530931e7a.svg" alt="\bar{u}_{i}    =  \sum_j \frac{\partial v_j}{\partial u_i} \bar{v}_{j}"/></p>
+</div><p>Seeding <img class="math" src="images/math/746f8925076fb843b8d376581f0d75ec4bafb957.svg" alt="\bar{z} = 1"/>,
+the adjoint mode equation can be applied for each step,
+from output to input,
+to obtain <img class="math" src="images/math/64f85d0444fc318a2410f5853a74c5ac0eec7571.svg" alt="\bar{\bm a}"/>,
+which is the derivative of the output <img class="math" src="images/math/9088946d67c3073e3d5bc4ef58d678de1a3a4a4c.svg" alt="z"/>
+with respect to each of the input variables <img class="math" src="images/math/32ce1a7e2930188bd3d90cde61a82858046006bb.svg" alt="\bm a"/>.</p>
+<p>For a function <img class="math" src="images/math/3aaf528805eecc78c728048ec74656ed8808434b.svg" alt="f\,{:}\,\mathbb{R}^n\,{\rightarrow}\,\mathbb{R}^m"/>,
+the adjoint mode gives the sensitivities of <em>one</em> output
+with respect to all <img class="math" src="images/math/9eae729219516ffac0f282e62444659aa54ac273.svg" alt="n"/> input parameters.
+It needs to be re-evaluated <img class="math" src="images/math/0541bd3ca64424b2b45ab42dc236b934f47bc754.svg" alt="m"/> times to obtain all sensitivities.
+The computational cost is constant in the number of input variables <img class="math" src="images/math/9eae729219516ffac0f282e62444659aa54ac273.svg" alt="n"/>
+and linear in the number of output variables <img class="math" src="images/math/0541bd3ca64424b2b45ab42dc236b934f47bc754.svg" alt="m"/>.</p>
+<h3 id="id2">Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>We illustrate the adjoint mode using the same example as above:</p>
+<div class="math">
+<p><img src="images/math/896c46d59a7d7bdfec08d4672193c3b90fc499c1.svg" alt="z = \sin x_1 + x_1 x_2"/></p>
+</div><p>implemented:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">x1</span><span class="p">);</span><span class="w"></span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x2</span><span class="p">;</span><span class="w"></span>
+<span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>With adjoint mode, we can get both partial derivatives of the output
+in a single execution,
+for the input values <img class="math" src="images/math/80c85dd0fff01dedce113a37e3e82a584868ffd4.svg" alt="x_1 = \pi"/> and <img class="math" src="images/math/9cef52270ce8c3425a9f3431a87c69299ed7d414.svg" alt="x_2 = 2"/>.
+This is illustrated in the figure below:</p>
+<img alt="Adjoint mode example" class="align-center" src="images/adjoint_illustration.svg" /><p>As the adjoint mode walks from outputs back to inputs,
+we execute the full computation of the value as usual,
+until we have an output for <img class="math" src="images/math/9088946d67c3073e3d5bc4ef58d678de1a3a4a4c.svg" alt="z"/> of <img class="math" src="images/math/24c610528e8ba699d08a4ee076dc7ac62149ebc8.svg" alt="2\pi"/>.</p>
+<p>Then we seed the adjoint of <img class="math" src="images/math/9088946d67c3073e3d5bc4ef58d678de1a3a4a4c.svg" alt="z"/> to 1 in the final step,
+and walk backwards to compute the adjoints of the inputs.</p>
+<p>In step 2, we can compute the adjoint of <img class="math" src="images/math/c28db08c9f7ca70af82c200608ce75b6f6df6295.svg" alt="b"/> by multiplying
+the adjoint of <img class="math" src="images/math/9088946d67c3073e3d5bc4ef58d678de1a3a4a4c.svg" alt="z"/> with the partial derivative of the equation
+for <img class="math" src="images/math/9088946d67c3073e3d5bc4ef58d678de1a3a4a4c.svg" alt="z"/> w.r.t. <img class="math" src="images/math/c28db08c9f7ca70af82c200608ce75b6f6df6295.svg" alt="b"/>, which is 1.</p>
+<p>The same is performed in step 1 to compute the adjoint of <img class="math" src="images/math/bcf3bb1a574bd438591bf4c34d1b556a196f6167.svg" alt="a"/>,
+which also yields 1.</p>
+<p>The adjoint of <img class="math" src="images/math/27fff47167e032761f25610a20ed6675073748fb.svg" alt="x2"/> is then computed by multiplying the partial
+derivative of <img class="math" src="images/math/c28db08c9f7ca70af82c200608ce75b6f6df6295.svg" alt="b"/> w.r.t. <img class="math" src="images/math/acc1d4119930a077f2bbbd21e77eb948af1aba14.svg" alt="x_2"/> with the adjoint of <img class="math" src="images/math/c28db08c9f7ca70af82c200608ce75b6f6df6295.svg" alt="b"/>,
+which gives the value <img class="math" src="images/math/3379cf4a59e768016d616d1addc40f6ac935a4a0.svg" alt="\pi"/>.</p>
+<p>The same method is applied to compute the adjoint of <img class="math" src="images/math/72cf50a8f9e3a03259a823d3348ea95fbf645531.svg" alt="x_1"/>,
+giving the value 1.</p>
+<p>Thus, the two derivatives we were interested in are:</p>
+<div class="math">
+<p><img src="images/math/8ebf29db670420dc60a89a0bb8f955dcb6757178.svg" alt="\left.\frac{\partial z}{\partial x_1}\right|_{(\pi,2)} &amp;= 1\\
+\left.\frac{\partial z}{\partial x_2}\right|_{(\pi,2)} &amp;= \pi"/></p>
+</div><p>Which can be easily verified analytically.</p>
+<h2 id="higher-orders"><span id="aad-higher"></span>Higher Orders<a class="headerlink" href="#higher-orders" title="Permalink to this headline">¶</a></h2>
+<p>Higher order derivatives can be obtained by nesting the principles described above.
+For example, applying forward mode algorithmic differentiation over adjoint mode
+gives second order derivatives.
+This method can be extended to any order.</p>
+
+
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      July  2022
+    
+  </small>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="intro.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Introduction
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="basic.html" class="md-footer__link md-footer__link--next" aria-label="Next: Basic Usage" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Basic Usage
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2010-2022, Xcelerit Computing Ltd.
+        
+    </div>
+  
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="static/javascripts/bundle.dc1bded0.min.js"></script>
+    
+  </body>
+</html>

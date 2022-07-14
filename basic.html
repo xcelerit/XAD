@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="static/stylesheets/main.2014a6d7.min.css">
+      <link rel="stylesheet" href="_static/stylesheets/main.2014a6d7.min.css">
       
         
-        <link rel="stylesheet" href="static/stylesheets/palette.92c9fe4a.min.css">
+        <link rel="stylesheet" href="_static/stylesheets/palette.92c9fe4a.min.css">
         
       
     
@@ -34,8 +34,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-        <link rel="stylesheet" type="text/css" href="static/table_styling.css" />
-        <link rel="stylesheet" type="text/css" href="static/style.css" />
+        <link rel="stylesheet" type="text/css" href="_static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="_static/style.css" />
     <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,7 +89,7 @@
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="static/logo.svg" alt="logo">
+      <img src="_static/logo.svg" alt="logo">
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
@@ -199,7 +199,7 @@
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="static/logo.svg" alt="logo">
+      <img src="_static/logo.svg" alt="logo">
     </a>
     XAD Documentation
   </label>
@@ -489,7 +489,7 @@
                 
 
 
-  <h1 id="basic-usage"><span id="tutorial"></span>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h1>
+  <h1 id="basic-usage"><span id="tutorial"></span>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this heading">¶</a></h1>
 <p>In this section, we will illustrate how to use XAD to compute
 first order derivatives in both forward and adjoint mode.</p>
 <p>As an example, we choose a simple function with 4 inputs and 1 output variable,
@@ -510,7 +510,7 @@ defined as:</p>
 <span class="kt">double</span><span class="w"> </span><span class="n">x3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 </div>
-<h2 id="prerequisite-replace-active-variables">Prerequisite: Replace Active Variables<a class="headerlink" href="#prerequisite-replace-active-variables" title="Permalink to this headline">¶</a></h2>
+<h2 id="prerequisite-replace-active-variables">Prerequisite: Replace Active Variables<a class="headerlink" href="#prerequisite-replace-active-variables" title="Permalink to this heading">¶</a></h2>
 <p>In order to use XAD to differentiate this function,
 we first must replace all independent data types and all values that
 depend on them with an active data type provided by XAD.
@@ -537,7 +537,7 @@ including the original <code class="docutils literal notranslate"><span class="p
 </code></pre></div>
 </div>
 <p>This means we can use the same definition with both forward and adjoint modes.</p>
-<h2 id="forward-mode"><span id="tutorial-fwd"></span>Forward Mode<a class="headerlink" href="#forward-mode" title="Permalink to this headline">¶</a></h2>
+<h2 id="forward-mode"><span id="tutorial-fwd"></span>Forward Mode<a class="headerlink" href="#forward-mode" title="Permalink to this heading">¶</a></h2>
 <p>As illustrated in <a class="reference internal" href="aad.html#aad-fwd"><span class="std std-ref">Forward Mode</span></a>,
 when applied to a function with a single output,
 the forward mode of algorithmic differentiation can compute <em>one</em> derivative
@@ -587,7 +587,7 @@ For example, the following code outputs them to the console:</p>
 <p class="admonition-title">See also</p>
 <p>This example is included with XAD (<a class="reference external" href="https://github.com/xcelerit/XAD/tree/main/samples/fwd_1st">fwd_1st</a>).</p>
 </div>
-<h2 id="adjoint-mode"><span id="tutorial-adj"></span>Adjoint Mode<a class="headerlink" href="#adjoint-mode" title="Permalink to this headline">¶</a></h2>
+<h2 id="adjoint-mode"><span id="tutorial-adj"></span>Adjoint Mode<a class="headerlink" href="#adjoint-mode" title="Permalink to this heading">¶</a></h2>
 <p>The adjoint mode of automatic differentiation
 is the natural choice for the function at hand,
 as it has a single output and multiple inputs.
@@ -666,7 +666,7 @@ via the global <a class="reference internal" href="ref/complex.html#_CPPv4I0E10d
 <p class="admonition-title">See also</p>
 <p>This example is included with XAD (<a class="reference external" href="https://github.com/xcelerit/XAD/tree/main/samples/adj_1st">adj_1st</a>).</p>
 </div>
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permalink to this headline">¶</a></h2>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permalink to this heading">¶</a></h2>
 <p>When the algorithm to be evaluated has less outputs than inputs,
 adjoint mode should be preferred.
 However, when only a small number of derivatives are needed (e.g. less than 5),
@@ -756,7 +756,7 @@ Experimentation is advised to find the optimal mode for the given algorithm.</p>
     <script id="__config" type="application/json">{"base": ".", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="static/javascripts/bundle.dc1bded0.min.js"></script>
+      <script src="_static/javascripts/bundle.dc1bded0.min.js"></script>
     
   </body>
 </html>

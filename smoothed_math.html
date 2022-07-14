@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="static/stylesheets/main.2014a6d7.min.css">
+      <link rel="stylesheet" href="_static/stylesheets/main.2014a6d7.min.css">
       
         
-        <link rel="stylesheet" href="static/stylesheets/palette.92c9fe4a.min.css">
+        <link rel="stylesheet" href="_static/stylesheets/palette.92c9fe4a.min.css">
         
       
     
@@ -34,8 +34,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-        <link rel="stylesheet" type="text/css" href="static/table_styling.css" />
-        <link rel="stylesheet" type="text/css" href="static/style.css" />
+        <link rel="stylesheet" type="text/css" href="_static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="_static/style.css" />
     <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -84,7 +84,7 @@
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="static/logo.svg" alt="logo">
+      <img src="_static/logo.svg" alt="logo">
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
@@ -194,7 +194,7 @@
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="static/logo.svg" alt="logo">
+      <img src="_static/logo.svg" alt="logo">
     </a>
     XAD Documentation
   </label>
@@ -395,7 +395,7 @@
                 
 
 
-  <h1 id="handling-discontinuities"><span id="smooth-math"></span>Handling Discontinuities<a class="headerlink" href="#handling-discontinuities" title="Permalink to this headline">¶</a></h1>
+  <h1 id="handling-discontinuities"><span id="smooth-math"></span>Handling Discontinuities<a class="headerlink" href="#handling-discontinuities" title="Permalink to this heading">¶</a></h1>
 <p>Many functions have jumps or discontinuities
 at which points no mathematical derivatives exist.
 These are typically written as conditionals in the source code
@@ -413,7 +413,7 @@ a small area around the discontinuity,
 and approximate the original function using a spline within this area.</p>
 <p>As an example, the <a class="reference internal" href="ref/smooth-math.html#_CPPv410smooth_abs1T1T" title="smooth_abs (C++ function) — Smoothed version of abs(), defined as:"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">smooth_abs()</span></code></a> function is illustrated in the
 figure below (with <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">0.001</span></code>):</p>
-<img alt="smooth_abs function" class="align-center" src="images/sabs.svg" /><p>Note that discontinuities may be hidden in conditional constructs in the
+<img alt="smooth_abs function" class="align-center" src="_images/sabs.svg" /><p>Note that discontinuities may be hidden in conditional constructs in the
 original code.
 In order to benefit from the smoothed math functions,
 the conditionals need to be replaced by functions.
@@ -512,7 +512,7 @@ For example:</p>
     <script id="__config" type="application/json">{"base": ".", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="static/javascripts/bundle.dc1bded0.min.js"></script>
+      <script src="_static/javascripts/bundle.dc1bded0.min.js"></script>
     
   </body>
 </html>

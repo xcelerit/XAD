@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="static/stylesheets/main.2014a6d7.min.css">
+      <link rel="stylesheet" href="_static/stylesheets/main.2014a6d7.min.css">
       
         
-        <link rel="stylesheet" href="static/stylesheets/palette.92c9fe4a.min.css">
+        <link rel="stylesheet" href="_static/stylesheets/palette.92c9fe4a.min.css">
         
       
     
@@ -34,8 +34,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-        <link rel="stylesheet" type="text/css" href="static/table_styling.css" />
-        <link rel="stylesheet" type="text/css" href="static/style.css" />
+        <link rel="stylesheet" type="text/css" href="_static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="_static/style.css" />
     <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,7 +89,7 @@
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="static/logo.svg" alt="logo">
+      <img src="_static/logo.svg" alt="logo">
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
@@ -199,7 +199,7 @@
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="static/logo.svg" alt="logo">
+      <img src="_static/logo.svg" alt="logo">
     </a>
     XAD Documentation
   </label>
@@ -543,7 +543,7 @@
                 
 
 
-  <h1 id="external-functions"><span id="external"></span>External Functions<a class="headerlink" href="#external-functions" title="Permalink to this headline">¶</a></h1>
+  <h1 id="external-functions"><span id="external"></span>External Functions<a class="headerlink" href="#external-functions" title="Permalink to this heading">¶</a></h1>
 <p>Often parts of the algorithm to be differentiated are not available
 in source code.
 For example, a routine from an external math library may be called.
@@ -561,12 +561,12 @@ the <em>external function interface</em> of XAD can be used to integrate
 the manual derivatives, which is described below.
 With the same technique,
 performance- or memory-critical parts of the application may be hand-tuned.</p>
-<h2 id="example-algorithm">Example Algorithm<a class="headerlink" href="#example-algorithm" title="Permalink to this headline">¶</a></h2>
+<h2 id="example-algorithm">Example Algorithm<a class="headerlink" href="#example-algorithm" title="Permalink to this heading">¶</a></h2>
 <p>We pick an example algorithm which computes the length of a multi dimensional
 vector.
 This is defined as:</p>
 <div class="math">
-<p><img src="images/math/7d7156cb038f2c51e63201a6c9c85aff80885e91.svg" alt="y = \sqrt{\sum_0^{N-1} x_i^2}"/></p>
+<p><img src="_images/math/7d7156cb038f2c51e63201a6c9c85aff80885e91.svg" alt="y = \sqrt{\sum_0^{N-1} x_i^2}"/></p>
 </div><p>The goal is to compute the derivatives of <code class="docutils literal notranslate"><span class="pre">y</span></code> with respect to all
 input vector elements using adjoint mode.</p>
 <p>The algorithm can be implemented in C++ code as:</p>
@@ -582,7 +582,7 @@ It has the prototype:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="nf">sum_elements</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 </div>
-<h2 id="external-function-for-adjoint-mode">External Function For Adjoint Mode<a class="headerlink" href="#external-function-for-adjoint-mode" title="Permalink to this headline">¶</a></h2>
+<h2 id="external-function-for-adjoint-mode">External Function For Adjoint Mode<a class="headerlink" href="#external-function-for-adjoint-mode" title="Permalink to this heading">¶</a></h2>
 <p>To use the external function, we follow this procedure:</p>
 <ol class="arabic simple">
 <li><p>At the point of the call, convert the values of the input active variables
@@ -623,7 +623,7 @@ The declaration of our callback class looks like this:</p>
 <p>We declare it as a template for arbitrary tape types,
 which is good practice as it allows to reuse
 this implementation with higher order derivatives too.</p>
-<h3 id="computeexternal-method"><code class="docutils literal notranslate"><span class="pre">computeExternal</span></code> Method<a class="headerlink" href="#computeexternal-method" title="Permalink to this headline">¶</a></h3>
+<h3 id="computeexternal-method"><code class="docutils literal notranslate"><span class="pre">computeExternal</span></code> Method<a class="headerlink" href="#computeexternal-method" title="Permalink to this heading">¶</a></h3>
 <p>Within the <code class="docutils literal notranslate"><span class="pre">computeExternal</span></code> method,
 we first store the slots in the tape for the input variables,
 as we will need them during adjoint computation to increment the corresponding
@@ -659,7 +659,7 @@ and return:</p>
 <span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 </div>
-<h3 id="computeadjoint-method"><code class="docutils literal notranslate"><span class="pre">computeAdjoint</span></code> Method<a class="headerlink" href="#computeadjoint-method" title="Permalink to this headline">¶</a></h3>
+<h3 id="computeadjoint-method"><code class="docutils literal notranslate"><span class="pre">computeAdjoint</span></code> Method<a class="headerlink" href="#computeadjoint-method" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">computeAdjoint</span></code> method gets called by XAD during tape rollback.
 We need to override this method and implement the manual adjoint code.
 For a simple sum operation, this is straightforward:
@@ -678,7 +678,7 @@ This reset is necessary in general as the output variable may
 have been overwriting other values in the forward computation.
 The <a class="reference internal" href="ref/tape.html#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T" title="Tape::incrementAdjoint (C++ function) — Increments the adjoint of the given slot by the value x."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Tape::incrementAdjoint()</span></code></a> function simply
 increments the adjoint with the given slot by the given value.</p>
-<h3 id="wrapper-function">Wrapper Function<a class="headerlink" href="#wrapper-function" title="Permalink to this headline">¶</a></h3>
+<h3 id="wrapper-function">Wrapper Function<a class="headerlink" href="#wrapper-function" title="Permalink to this heading">¶</a></h3>
 <p>With the checkpointing callback class in place,
 we can implement a <code class="docutils literal notranslate"><span class="pre">sum_elements</span></code> overload for <a class="desctype reference internal" href="ref/areal.html#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AReal</span></code></a> that
 wraps the creation of this callback:</p>
@@ -707,7 +707,7 @@ Using this wrapper class, the <code class="docutils literal notranslate"><span c
 in the same fashion as the original external function <code class="docutils literal notranslate"><span class="pre">sum_elements</span></code> for <code class="docutils literal notranslate"><span class="pre">double</span></code>.
 Defining it as a template allows us to re-use this function for higher-order derivatives,
 should we need them in future.</p>
-<h3 id="call-site">Call-Site<a class="headerlink" href="#call-site" title="Permalink to this headline">¶</a></h3>
+<h3 id="call-site">Call-Site<a class="headerlink" href="#call-site" title="Permalink to this heading">¶</a></h3>
 <p>The call site then can be implemented as
 (assuming that <code class="docutils literal notranslate"><span class="pre">x_ad</span></code> is the vector holding the independent variables, already registered on tape):</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">tape</span><span class="p">.</span><span class="n">newRecording</span><span class="p">();</span><span class="w"></span>
@@ -731,7 +731,7 @@ should we need them in future.</p>
 <p class="admonition-title">See also</p>
 <p>This example is included with XAD (<a class="reference external" href="https://github.com/xcelerit/XAD/tree/main/samples/external_function">external_function</a>).</p>
 </div>
-<h2 id="external-function-for-forward-mode">External Function For Forward Mode<a class="headerlink" href="#external-function-for-forward-mode" title="Permalink to this headline">¶</a></h2>
+<h2 id="external-function-for-forward-mode">External Function For Forward Mode<a class="headerlink" href="#external-function-for-forward-mode" title="Permalink to this heading">¶</a></h2>
 <p>Since forward mode involves no tape,
 a manual implementation of the derivative computation needs to be implemented
 together with computing the value.
@@ -854,7 +854,7 @@ which is computed by the loop in the end.</p>
     <script id="__config" type="application/json">{"base": ".", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="static/javascripts/bundle.dc1bded0.min.js"></script>
+      <script src="_static/javascripts/bundle.dc1bded0.min.js"></script>
     
   </body>
 </html>

@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="../static/stylesheets/main.2014a6d7.min.css">
+      <link rel="stylesheet" href="../_static/stylesheets/main.2014a6d7.min.css">
       
         
-        <link rel="stylesheet" href="../static/stylesheets/palette.92c9fe4a.min.css">
+        <link rel="stylesheet" href="../_static/stylesheets/palette.92c9fe4a.min.css">
         
       
     
@@ -34,8 +34,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-        <link rel="stylesheet" type="text/css" href="../static/table_styling.css" />
-        <link rel="stylesheet" type="text/css" href="../static/style.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/style.css" />
     <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,7 +89,7 @@
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="../static/logo.svg" alt="logo">
+      <img src="../_static/logo.svg" alt="logo">
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
@@ -199,7 +199,7 @@
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="../static/logo.svg" alt="logo">
+      <img src="../_static/logo.svg" alt="logo">
     </a>
     XAD Documentation
   </label>
@@ -965,7 +965,7 @@
                 
 
 
-  <h1 id="smoothed-mathematical-functions"><span id="ref-smooth-math"></span>Smoothed Mathematical Functions<a class="headerlink" href="#smoothed-mathematical-functions" title="Permalink to this headline">¶</a></h1>
+  <h1 id="smoothed-mathematical-functions"><span id="ref-smooth-math"></span>Smoothed Mathematical Functions<a class="headerlink" href="#smoothed-mathematical-functions" title="Permalink to this heading">¶</a></h1>
 <p>The functions in this section are smoothed equivalents of the original
 math functions that can be used to allow computing derivatives around discontinuities.</p>
 <dl class="cpp function objdesc">
@@ -973,21 +973,21 @@ math functions that can be used to allow computing derivatives around discontinu
 <span id="_CPPv310smooth_abs1T1T"></span><span id="_CPPv210smooth_abs1T1T"></span><span id="smooth_abs__T.T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">smooth_abs</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv410smooth_abs1T1T-p-x" title="smooth_abs::x (C++ function parameter) — The input value"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv410smooth_abs1T1T-p-c" title="smooth_abs::c (C++ function parameter) — Cut-off point for the spline-approximated area (default: 0.001)"><span class="n sig-param">c</span></a><span class="w">&nbsp;</span><span class="p">=</span><span class="w">&nbsp;</span><span class="m">0.001</span></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv410smooth_abs1T1T" title="Permalink to this definition">¶</a></dt>
 <dd><p>Smoothed version of <a class="reference internal" href="math.html#_CPPv43abs1T" title="abs (C++ function) — Computes the absolute value of x."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">abs()</span></code></a>, defined as:</p>
 <div class="math">
-<p><img src="../images/math/a80ecaa6d8018dc52d2bdf0e1eea7064e6f00e9a.svg" alt="\text{smooth\_abs}(x,c) = \left\{\begin{array}{lll}
+<p><img src="../_images/math/a80ecaa6d8018dc52d2bdf0e1eea7064e6f00e9a.svg" alt="\text{smooth\_abs}(x,c) = \left\{\begin{array}{lll}
 |x| &amp; &amp; \text{if }x &lt; c\text{ or } x &gt; c\\[5pt]
 x^2\left(\frac{2}{c}-\frac{1}{c^2} x\right) &amp; &amp; \text{if }0 \leq x \leq c\\[5pt]
 x^2\left(\frac{2}{c}+\frac{1}{c^2} x\right) &amp; &amp; \text{if }-c \leq x &lt; 0
 \end{array}\right."/></p>
 </div><dl class="field-list simple">
-<dt class="field-odd" id="_CPPv410smooth_abs1T1T-parameters">Parameters<a class="headerlink" href="#_CPPv410smooth_abs1T1T-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv410smooth_abs1T1T-parameters">Parameters<a class="headerlink" href="#_CPPv410smooth_abs1T1T-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv410smooth_abs1T1T-p-x"><span class="n">T</span><span class="w">   </span><span class="n sig-param sig-name">x</span><a class="headerlink" href="#_CPPv410smooth_abs1T1T-p-x" title="Permalink to this definition">¶</a></dt><dd><p>The input value</p>
 </dd>
 <dt id="_CPPv410smooth_abs1T1T-p-c"><span class="n">T</span><span class="w">   </span><span class="n sig-param sig-name">c</span><span class="w">   </span><span class="p">=</span><span class="w">   </span><span class="m">0.001</span><a class="headerlink" href="#_CPPv410smooth_abs1T1T-p-c" title="Permalink to this definition">¶</a></dt><dd><p>Cut-off point for the spline-approximated area (default: <code class="docutils literal notranslate"><span class="pre">0.001</span></code>)</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even" id="_CPPv410smooth_abs1T1T-returns">Returns<a class="headerlink" href="#_CPPv410smooth_abs1T1T-returns" title="Permalink to this headline">¶</a></dt>
+<dt class="field-even" id="_CPPv410smooth_abs1T1T-returns">Returns<a class="headerlink" href="#_CPPv410smooth_abs1T1T-returns" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-even"><p>The smoothed absolute value, defined as above</p>
 </dd>
 </dl>
@@ -998,10 +998,10 @@ x^2\left(\frac{2}{c}+\frac{1}{c^2} x\right) &amp; &amp; \text{if }-c \leq x &lt;
 <span id="_CPPv310smooth_max1T1T1T"></span><span id="_CPPv210smooth_max1T1T1T"></span><span id="smooth_max__T.T.T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">smooth_max</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv410smooth_max1T1T1T-p-x" title="smooth_max::x (C++ function parameter) — First argument to max"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv410smooth_max1T1T1T-p-y" title="smooth_max::y (C++ function parameter) — Second argument to max"><span class="n sig-param">y</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv410smooth_max1T1T1T-p-c" title="smooth_max::c (C++ function parameter) — Cut-off point for the spline-approximated area (default: 0.001)"><span class="n sig-param">c</span></a><span class="w">&nbsp;</span><span class="p">=</span><span class="w">&nbsp;</span><span class="m">0.001</span></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv410smooth_max1T1T1T" title="Permalink to this definition">¶</a></dt>
 <dd><p>Smoothed version of the <a class="reference internal" href="math.html#_CPPv43max1T1T" title="max (C++ function) — Returns the maximum of x and y."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">max()</span></code></a>, defined as:</p>
 <div class="math">
-<p><img src="../images/math/d38a201ce890facbbdc799e914c1fa27b0a2bddd.svg" alt="\text{smooth\_max}(x,y,c) = 0.5\left(x+y+\text{smooth\_abs}(x-y,c)\right)"/></p>
+<p><img src="../_images/math/d38a201ce890facbbdc799e914c1fa27b0a2bddd.svg" alt="\text{smooth\_max}(x,y,c) = 0.5\left(x+y+\text{smooth\_abs}(x-y,c)\right)"/></p>
 </div><dl class="field-list simple">
-<dt class="field-odd" id="_CPPv410smooth_max1T1T1T-parameters">Parameters<a class="headerlink" href="#_CPPv410smooth_max1T1T1T-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv410smooth_max1T1T1T-parameters">Parameters<a class="headerlink" href="#_CPPv410smooth_max1T1T1T-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv410smooth_max1T1T1T-p-x"><span class="n">T</span><span class="w">   </span><span class="n sig-param sig-name">x</span><a class="headerlink" href="#_CPPv410smooth_max1T1T1T-p-x" title="Permalink to this definition">¶</a></dt><dd><p>First argument to max</p>
 </dd>
 <dt id="_CPPv410smooth_max1T1T1T-p-y"><span class="n">T</span><span class="w">   </span><span class="n sig-param sig-name">y</span><a class="headerlink" href="#_CPPv410smooth_max1T1T1T-p-y" title="Permalink to this definition">¶</a></dt><dd><p>Second argument to max</p>
@@ -1010,7 +1010,7 @@ x^2\left(\frac{2}{c}+\frac{1}{c^2} x\right) &amp; &amp; \text{if }-c \leq x &lt;
 </dd>
 </dl>
 </dd>
-<dt class="field-even" id="_CPPv410smooth_max1T1T1T-returns">Returns<a class="headerlink" href="#_CPPv410smooth_max1T1T1T-returns" title="Permalink to this headline">¶</a></dt>
+<dt class="field-even" id="_CPPv410smooth_max1T1T1T-returns">Returns<a class="headerlink" href="#_CPPv410smooth_max1T1T1T-returns" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-even"><p>The smoothed max function, defined as above</p>
 </dd>
 </dl>
@@ -1021,10 +1021,10 @@ x^2\left(\frac{2}{c}+\frac{1}{c^2} x\right) &amp; &amp; \text{if }-c \leq x &lt;
 <span id="_CPPv310smooth_min1T1T1T"></span><span id="_CPPv210smooth_min1T1T1T"></span><span id="smooth_min__T.T.T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">smooth_min</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv410smooth_min1T1T1T-p-x" title="smooth_min::x (C++ function parameter) — First argument to min"><span class="n sig-param">x</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv410smooth_min1T1T1T-p-y" title="smooth_min::y (C++ function parameter) — Second argument to min"><span class="n sig-param">y</span></a></span><span class="p">,</span><span><span class="n">&nbsp;T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv410smooth_min1T1T1T-p-c" title="smooth_min::c (C++ function parameter) — Cut-off point for the spline-approximated area (default: 0.001)"><span class="n sig-param">c</span></a><span class="w">&nbsp;</span><span class="p">=</span><span class="w">&nbsp;</span><span class="m">0.001</span></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv410smooth_min1T1T1T" title="Permalink to this definition">¶</a></dt>
 <dd><p>Smoothed version of the <a class="reference internal" href="math.html#_CPPv43min1T1T" title="min (C++ function) — Returns the minimum of x and y."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">min()</span></code></a>, defined as:</p>
 <div class="math">
-<p><img src="../images/math/4c5bd979816c75b88d157ac9b04001c179ca960c.svg" alt="\text{smooth\_min}(x,y,c) = 0.5\left(x+y-\text{smooth\_abs}(x-y,c)\right)"/></p>
+<p><img src="../_images/math/4c5bd979816c75b88d157ac9b04001c179ca960c.svg" alt="\text{smooth\_min}(x,y,c) = 0.5\left(x+y-\text{smooth\_abs}(x-y,c)\right)"/></p>
 </div><dl class="field-list simple">
-<dt class="field-odd" id="_CPPv410smooth_min1T1T1T-parameters">Parameters<a class="headerlink" href="#_CPPv410smooth_min1T1T1T-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv410smooth_min1T1T1T-parameters">Parameters<a class="headerlink" href="#_CPPv410smooth_min1T1T1T-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv410smooth_min1T1T1T-p-x"><span class="n">T</span><span class="w">   </span><span class="n sig-param sig-name">x</span><a class="headerlink" href="#_CPPv410smooth_min1T1T1T-p-x" title="Permalink to this definition">¶</a></dt><dd><p>First argument to min</p>
 </dd>
 <dt id="_CPPv410smooth_min1T1T1T-p-y"><span class="n">T</span><span class="w">   </span><span class="n sig-param sig-name">y</span><a class="headerlink" href="#_CPPv410smooth_min1T1T1T-p-y" title="Permalink to this definition">¶</a></dt><dd><p>Second argument to min</p>
@@ -1033,7 +1033,7 @@ x^2\left(\frac{2}{c}+\frac{1}{c^2} x\right) &amp; &amp; \text{if }-c \leq x &lt;
 </dd>
 </dl>
 </dd>
-<dt class="field-even" id="_CPPv410smooth_min1T1T1T-returns">Returns<a class="headerlink" href="#_CPPv410smooth_min1T1T1T-returns" title="Permalink to this headline">¶</a></dt>
+<dt class="field-even" id="_CPPv410smooth_min1T1T1T-returns">Returns<a class="headerlink" href="#_CPPv410smooth_min1T1T1T-returns" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-even"><p>The smoothed min function, defined as above</p>
 </dd>
 </dl>
@@ -1123,7 +1123,7 @@ x^2\left(\frac{2}{c}+\frac{1}{c^2} x\right) &amp; &amp; \text{if }-c \leq x &lt;
     <script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../static/javascripts/bundle.dc1bded0.min.js"></script>
+      <script src="../_static/javascripts/bundle.dc1bded0.min.js"></script>
     
   </body>
 </html>

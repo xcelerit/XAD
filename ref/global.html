@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="../static/stylesheets/main.2014a6d7.min.css">
+      <link rel="stylesheet" href="../_static/stylesheets/main.2014a6d7.min.css">
       
         
-        <link rel="stylesheet" href="../static/stylesheets/palette.92c9fe4a.min.css">
+        <link rel="stylesheet" href="../_static/stylesheets/palette.92c9fe4a.min.css">
         
       
     
@@ -34,8 +34,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-        <link rel="stylesheet" type="text/css" href="../static/table_styling.css" />
-        <link rel="stylesheet" type="text/css" href="../static/style.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/style.css" />
     <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,7 +89,7 @@
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="../static/logo.svg" alt="logo">
+      <img src="../_static/logo.svg" alt="logo">
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
@@ -199,7 +199,7 @@
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="../static/logo.svg" alt="logo">
+      <img src="../_static/logo.svg" alt="logo">
     </a>
     XAD Documentation
   </label>
@@ -815,7 +815,7 @@
                 
 
 
-  <h1 id="global-functions"><span id="ref-global"></span>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h1>
+  <h1 id="global-functions"><span id="ref-global"></span>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this heading">¶</a></h1>
 <p>This section lists functions that are specific to the active data types
 and tape management.
 For mathematical function, see <a class="reference internal" href="math.html#ref-math"><span class="std std-ref">Mathematical Operations</span></a>.</p>
@@ -831,13 +831,13 @@ this function returns a reference to the stored value (which is assignable).</p>
 <p>This function is especially useful in generic code, as it is defined on any
 data type.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv45valueR1T-parameters">Parameters<a class="headerlink" href="#_CPPv45valueR1T-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv45valueR1T-parameters">Parameters<a class="headerlink" href="#_CPPv45valueR1T-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv45valueR1T-p-x"><span class="n">T</span><span class="w">   </span><span class="p">&amp;</span><span class="n sig-param sig-name">x</span><a class="headerlink" href="#_CPPv45valueR1T-p-x" title="Permalink to this definition">¶</a></dt><dd><p>An active or passive variable</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even" id="_CPPv45valueR1T-returns">Returns<a class="headerlink" href="#_CPPv45valueR1T-returns" title="Permalink to this headline">¶</a></dt>
+<dt class="field-even" id="_CPPv45valueR1T-returns">Returns<a class="headerlink" href="#_CPPv45valueR1T-returns" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-even"><p>Reference to the value stored in <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
 </dd>
 </dl>
@@ -855,13 +855,13 @@ this function returns a reference to the stored derivative (which is assignable)
 <p>This function is especially useful in generic code, as it is defined on any
 data type.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv410derivativeRK1T-parameters">Parameters<a class="headerlink" href="#_CPPv410derivativeRK1T-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv410derivativeRK1T-parameters">Parameters<a class="headerlink" href="#_CPPv410derivativeRK1T-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv410derivativeRK1T-p-x"><span class="k">const</span><span class="w">   </span><span class="n">T</span><span class="w">   </span><span class="p">&amp;</span><span class="n sig-param sig-name">x</span><a class="headerlink" href="#_CPPv410derivativeRK1T-p-x" title="Permalink to this definition">¶</a></dt><dd><p>An active or passive variable</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even" id="_CPPv410derivativeRK1T-returns">Returns<a class="headerlink" href="#_CPPv410derivativeRK1T-returns" title="Permalink to this headline">¶</a></dt>
+<dt class="field-even" id="_CPPv410derivativeRK1T-returns">Returns<a class="headerlink" href="#_CPPv410derivativeRK1T-returns" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-even"><p>Reference to the derivative associated with <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
 </dd>
 </dl>
@@ -951,7 +951,7 @@ data type.</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../static/javascripts/bundle.dc1bded0.min.js"></script>
+      <script src="../_static/javascripts/bundle.dc1bded0.min.js"></script>
     
   </body>
 </html>

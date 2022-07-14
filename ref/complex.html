@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="../static/stylesheets/main.2014a6d7.min.css">
+      <link rel="stylesheet" href="../_static/stylesheets/main.2014a6d7.min.css">
       
         
-        <link rel="stylesheet" href="../static/stylesheets/palette.92c9fe4a.min.css">
+        <link rel="stylesheet" href="../_static/stylesheets/palette.92c9fe4a.min.css">
         
       
     
@@ -34,8 +34,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-        <link rel="stylesheet" type="text/css" href="../static/table_styling.css" />
-        <link rel="stylesheet" type="text/css" href="../static/style.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/style.css" />
     <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,7 +89,7 @@
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="../static/logo.svg" alt="logo">
+      <img src="../_static/logo.svg" alt="logo">
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
@@ -199,7 +199,7 @@
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="../static/logo.svg" alt="logo">
+      <img src="../_static/logo.svg" alt="logo">
     </a>
     XAD Documentation
   </label>
@@ -999,8 +999,8 @@
                 
 
 
-  <h1 id="complex"><span id="ref-complex"></span>Complex<a class="headerlink" href="#complex" title="Permalink to this headline">¶</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+  <h1 id="complex"><span id="ref-complex"></span>Complex<a class="headerlink" href="#complex" title="Permalink to this heading">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>XAD implements specialisations of <code class="cpp-expr sig sig-inline cpp highlight"><span class="n">std</span><span class="p">::</span><a class="desctype reference external" href="https://en.cppreference.com/w/cpp/numeric/complex" title="std::complex (C++ standard class)"><span class="n">complex</span></a></code> for the XAD active data types
 <a class="desctype reference internal" href="areal.html#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AReal</span></code></a> and <a class="desctype reference internal" href="freal.html#_CPPv4I0E5FReal" title="FReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives for forward mode differentiation (without tape)"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FReal</span></code></a>.
 They are are provided in the header <code class="docutils literal notranslate"><span class="pre">XAD/Complex.hpp</span></code>,
@@ -1019,7 +1019,7 @@ Users must include it as needed.</p>
 <dd><p>Specialisation for forward mode data type (in <code class="docutils literal notranslate"><span class="pre">std</span></code> namespace).</p>
 </dd></dl>
 
-<h2 id="members">Members<a class="headerlink" href="#members" title="Permalink to this headline">¶</a></h2>
+<h2 id="members">Members<a class="headerlink" href="#members" title="Permalink to this heading">¶</a></h2>
 <p>All standard complex members are implemented.</p>
 <p>Below are the non-standard additions and changes of the interface only,
 using the placeholder <a class="desctype reference internal" href="areal.html#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AReal&lt;T&gt;</span></code></a> as a placeholder inner type.
@@ -1052,7 +1052,7 @@ to allow for easy access and adjusting of derivatives using <a class="reference 
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv4NSt7complexI5ARealI1TEE13setDerivativeERK1TRK1T">
 <span id="_CPPv3NSt7complexI5ARealI1TEE13setDerivativeERK1TRK1T"></span><span id="_CPPv2NSt7complexI5ARealI1TEE13setDerivativeERK1TRK1T"></span><span id="std::complex:AReal:T::::setDerivative__TCR.TCR"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">setDerivative</span></span><span><span class="p">(</span><span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0ENSt7complexI5ARealI1TEEE" title="std::complex&lt;AReal&lt;T&gt;&gt;::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4NSt7complexI5ARealI1TEE13setDerivativeERK1TRK1T" title="std::complex&lt;AReal&lt;T&gt;&gt;::setDerivative::real_derivative (C++ function parameter)"><span class="n sig-param">real_derivative</span></a></span><span class="p">,</span><span><span class="k"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0ENSt7complexI5ARealI1TEEE" title="std::complex&lt;AReal&lt;T&gt;&gt;::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4NSt7complexI5ARealI1TEE13setDerivativeERK1TRK1T" title="std::complex&lt;AReal&lt;T&gt;&gt;::setDerivative::imag_derivative (C++ function parameter)"><span class="n sig-param">imag_derivative</span></a><span class="w">&nbsp;</span><span class="p">=</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0ENSt7complexI5ARealI1TEEE" title="std::complex&lt;AReal&lt;T&gt;&gt;::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">(</span><span class="p">)</span></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4NSt7complexI5ARealI1TEE13setDerivativeERK1TRK1T" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the derivatives (either <img class="math" src="../images/math/10c7910586d5369f8e17f3cb4a25b93680cbbd29.svg" alt="\dot{x}"/> or <img class="math" src="../images/math/eefbde94325ab2e9edf73416476e5c713a73c1f8.svg" alt="\bar{x}"/>) for both the real
+<dd><p>Sets the derivatives (either <img class="math" src="../_images/math/10c7910586d5369f8e17f3cb4a25b93680cbbd29.svg" alt="\dot{x}"/> or <img class="math" src="../_images/math/eefbde94325ab2e9edf73416476e5c713a73c1f8.svg" alt="\bar{x}"/>) for both the real
 and imaginary parts.</p>
 </dd></dl>
 
@@ -1065,7 +1065,7 @@ and imaginary parts.</p>
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv4NKSt7complexI5ARealI1TEE13getDerivativeEv">
 <span id="_CPPv3NKSt7complexI5ARealI1TEE13getDerivativeEv"></span><span id="_CPPv2NKSt7complexI5ARealI1TEE13getDerivativeEv"></span><span id="std::complex:AReal:T::::getDerivativeC"></span><span class="n">std</span><span class="p">::</span><a class="desctype reference external" href="https://en.cppreference.com/w/cpp/numeric/complex" title="std::complex (C++ standard class)"><span class="n">complex</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4I0ENSt7complexI5ARealI1TEEE" title="std::complex&lt;AReal&lt;T&gt;&gt;::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">&gt;</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">getDerivative</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NKSt7complexI5ARealI1TEE13getDerivativeEv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the derivatives (either <img class="math" src="../images/math/10c7910586d5369f8e17f3cb4a25b93680cbbd29.svg" alt="\dot{x}"/> or <img class="math" src="../images/math/eefbde94325ab2e9edf73416476e5c713a73c1f8.svg" alt="\bar{x}"/>) for both the real
+<dd><p>Gets the derivatives (either <img class="math" src="../_images/math/10c7910586d5369f8e17f3cb4a25b93680cbbd29.svg" alt="\dot{x}"/> or <img class="math" src="../_images/math/eefbde94325ab2e9edf73416476e5c713a73c1f8.svg" alt="\bar{x}"/>) for both the real
 and imaginary parts, represented as a complex of the underlying (double) type.</p>
 </dd></dl>
 
@@ -1075,7 +1075,7 @@ and imaginary parts, represented as a complex of the underlying (double) type.</
 <dd><p>Alias for <a class="reference internal" href="#_CPPv4NKSt7complexI5ARealI1TEE13getDerivativeEv" title="std::complex&lt;AReal&lt;T&gt;&gt;::getDerivative (C++ function) — Gets the derivatives (either \dot{x} or \bar{x}) for both the real and imaginary parts, represented as a complex of the underlying (double) type."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">getDerivative()</span></code></a></p>
 </dd></dl>
 
-<h2 id="non-member-functions">Non-Member Functions<a class="headerlink" href="#non-member-functions" title="Permalink to this headline">¶</a></h2>
+<h2 id="non-member-functions">Non-Member Functions<a class="headerlink" href="#non-member-functions" title="Permalink to this heading">¶</a></h2>
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv4I0E10derivativeNSt7complexI1TEERKNSt7complexI5ARealI1TEEE">
 <span id="_CPPv3I0E10derivativeRKNSt7complexI5ARealI1TEEE"></span><span id="_CPPv2I0E10derivativeRKNSt7complexI5ARealI1TEEE"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0E10derivativeNSt7complexI1TEERKNSt7complexI5ARealI1TEEE" title="derivative::T (C++ type template parameter)"><span class="n">T</span></a></span></span><span class="p">&gt;</span><span class="n"><br>std</span><span class="p">::</span><a class="desctype reference external" href="https://en.cppreference.com/w/cpp/numeric/complex" title="std::complex (C++ standard class)"><span class="n">complex</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4I0E10derivativeNSt7complexI1TEERKNSt7complexI5ARealI1TEEE" title="derivative::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">&gt;</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">derivative</span></span><span><span class="p">(</span><span><span class="k">const</span><span class="w">&nbsp;</span><span class="n">std</span><span class="p">::</span><a class="desctype reference external" href="https://en.cppreference.com/w/cpp/numeric/complex" title="std::complex (C++ standard class)"><span class="n">complex</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="areal.html#_CPPv4I0E5AReal" title="AReal (C++ class) — Defines and active data type version of the underlying type T that tracks derivatives on a tape for adjoint computation."><span class="n">AReal</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv4I0E10derivativeNSt7complexI1TEERKNSt7complexI5ARealI1TEEE" title="derivative::T (C++ type template parameter)"><span class="n">T</span></a><span class="p">&gt;</span><span class="p">&gt;</span><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4I0E10derivativeNSt7complexI1TEERKNSt7complexI5ARealI1TEEE" title="derivative::z (C++ function parameter)"><span class="n sig-param">z</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4I0E10derivativeNSt7complexI1TEERKNSt7complexI5ARealI1TEEE" title="Permalink to this definition">¶</a></dt>
@@ -1136,7 +1136,7 @@ represented as a complex number.</p>
 <dd><p>Access to the imaginary part by reference.</p>
 </dd></dl>
 
-<h2 id="math-operations">Math Operations<a class="headerlink" href="#math-operations" title="Permalink to this headline">¶</a></h2>
+<h2 id="math-operations">Math Operations<a class="headerlink" href="#math-operations" title="Permalink to this heading">¶</a></h2>
 <p>All arithmetic operators and mathematical functions in the C++11 standard
 have been specialised with the XAD complex data types as well.
 This also includes the stream read and write operations.</p>
@@ -1224,7 +1224,7 @@ This also includes the stream read and write operations.</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../static/javascripts/bundle.dc1bded0.min.js"></script>
+      <script src="../_static/javascripts/bundle.dc1bded0.min.js"></script>
     
   </body>
 </html>

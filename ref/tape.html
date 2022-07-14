@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="../static/stylesheets/main.2014a6d7.min.css">
+      <link rel="stylesheet" href="../_static/stylesheets/main.2014a6d7.min.css">
       
         
-        <link rel="stylesheet" href="../static/stylesheets/palette.92c9fe4a.min.css">
+        <link rel="stylesheet" href="../_static/stylesheets/palette.92c9fe4a.min.css">
         
       
     
@@ -34,8 +34,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-        <link rel="stylesheet" type="text/css" href="../static/table_styling.css" />
-        <link rel="stylesheet" type="text/css" href="../static/style.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/style.css" />
     <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,7 +89,7 @@
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="../static/logo.svg" alt="logo">
+      <img src="../_static/logo.svg" alt="logo">
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
@@ -199,7 +199,7 @@
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="../static/logo.svg" alt="logo">
+      <img src="../_static/logo.svg" alt="logo">
     </a>
     XAD Documentation
   </label>
@@ -2577,8 +2577,8 @@
                 
 
 
-  <h1 id="tape"><span id="ref-tape"></span>Tape<a class="headerlink" href="#tape" title="Permalink to this headline">¶</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+  <h1 id="tape"><span id="ref-tape"></span>Tape<a class="headerlink" href="#tape" title="Permalink to this heading">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <dl class="cpp class objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv4I0E4Tape">
 <span id="_CPPv3I0E4Tape"></span><span id="_CPPv2I0E4Tape"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a></span></span><span class="p">&gt;</span><span class="k"><br>class</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">Tape</span></span><a class="headerlink" href="#_CPPv4I0E4Tape" title="Permalink to this definition">¶</a></dt>
@@ -2610,8 +2610,8 @@ for higher-order derivative calculations).</p>
 <a class="reference internal" href="interface.html#ref-interface"><span class="std std-ref">AD Mode Interface</span></a> instead of declaring this tape type directly.</p>
 </dd></dl>
 
-<h2 id="members">Members<a class="headerlink" href="#members" title="Permalink to this headline">¶</a></h2>
-<h3 id="types">Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h3>
+<h2 id="members">Members<a class="headerlink" href="#members" title="Permalink to this heading">¶</a></h2>
+<h3 id="types">Types<a class="headerlink" href="#types" title="Permalink to this heading">¶</a></h3>
 <dl class="cpp type objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape9size_typeE">
 <span id="_CPPv3N4Tape9size_typeE"></span><span id="_CPPv2N4Tape9size_typeE"></span><span id="Tape::size_type"></span><span class="k">type</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">size_type</span></span><a class="headerlink" href="#_CPPv4N4Tape9size_typeE" title="Permalink to this definition">¶</a></dt>
@@ -2654,7 +2654,7 @@ for higher-order derivative calculations).</p>
 <dd><p>The callback type used for checkpoints</p>
 </dd></dl>
 
-<h3 id="construct-destruct-and-assign">Construct, Destruct, and Assign<a class="headerlink" href="#construct-destruct-and-assign" title="Permalink to this headline">¶</a></h3>
+<h3 id="construct-destruct-and-assign">Construct, Destruct, and Assign<a class="headerlink" href="#construct-destruct-and-assign" title="Permalink to this heading">¶</a></h3>
 <p>A tape can be created and moved, but it is not copyable.</p>
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape4TapeEb">
@@ -2665,7 +2665,7 @@ set to this constructed instance, resulting all operations and instantiations
 of active data types that follow
 to get automatically associated with this tape instance.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N4Tape4TapeEb-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape4TapeEb-throws" title="Permalink to this headline">¶</a></dt>
+<dt class="field-odd" id="_CPPv4N4Tape4TapeEb-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape4TapeEb-throws" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-odd"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv417TapeAlreadyActive" title="TapeAlreadyActive (C++ class) — Exception that is thrown when a tape is attempted to be activated while another one is already active for the current thread."><span class="n">TapeAlreadyActive</span></a></code></span> – if <cite>activate</cite> is true and another tape is already active
 for the current thread</p>
 </dd>
@@ -2690,7 +2690,7 @@ for the current thread</p>
 <dd><p>Move-assign.</p>
 </dd></dl>
 
-<h3 id="recording-control">Recording Control<a class="headerlink" href="#recording-control" title="Permalink to this headline">¶</a></h3>
+<h3 id="recording-control">Recording Control<a class="headerlink" href="#recording-control" title="Permalink to this heading">¶</a></h3>
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape8activateEv">
 <span id="_CPPv3N4Tape8activateEv"></span><span id="_CPPv2N4Tape8activateEv"></span><span id="Tape::activate"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">activate</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape8activateEv" title="Permalink to this definition">¶</a></dt>
@@ -2699,7 +2699,7 @@ resulting all <code class="docutils literal notranslate"><span class="pre">regis
 active data types depending on such inputs to get associated
 with this tape instance.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N4Tape8activateEv-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape8activateEv-throws" title="Permalink to this headline">¶</a></dt>
+<dt class="field-odd" id="_CPPv4N4Tape8activateEv-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape8activateEv-throws" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-odd"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv417TapeAlreadyActive" title="TapeAlreadyActive (C++ class) — Exception that is thrown when a tape is attempted to be activated while another one is already active for the current thread."><span class="n">TapeAlreadyActive</span></a></code></span> – if another tape is already active for the current thread</p>
 </dd>
 </dl>
@@ -2717,7 +2717,7 @@ tape.</p>
 <span id="_CPPv3NK4Tape8isActiveEv"></span><span id="_CPPv2NK4Tape8isActiveEv"></span><span id="Tape::isActiveC"></span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">isActive</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK4Tape8isActiveEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the current instance is the currently active tape.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4NK4Tape8isActiveEv-returns">Returns<a class="headerlink" href="#_CPPv4NK4Tape8isActiveEv-returns" title="Permalink to this headline">¶</a></dt>
+<dt class="field-odd" id="_CPPv4NK4Tape8isActiveEv-returns">Returns<a class="headerlink" href="#_CPPv4NK4Tape8isActiveEv-returns" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the this instance is active</p>
 </dd>
 </dl>
@@ -2730,7 +2730,7 @@ tape.</p>
 <p>Note that this is a thread-local pointer - calling this function in different
 threads gives different results.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N4Tape9getActiveEv-returns">Returns<a class="headerlink" href="#_CPPv4N4Tape9getActiveEv-returns" title="Permalink to this headline">¶</a></dt>
+<dt class="field-odd" id="_CPPv4N4Tape9getActiveEv-returns">Returns<a class="headerlink" href="#_CPPv4N4Tape9getActiveEv-returns" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-odd"><p>Pointer to the currently-active thread-local tape - or <code class="docutils literal notranslate"><span class="pre">nullptr</span></code></p>
 </dd>
 </dl>
@@ -2805,7 +2805,7 @@ have been initialized to a non-zero value.</p>
 <p>After this call, the derivatives of the independent variables are set and
 can be obtained.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N4Tape15computeAdjointsEv-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape15computeAdjointsEv-throws" title="Permalink to this headline">¶</a></dt>
+<dt class="field-odd" id="_CPPv4N4Tape15computeAdjointsEv-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape15computeAdjointsEv-throws" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-odd"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv425DerivativesNotInitialized" title="DerivativesNotInitialized (C++ class) — Exception thrown if adjoints are attempted to be computed without setting at least one derivative first."><span class="n">DerivativesNotInitialized</span></a></code></span> – If called without setting any derivative first.
 Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
 </dd>
@@ -2858,19 +2858,19 @@ This may be a performance gain compared to repeated construction/destruction
 of tapes of the same time, for example in a path-wise AD Monte-Carlo.</p>
 </dd></dl>
 
-<h3 id="derivatives">Derivatives<a class="headerlink" href="#derivatives" title="Permalink to this headline">¶</a></h3>
+<h3 id="derivatives">Derivatives<a class="headerlink" href="#derivatives" title="Permalink to this heading">¶</a></h3>
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape10derivativeE9slot_type">
 <span id="_CPPv3N4Tape10derivativeE9slot_type"></span><span id="_CPPv2N4Tape10derivativeE9slot_type"></span><span id="Tape::derivative__slot_type"></span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="sig-name descname"><span class="n">derivative</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape10derivativeE9slot_type-p-s" title="Tape::derivative::s (C++ function parameter) — The slot of the derivative"><span class="n sig-param">s</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape10derivativeE9slot_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a reference to the derivative associated with the slot <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N4Tape10derivativeE9slot_type-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape10derivativeE9slot_type-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv4N4Tape10derivativeE9slot_type-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape10derivativeE9slot_type-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv4N4Tape10derivativeE9slot_type-p-s"><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">   </span><span class="n sig-param sig-name">s</span><a class="headerlink" href="#_CPPv4N4Tape10derivativeE9slot_type-p-s" title="Permalink to this definition">¶</a></dt><dd><p>The slot of the derivative</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even" id="_CPPv4N4Tape10derivativeE9slot_type-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape10derivativeE9slot_type-throws" title="Permalink to this headline">¶</a></dt>
+<dt class="field-even" id="_CPPv4N4Tape10derivativeE9slot_type-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape10derivativeE9slot_type-throws" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – if the given slot is not associated with a stored derivative. (Only
 thrown in debug mode,
 otherwise the behaviour is undefined in this case)
@@ -2884,13 +2884,13 @@ Gives <em>strong exception safety guarantee</em> - tape state unchanged in case 
 <span id="_CPPv3NK4Tape10derivativeE9slot_type"></span><span id="_CPPv2NK4Tape10derivativeE9slot_type"></span><span id="Tape::derivative__slot_typeC"></span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><span class="sig-name descname"><span class="n">derivative</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4NK4Tape10derivativeE9slot_type-p-s" title="Tape::derivative::s (C++ function parameter) — The slot of the derivative"><span class="n sig-param">s</span></a></span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK4Tape10derivativeE9slot_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a const reference to the derivative associated with the slot <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4NK4Tape10derivativeE9slot_type-parameters">Parameters<a class="headerlink" href="#_CPPv4NK4Tape10derivativeE9slot_type-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv4NK4Tape10derivativeE9slot_type-parameters">Parameters<a class="headerlink" href="#_CPPv4NK4Tape10derivativeE9slot_type-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv4NK4Tape10derivativeE9slot_type-p-s"><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">   </span><span class="n sig-param sig-name">s</span><a class="headerlink" href="#_CPPv4NK4Tape10derivativeE9slot_type-p-s" title="Permalink to this definition">¶</a></dt><dd><p>The slot of the derivative</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even" id="_CPPv4NK4Tape10derivativeE9slot_type-throws">Throws<a class="headerlink" href="#_CPPv4NK4Tape10derivativeE9slot_type-throws" title="Permalink to this headline">¶</a></dt>
+<dt class="field-even" id="_CPPv4NK4Tape10derivativeE9slot_type-throws">Throws<a class="headerlink" href="#_CPPv4NK4Tape10derivativeE9slot_type-throws" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – if the given slot is not associated with a stored derivative. (Only
 thrown in debug mode,
 otherwise the behaviour is undefined in this case)
@@ -2904,13 +2904,13 @@ Gives <em>strong exception safety guarantee</em> - tape state unchanged in case 
 <span id="_CPPv3NK4Tape13getDerivativeE9slot_type"></span><span id="_CPPv2NK4Tape13getDerivativeE9slot_type"></span><span id="Tape::getDerivative__slot_typeC"></span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">getDerivative</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4NK4Tape13getDerivativeE9slot_type-p-s" title="Tape::getDerivative::s (C++ function parameter) — The slot of the derivative"><span class="n sig-param">s</span></a></span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK4Tape13getDerivativeE9slot_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the value of the derivative associated with the slot <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4NK4Tape13getDerivativeE9slot_type-parameters">Parameters<a class="headerlink" href="#_CPPv4NK4Tape13getDerivativeE9slot_type-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv4NK4Tape13getDerivativeE9slot_type-parameters">Parameters<a class="headerlink" href="#_CPPv4NK4Tape13getDerivativeE9slot_type-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv4NK4Tape13getDerivativeE9slot_type-p-s"><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">   </span><span class="n sig-param sig-name">s</span><a class="headerlink" href="#_CPPv4NK4Tape13getDerivativeE9slot_type-p-s" title="Permalink to this definition">¶</a></dt><dd><p>The slot of the derivative</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even" id="_CPPv4NK4Tape13getDerivativeE9slot_type-throws">Throws<a class="headerlink" href="#_CPPv4NK4Tape13getDerivativeE9slot_type-throws" title="Permalink to this headline">¶</a></dt>
+<dt class="field-even" id="_CPPv4NK4Tape13getDerivativeE9slot_type-throws">Throws<a class="headerlink" href="#_CPPv4NK4Tape13getDerivativeE9slot_type-throws" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – if the given slot is not associated with a stored derivative. (Only
 thrown in debug mode,
 otherwise the behaviour is undefined in this case)
@@ -2924,15 +2924,15 @@ Gives <em>strong exception safety guarantee</em> - tape state unchanged in case 
 <span id="_CPPv3N4Tape13setDerivativeE9slot_typeRK1T"></span><span id="_CPPv2N4Tape13setDerivativeE9slot_typeRK1T"></span><span id="Tape::setDerivative__slot_type.TCR"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">setDerivative</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-s" title="Tape::setDerivative::s (C++ function parameter) — The slot of the derivative"><span class="n sig-param">s</span></a></span><span class="p">,</span><span><span class="k">&nbsp;const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">&nbsp;</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-v" title="Tape::setDerivative::v (C++ function parameter) — The value to assign to the derivative"><span class="n sig-param">v</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the value of the derivative associated with the slot <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-s"><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">   </span><span class="n sig-param sig-name">s</span><a class="headerlink" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-s" title="Permalink to this definition">¶</a></dt><dd><p>The slot of the derivative</p>
 </dd>
 <dt id="_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-v"><span class="k">const</span><span class="w">   </span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">   </span><span class="p">&amp;</span><span class="n sig-param sig-name">v</span><a class="headerlink" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-p-v" title="Permalink to this definition">¶</a></dt><dd><p>The value to assign to the derivative</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even" id="_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-throws" title="Permalink to this headline">¶</a></dt>
+<dt class="field-even" id="_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape13setDerivativeE9slot_typeRK1T-throws" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – if the given slot is not associated with a stored derivative. (Only
 thrown in debug mode,
 otherwise the behaviour is undefined in this case)
@@ -2949,7 +2949,7 @@ This can be used to calculate derivatives w.r.t. multiple outputs,
 as the same tape can be rolled back multiple times.</p>
 </dd></dl>
 
-<h3 id="status">Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h3>
+<h3 id="status">Status<a class="headerlink" href="#status" title="Permalink to this heading">¶</a></h3>
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv4NK4Tape11printStatusEv">
 <span id="_CPPv3NK4Tape11printStatusEv"></span><span id="_CPPv2NK4Tape11printStatusEv"></span><span id="Tape::printStatusC"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">printStatus</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK4Tape11printStatusEv" title="Permalink to this definition">¶</a></dt>
@@ -2962,13 +2962,13 @@ to stdout.</p>
 <span id="_CPPv3NK4Tape9getMemoryEv"></span><span id="_CPPv2NK4Tape9getMemoryEv"></span><span id="Tape::getMemoryC"></span><span class="n">std</span><span class="p">::</span><a class="desctype reference external" href="https://en.cppreference.com/w/cpp/types/size_t" title="std::size_t (C++ standard type alias)"><span class="n">size_t</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">getMemory</span></span><span><span class="p">(</span><span class="p">)</span></span><span class="w">&nbsp;</span><span class="k">const</span><a class="headerlink" href="#_CPPv4NK4Tape9getMemoryEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the memory in bytes that is occupied by the tape.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4NK4Tape9getMemoryEv-returns">Returns<a class="headerlink" href="#_CPPv4NK4Tape9getMemoryEv-returns" title="Permalink to this headline">¶</a></dt>
+<dt class="field-odd" id="_CPPv4NK4Tape9getMemoryEv-returns">Returns<a class="headerlink" href="#_CPPv4NK4Tape9getMemoryEv-returns" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-odd"><p>Memory in bytes</p>
 </dd>
 </dl>
 </dd></dl>
 
-<h3 id="checkpointing">Checkpointing<a class="headerlink" href="#checkpointing" title="Permalink to this headline">¶</a></h3>
+<h3 id="checkpointing">Checkpointing<a class="headerlink" href="#checkpointing" title="Permalink to this heading">¶</a></h3>
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape14insertCallbackE13callback_type">
 <span id="_CPPv3N4Tape14insertCallbackE13callback_type"></span><span id="_CPPv2N4Tape14insertCallbackE13callback_type"></span><span id="Tape::insertCallback__callback_type"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">insertCallback</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape13callback_typeE" title="Tape::callback_type (C++ type) — The callback type used for checkpoints"><span class="n">callback_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape14insertCallbackE13callback_type-p-cb" title="Tape::insertCallback::cb (C++ function parameter) — Pointer to a CheckpointCallback instance."><span class="n sig-param">cb</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape14insertCallbackE13callback_type" title="Permalink to this definition">¶</a></dt>
@@ -2982,8 +2982,8 @@ It is the responsibility of the user to free the memory for the callback object.
 Alternatively, the <a class="reference internal" href="#ref-tape-ckpt-mem"><span class="std std-ref">Checkpoint Callback Memory Management</span></a> API can be used to have the
 tape destroy the callbacks automatically.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N4Tape14insertCallbackE13callback_type-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape14insertCallbackE13callback_type-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv4N4Tape14insertCallbackE13callback_type-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape14insertCallbackE13callback_type-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv4N4Tape14insertCallbackE13callback_type-p-cb"><a class="desctype reference internal" href="#_CPPv4N4Tape13callback_typeE" title="Tape::callback_type (C++ type) — The callback type used for checkpoints"><span class="n">callback_type</span></a><span class="w">   </span><span class="n sig-param sig-name">cb</span><a class="headerlink" href="#_CPPv4N4Tape14insertCallbackE13callback_type-p-cb" title="Permalink to this definition">¶</a></dt><dd><p>Pointer to a <a class="desctype reference internal" href="chkpt_cb.html#_CPPv4I0E18CheckpointCallback" title="CheckpointCallback (C++ class) — Base class of any checkpoint callbacks associated with the given TapeType."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">CheckpointCallback</span></code></a> instance.</p>
 </dd>
 </dl>
@@ -2999,16 +2999,16 @@ tape destroy the callbacks automatically.</p>
 to get the current value of the adjoint.
 It also resets its adjoint to 0 on the tape to allow re-use of that variable.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-p-slot"><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">   </span><span class="n sig-param sig-name">slot</span><a class="headerlink" href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-p-slot" title="Permalink to this definition">¶</a></dt><dd><p>The slot of the output variable.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even" id="_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-returns">Returns<a class="headerlink" href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-returns" title="Permalink to this headline">¶</a></dt>
+<dt class="field-even" id="_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-returns">Returns<a class="headerlink" href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-returns" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-even"><p>The value of the variable’s derivative (i.e. its adjoint)</p>
 </dd>
-<dt class="field-odd" id="_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-throws" title="Permalink to this headline">¶</a></dt>
+<dt class="field-odd" id="_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape24getAndResetOutputAdjointE9slot_type-throws" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-odd"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – If the given slot is not associated with a stored derivative.
 (Only thrown in debug mode, otherwise the behaviour is undefined)
 Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
@@ -3024,15 +3024,15 @@ Gives <em>strong exception safety guarantee</em> - tape state unchanged in case 
 implementation, to update the input adjoints with the
 computed adjoint increments.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-slot"><a class="desctype reference internal" href="#_CPPv4N4Tape9slot_typeE" title="Tape::slot_type (C++ type) — Type used to represent a slot of a specific active variable"><span class="n">slot_type</span></a><span class="w">   </span><span class="n sig-param sig-name">slot</span><a class="headerlink" href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-slot" title="Permalink to this definition">¶</a></dt><dd><p>Slot of the input variable to increment</p>
 </dd>
 <dt id="_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-x"><span class="k">const</span><span class="w">   </span><a class="desctype reference internal" href="#_CPPv4I0E4Tape" title="Tape::T (C++ type template parameter)"><span class="n">T</span></a><span class="w">   </span><span class="p">&amp;</span><span class="n sig-param sig-name">x</span><a class="headerlink" href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-p-x" title="Permalink to this definition">¶</a></dt><dd><p>The value to be added to the adjoint</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even" id="_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-throws" title="Permalink to this headline">¶</a></dt>
+<dt class="field-even" id="_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape16incrementAdjointE9slot_typeRK1T-throws" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – If the given slot is not associated with a stored derivative.
 (Only thrown in debug mode, otherwise the behaviour is undefined)
 Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
@@ -3059,7 +3059,7 @@ using the RAII class <a class="desctype reference internal" href="#_CPPv4I0E21Sc
 <dd><p>Ends a nested recording.</p>
 </dd></dl>
 
-<h3 id="checkpoint-callback-memory-management"><span id="ref-tape-ckpt-mem"></span>Checkpoint Callback Memory Management<a class="headerlink" href="#checkpoint-callback-memory-management" title="Permalink to this headline">¶</a></h3>
+<h3 id="checkpoint-callback-memory-management"><span id="ref-tape-ckpt-mem"></span>Checkpoint Callback Memory Management<a class="headerlink" href="#checkpoint-callback-memory-management" title="Permalink to this heading">¶</a></h3>
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv4N4Tape12pushCallbackE13callback_type">
 <span id="_CPPv3N4Tape12pushCallbackE13callback_type"></span><span id="_CPPv2N4Tape12pushCallbackE13callback_type"></span><span id="Tape::pushCallback__callback_type"></span><span class="kt">void</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">pushCallback</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4N4Tape13callback_typeE" title="Tape::callback_type (C++ type) — The callback type used for checkpoints"><span class="n">callback_type</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N4Tape12pushCallbackE13callback_type-p-cb" title="Tape::pushCallback::cb (C++ function parameter) — Pointer to a dynamically-allocated checkpoint callback"><span class="n sig-param">cb</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N4Tape12pushCallbackE13callback_type" title="Permalink to this definition">¶</a></dt>
@@ -3069,8 +3069,8 @@ registered using this function.</p>
 <p>Use this if checkpoints are created in a stateless function to avoid
 having to track and destroy checkpoint callbacks manually.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N4Tape12pushCallbackE13callback_type-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape12pushCallbackE13callback_type-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv4N4Tape12pushCallbackE13callback_type-parameters">Parameters<a class="headerlink" href="#_CPPv4N4Tape12pushCallbackE13callback_type-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv4N4Tape12pushCallbackE13callback_type-p-cb"><a class="desctype reference internal" href="#_CPPv4N4Tape13callback_typeE" title="Tape::callback_type (C++ type) — The callback type used for checkpoints"><span class="n">callback_type</span></a><span class="w">   </span><span class="n sig-param sig-name">cb</span><a class="headerlink" href="#_CPPv4N4Tape12pushCallbackE13callback_type-p-cb" title="Permalink to this definition">¶</a></dt><dd><p>Pointer to a dynamically-allocated checkpoint callback</p>
 </dd>
 </dl>
@@ -3086,10 +3086,10 @@ with <a class="reference internal" href="#_CPPv4N4Tape12pushCallbackE13callback_
 <p>This can be useful if multiple subsequent checkpoints can be added to the
 same checkpoint callback object.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N4Tape15getLastCallbackEv-returns">Returns<a class="headerlink" href="#_CPPv4N4Tape15getLastCallbackEv-returns" title="Permalink to this headline">¶</a></dt>
+<dt class="field-odd" id="_CPPv4N4Tape15getLastCallbackEv-returns">Returns<a class="headerlink" href="#_CPPv4N4Tape15getLastCallbackEv-returns" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-odd"><p>Pointer to the last callback object that has been pushed.</p>
 </dd>
-<dt class="field-even" id="_CPPv4N4Tape15getLastCallbackEv-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape15getLastCallbackEv-throws" title="Permalink to this headline">¶</a></dt>
+<dt class="field-even" id="_CPPv4N4Tape15getLastCallbackEv-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape15getLastCallbackEv-throws" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-even"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – if the callback stack is empty
 Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
 </dd>
@@ -3102,7 +3102,7 @@ Gives <em>strong exception safety guarantee</em> - tape state unchanged in case 
 <dd><p>Gets the number of callback objects that have been pushed by
 <a class="reference internal" href="#_CPPv4N4Tape12pushCallbackE13callback_type" title="Tape::pushCallback (C++ function) — Let this tape handle the de-allocation of the given callback."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">pushCallback()</span></code></a></p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4NK4Tape15getNumCallbacksEv-returns">Returns<a class="headerlink" href="#_CPPv4NK4Tape15getNumCallbacksEv-returns" title="Permalink to this headline">¶</a></dt>
+<dt class="field-odd" id="_CPPv4NK4Tape15getNumCallbacksEv-returns">Returns<a class="headerlink" href="#_CPPv4NK4Tape15getNumCallbacksEv-returns" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-odd"><p>Number of callback objects registered</p>
 </dd>
 </dl>
@@ -3114,7 +3114,7 @@ Gives <em>strong exception safety guarantee</em> - tape state unchanged in case 
 <dd><p>Checks if there have been any checkpoint callbacks registered by
 <a class="reference internal" href="#_CPPv4N4Tape12pushCallbackE13callback_type" title="Tape::pushCallback (C++ function) — Let this tape handle the de-allocation of the given callback."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">pushCallback()</span></code></a></p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4NK4Tape13haveCallbacksEv-returns">Returns<a class="headerlink" href="#_CPPv4NK4Tape13haveCallbacksEv-returns" title="Permalink to this headline">¶</a></dt>
+<dt class="field-odd" id="_CPPv4NK4Tape13haveCallbacksEv-returns">Returns<a class="headerlink" href="#_CPPv4NK4Tape13haveCallbacksEv-returns" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if there is at least one pushed callback object.</p>
 </dd>
 </dl>
@@ -3126,14 +3126,14 @@ Gives <em>strong exception safety guarantee</em> - tape state unchanged in case 
 <dd><p>Removes the callback object that has been last pushed by
 <a class="reference internal" href="#_CPPv4N4Tape12pushCallbackE13callback_type" title="Tape::pushCallback (C++ function) — Let this tape handle the de-allocation of the given callback."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">pushCallback()</span></code></a></p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N4Tape11popCallbackEv-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape11popCallbackEv-throws" title="Permalink to this headline">¶</a></dt>
+<dt class="field-odd" id="_CPPv4N4Tape11popCallbackEv-throws">Throws<a class="headerlink" href="#_CPPv4N4Tape11popCallbackEv-throws" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-odd"><p><span><code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="exceptions.html#_CPPv410OutOfRange" title="OutOfRange (C++ class) — Exception thrown when an argument is out of the acceptable range."><span class="n">OutOfRange</span></a></code></span> – if the stack of callbacks is empty
 Gives <em>strong exception safety guarantee</em> - tape state unchanged in case of exception.</p>
 </dd>
 </dl>
 </dd></dl>
 
-<h2 id="nested-tape">Nested Tape<a class="headerlink" href="#nested-tape" title="Permalink to this headline">¶</a></h2>
+<h2 id="nested-tape">Nested Tape<a class="headerlink" href="#nested-tape" title="Permalink to this heading">¶</a></h2>
 <dl class="cpp class objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv4I0E21ScopedNestedRecording">
 <span id="_CPPv3I0E21ScopedNestedRecording"></span><span id="_CPPv2I0E21ScopedNestedRecording"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0E21ScopedNestedRecording" title="ScopedNestedRecording::TapeType (C++ type template parameter)"><span class="n">TapeType</span></a></span></span><span class="p">&gt;</span><span class="k"><br>class</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">ScopedNestedRecording</span></span><a class="headerlink" href="#_CPPv4I0E21ScopedNestedRecording" title="Permalink to this definition">¶</a></dt>
@@ -3149,8 +3149,8 @@ This is useful for checkpoint callbacks, i.e. within the implementation of
 <span id="_CPPv3N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType"></span><span id="_CPPv2N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType"></span><span id="ScopedNestedRecording::ScopedNestedRecording__TapeTypeP"></span><span class="sig-name descname"><span class="n">ScopedNestedRecording</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4I0E21ScopedNestedRecording" title="ScopedNestedRecording::TapeType (C++ type template parameter)"><span class="n">TapeType</span></a><span class="w">&nbsp;</span><span class="p">*</span><a class="n sig-param reference internal" href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-p-t" title="ScopedNestedRecording::ScopedNestedRecording::t (C++ function parameter) — pointer to the associated tape"><span class="n sig-param">t</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start a new nested recording on the given tape and track it with this object.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-parameters">Parameters<a class="headerlink" href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-parameters" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><dl class="api-field highlight simple">
+<dt class="field-odd" id="_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-parameters">Parameters<a class="headerlink" href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-parameters" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
 <dt id="_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-p-t"><a class="desctype reference internal" href="#_CPPv4I0E21ScopedNestedRecording" title="ScopedNestedRecording::TapeType (C++ type template parameter)"><span class="n">TapeType</span></a><span class="w">   </span><span class="p">*</span><span class="n sig-param sig-name">t</span><a class="headerlink" href="#_CPPv4N21ScopedNestedRecording21ScopedNestedRecordingEP8TapeType-p-t" title="Permalink to this definition">¶</a></dt><dd><p>pointer to the associated tape</p>
 </dd>
 </dl>
@@ -3182,7 +3182,7 @@ See <code class="xref cpp cpp-func docutils literal notranslate"><span class="pr
 <span id="_CPPv3N21ScopedNestedRecording7getTapeEv"></span><span id="_CPPv2N21ScopedNestedRecording7getTapeEv"></span><span id="ScopedNestedRecording::getTape"></span><a class="desctype reference internal" href="#_CPPv4I0E21ScopedNestedRecording" title="ScopedNestedRecording::TapeType (C++ type template parameter)"><span class="n">TapeType</span></a><span class="w">&nbsp;</span><span class="p">*</span><span class="sig-name descname"><span class="n">getTape</span></span><span><span class="p">(</span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N21ScopedNestedRecording7getTapeEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the underlying tape for this nested recording.</p>
 <dl class="field-list simple">
-<dt class="field-odd" id="_CPPv4N21ScopedNestedRecording7getTapeEv-returns">Returns<a class="headerlink" href="#_CPPv4N21ScopedNestedRecording7getTapeEv-returns" title="Permalink to this headline">¶</a></dt>
+<dt class="field-odd" id="_CPPv4N21ScopedNestedRecording7getTapeEv-returns">Returns<a class="headerlink" href="#_CPPv4N21ScopedNestedRecording7getTapeEv-returns" title="Permalink to this headline">¶</a><span class="colon">:</span></dt>
 <dd class="field-odd"><p>Pointer to the underlying tape</p>
 </dd>
 </dl>
@@ -3274,7 +3274,7 @@ See <code class="xref cpp cpp-func docutils literal notranslate"><span class="pr
     <script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../static/javascripts/bundle.dc1bded0.min.js"></script>
+      <script src="../_static/javascripts/bundle.dc1bded0.min.js"></script>
     
   </body>
 </html>

@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="../static/stylesheets/main.2014a6d7.min.css">
+      <link rel="stylesheet" href="../_static/stylesheets/main.2014a6d7.min.css">
       
         
-        <link rel="stylesheet" href="../static/stylesheets/palette.92c9fe4a.min.css">
+        <link rel="stylesheet" href="../_static/stylesheets/palette.92c9fe4a.min.css">
         
       
     
@@ -34,8 +34,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-        <link rel="stylesheet" type="text/css" href="../static/table_styling.css" />
-        <link rel="stylesheet" type="text/css" href="../static/style.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/style.css" />
     <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,7 +89,7 @@
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="../static/logo.svg" alt="logo">
+      <img src="../_static/logo.svg" alt="logo">
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
@@ -199,7 +199,7 @@
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="../static/logo.svg" alt="logo">
+      <img src="../_static/logo.svg" alt="logo">
     </a>
     XAD Documentation
   </label>
@@ -1513,7 +1513,7 @@
                 
 
 
-  <h1 id="mathematical-operations"><span id="ref-math"></span>Mathematical Operations<a class="headerlink" href="#mathematical-operations" title="Permalink to this headline">¶</a></h1>
+  <h1 id="mathematical-operations"><span id="ref-math"></span>Mathematical Operations<a class="headerlink" href="#mathematical-operations" title="Permalink to this heading">¶</a></h1>
 <p>In the following, the data types <code class="docutils literal notranslate"><span class="pre">T</span></code>
 refer to arithmetic data types on which the operation is defined mathematically.
 This includes the active XAD types as well as the standard passive types.</p>
@@ -1526,7 +1526,7 @@ also for <code class="docutils literal notranslate"><span class="pre">float</spa
 <p>For convenience, if the header <code class="docutils literal notranslate"><span class="pre">XAD/StdCompatibility.hpp</span></code> is included,
 the XAD variables are imported into the <code class="cpp-expr sig sig-inline cpp highlight"><span class="n">std</span></code> namespace,
 so that existing calls to <code class="cpp-expr sig sig-inline cpp highlight"><span class="n">std</span><span class="p">::</span><a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/sin" title="std::sin (C++ standard function)"><span class="n">sin</span></a></code> and similar functions are working as expected.</p>
-<h2 id="absolute-values-max-min-and-rounding">Absolute Values, Max, Min, and Rounding<a class="headerlink" href="#absolute-values-max-min-and-rounding" title="Permalink to this headline">¶</a></h2>
+<h2 id="absolute-values-max-min-and-rounding">Absolute Values, Max, Min, and Rounding<a class="headerlink" href="#absolute-values-max-min-and-rounding" title="Permalink to this heading">¶</a></h2>
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv43abs1T">
 <span id="_CPPv33abs1T"></span><span id="_CPPv23abs1T"></span><span id="abs__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">abs</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43abs1T" title="abs::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43abs1T" title="Permalink to this definition">¶</a></dt>
@@ -1640,7 +1640,7 @@ For derivatives, we therefore consider them both the same and calculate
 derivative accordingly.</p>
 </dd></dl>
 
-<h2 id="trigonometric-functions">Trigonometric Functions<a class="headerlink" href="#trigonometric-functions" title="Permalink to this headline">¶</a></h2>
+<h2 id="trigonometric-functions">Trigonometric Functions<a class="headerlink" href="#trigonometric-functions" title="Permalink to this heading">¶</a></h2>
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv47degrees1T">
 <span id="_CPPv37degrees1T"></span><span id="_CPPv27degrees1T"></span><span id="degrees__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">degrees</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv47degrees1T" title="degrees::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv47degrees1T" title="Permalink to this definition">¶</a></dt>
@@ -1731,7 +1731,7 @@ derivative accordingly.</p>
 <dd><p>Computes the inverse hyperbolic tangent of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
 </dd></dl>
 
-<h2 id="powers-exponentials-and-logarithms">Powers, Exponentials, and Logarithms<a class="headerlink" href="#powers-exponentials-and-logarithms" title="Permalink to this headline">¶</a></h2>
+<h2 id="powers-exponentials-and-logarithms">Powers, Exponentials, and Logarithms<a class="headerlink" href="#powers-exponentials-and-logarithms" title="Permalink to this heading">¶</a></h2>
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv43log1T">
 <span id="_CPPv33log1T"></span><span id="_CPPv23log1T"></span><span id="log__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">log</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43log1T" title="log::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43log1T" title="Permalink to this definition">¶</a></dt>
@@ -1818,7 +1818,7 @@ using <code class="docutils literal notranslate"><span class="pre">FLT_RADIX</sp
 <dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">arg</span> <span class="pre">*</span> <span class="pre">pow(FLT_RADIX,</span> <span class="pre">exp)</span></code>.</p>
 </dd></dl>
 
-<h2 id="error-functions">Error Functions<a class="headerlink" href="#error-functions" title="Permalink to this headline">¶</a></h2>
+<h2 id="error-functions">Error Functions<a class="headerlink" href="#error-functions" title="Permalink to this heading">¶</a></h2>
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv43erf1T">
 <span id="_CPPv33erf1T"></span><span id="_CPPv23erf1T"></span><span id="erf__T"></span><span class="n">T</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">erf</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43erf1T" title="erf::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43erf1T" title="Permalink to this definition">¶</a></dt>
@@ -1833,7 +1833,7 @@ library.</p>
 library.</p>
 </dd></dl>
 
-<h2 id="floating-point-classification">Floating Point Classification<a class="headerlink" href="#floating-point-classification" title="Permalink to this headline">¶</a></h2>
+<h2 id="floating-point-classification">Floating Point Classification<a class="headerlink" href="#floating-point-classification" title="Permalink to this heading">¶</a></h2>
 <dl class="cpp function objdesc">
 <dt class="sig sig-object highlight cpp" id="_CPPv45isinf1T">
 <span id="_CPPv35isinf1T"></span><span id="_CPPv25isinf1T"></span><span id="isinf__T"></span><span class="kt">bool</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">isinf</span></span><span><span class="p">(</span><span><span class="n">T</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv45isinf1T" title="isinf::x (C++ function parameter)"><span class="n sig-param">x</span></a></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv45isinf1T" title="Permalink to this definition">¶</a></dt>
@@ -1949,7 +1949,7 @@ not zero, subnormal, infinite, or NaN.</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../static/javascripts/bundle.dc1bded0.min.js"></script>
+      <script src="../_static/javascripts/bundle.dc1bded0.min.js"></script>
     
   </body>
 </html>

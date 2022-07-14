@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="static/stylesheets/main.2014a6d7.min.css">
+      <link rel="stylesheet" href="_static/stylesheets/main.2014a6d7.min.css">
       
         
-        <link rel="stylesheet" href="static/stylesheets/palette.92c9fe4a.min.css">
+        <link rel="stylesheet" href="_static/stylesheets/palette.92c9fe4a.min.css">
         
       
     
@@ -34,8 +34,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-        <link rel="stylesheet" type="text/css" href="static/table_styling.css" />
-        <link rel="stylesheet" type="text/css" href="static/style.css" />
+        <link rel="stylesheet" type="text/css" href="_static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="_static/style.css" />
     <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,7 +89,7 @@
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="static/logo.svg" alt="logo">
+      <img src="_static/logo.svg" alt="logo">
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
@@ -199,7 +199,7 @@
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="static/logo.svg" alt="logo">
+      <img src="_static/logo.svg" alt="logo">
     </a>
     XAD Documentation
   </label>
@@ -529,7 +529,7 @@
                 
 
 
-  <h1 id="higher-order-derivatives"><span id="higher-order"></span>Higher-Order Derivatives<a class="headerlink" href="#higher-order-derivatives" title="Permalink to this headline">¶</a></h1>
+  <h1 id="higher-order-derivatives"><span id="higher-order"></span>Higher-Order Derivatives<a class="headerlink" href="#higher-order-derivatives" title="Permalink to this heading">¶</a></h1>
 <p>As explained in <a class="reference internal" href="aad.html#aad-higher"><span class="std std-ref">Higher Orders</span></a>, higher order derivatives can be computed
 by nesting first order algorithmic differentiation techniques.
 For example, one can obtain second order by computing forward mode over adjoint mode.
@@ -541,7 +541,7 @@ Types for third or higher orders need to defined manually
 from the basic first-order types.</p>
 <p>We will demonstrate second-order derivatives using forward-over-adjoint mode
 in the following.</p>
-<h2 id="example-algorithm">Example Algorithm<a class="headerlink" href="#example-algorithm" title="Permalink to this headline">¶</a></h2>
+<h2 id="example-algorithm">Example Algorithm<a class="headerlink" href="#example-algorithm" title="Permalink to this heading">¶</a></h2>
 <p>For demonstration purposes, we use the same algorithm from <a class="reference internal" href="basic.html#tutorial"><span class="std std-ref">Basic Usage</span></a>:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
 <span class="n">T</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">x0</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">x3</span><span class="p">)</span><span class="w"></span>
@@ -560,13 +560,13 @@ in the following.</p>
 <span class="kt">double</span><span class="w"> </span><span class="n">x3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 </div>
-<h2 id="forward-over-adjoint">Forward Over Adjoint<a class="headerlink" href="#forward-over-adjoint" title="Permalink to this headline">¶</a></h2>
+<h2 id="forward-over-adjoint">Forward Over Adjoint<a class="headerlink" href="#forward-over-adjoint" title="Permalink to this heading">¶</a></h2>
 <p>In this mode, we can compute all first-order derivatives (as a single output
 function derived with adjoints gives all first order derivatives),
 and the first row of the Hessian matrix of second order derivatives.
 The full Hessian is defined as:</p>
 <div class="math">
-<p><img src="images/math/34a1f2851a2959ee29de7b900784b99350baf8ba.svg" alt="\Large
+<p><img src="_images/math/34a1f2851a2959ee29de7b900784b99350baf8ba.svg" alt="\Large
 \bm H = \left[ \begin{array}{cccc}
   \frac{\partial^2 f}{\partial x_0^2} &amp;
   \frac{\partial^2 f}{\partial x_0 \partial x_1} &amp;
@@ -675,10 +675,10 @@ d2y/dx0dx3 = 0.198741
 <p class="admonition-title">See also</p>
 <p>This example is included with XAD (<a class="reference external" href="https://github.com/xcelerit/XAD/tree/main/samples/fwd_adj_2nd">fwd_adj_2nd</a>).</p>
 </div>
-<h2 id="other-second-order-modes">Other Second-Order Modes<a class="headerlink" href="#other-second-order-modes" title="Permalink to this headline">¶</a></h2>
+<h2 id="other-second-order-modes">Other Second-Order Modes<a class="headerlink" href="#other-second-order-modes" title="Permalink to this heading">¶</a></h2>
 <p>Other second-order modes work in a similar fashion.
 They are briefly described in the following.</p>
-<h3 id="forward-over-forward">Forward Over Forward<a class="headerlink" href="#forward-over-forward" title="Permalink to this headline">¶</a></h3>
+<h3 id="forward-over-forward">Forward Over Forward<a class="headerlink" href="#forward-over-forward" title="Permalink to this heading">¶</a></h3>
 <p>With forward-over-forward mode,
 there is no tape needed and the derivatives of both orders need to be seeded
 before running the algorithm.
@@ -698,7 +698,7 @@ The derivative initialization sequence in this mode is typically:</p>
 </code></pre></div>
 </div>
 <p>With different initial seeding, different elements of the Hessian can be obtained.</p>
-<h3 id="adjoint-over-forward">Adjoint Over Forward<a class="headerlink" href="#adjoint-over-forward" title="Permalink to this headline">¶</a></h3>
+<h3 id="adjoint-over-forward">Adjoint Over Forward<a class="headerlink" href="#adjoint-over-forward" title="Permalink to this heading">¶</a></h3>
 <p>Here the inner mode is forward,
 computing one derivative in a tape-less fashion,
 and the outer mode is adjoint, requiring a tape.
@@ -726,7 +726,7 @@ similar to the forward-over-adjoint mode.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;d2y/dxdx = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">derivative</span><span class="p">(</span><span class="n">value</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="w"></span>
 </code></pre></div>
 </div>
-<h3 id="adjoint-over-adjoint">Adjoint Over Adjoint<a class="headerlink" href="#adjoint-over-adjoint" title="Permalink to this headline">¶</a></h3>
+<h3 id="adjoint-over-adjoint">Adjoint Over Adjoint<a class="headerlink" href="#adjoint-over-adjoint" title="Permalink to this heading">¶</a></h3>
 <p>As both nested modes are adjoint,
 this mode needs to two tapes for both orders.
 Hence the types defined in the interface structure <a class="desctype reference internal" href="ref/interface.html#_CPPv4I0E7adj_adj" title="adj_adj (C++ class) — Structure defining the data types for second order adjoint-over-adjoint mode."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">adj_adj</span></code></a>
@@ -843,7 +843,7 @@ we can read the first-order derivatives as:</p>
     <script id="__config" type="application/json">{"base": ".", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="static/javascripts/bundle.dc1bded0.min.js"></script>
+      <script src="_static/javascripts/bundle.dc1bded0.min.js"></script>
     
   </body>
 </html>

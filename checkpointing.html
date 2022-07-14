@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="static/stylesheets/main.2014a6d7.min.css">
+      <link rel="stylesheet" href="_static/stylesheets/main.2014a6d7.min.css">
       
         
-        <link rel="stylesheet" href="static/stylesheets/palette.92c9fe4a.min.css">
+        <link rel="stylesheet" href="_static/stylesheets/palette.92c9fe4a.min.css">
         
       
     
@@ -34,8 +34,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-        <link rel="stylesheet" type="text/css" href="static/table_styling.css" />
-        <link rel="stylesheet" type="text/css" href="static/style.css" />
+        <link rel="stylesheet" type="text/css" href="_static/table_styling.css" />
+        <link rel="stylesheet" type="text/css" href="_static/style.css" />
     <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,7 +89,7 @@
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="index.html" title="XAD Documentation" class="md-header__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="static/logo.svg" alt="logo">
+      <img src="_static/logo.svg" alt="logo">
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
@@ -199,7 +199,7 @@
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="index.html" title="XAD Documentation" class="md-nav__button md-logo" aria-label="XAD Documentation" data-md-component="logo">
-      <img src="static/logo.svg" alt="logo">
+      <img src="_static/logo.svg" alt="logo">
     </a>
     XAD Documentation
   </label>
@@ -529,14 +529,14 @@
                 
 
 
-  <h1 id="checkpointing"><span id="id1"></span>Checkpointing<a class="headerlink" href="#checkpointing" title="Permalink to this headline">¶</a></h1>
+  <h1 id="checkpointing"><span id="id1"></span>Checkpointing<a class="headerlink" href="#checkpointing" title="Permalink to this heading">¶</a></h1>
 <p>Checkpointing is a technique to reduce the memory footprint of the tape
 in adjoint mode algorithmic differentiation.
 Instead of recording the full algorithm on tape,
 which can quickly result in gigabytes of memory in a large computation,
 the tape is recorded for specific stages of the algorithm, one at a time.
 This is illustrated in the following figure:</p>
-<a class="reference internal image-reference" href="images/checkpointing.svg"><img alt="Checkpointing" class="align-center" src="images/checkpointing.svg" width="70%" /></a>
+<a class="reference internal image-reference" href="_images/checkpointing.svg"><img alt="Checkpointing" class="align-center" src="_images/checkpointing.svg" width="70%" /></a>
 <p>The algorithm is divided into stages,
 where the input data of each stage is stored in a checkpoint
 and the outputs are computed passively (without recording on tape).
@@ -559,7 +559,7 @@ hence checkpointing trades computation for memory.</p>
 <p>In practice, as using less memory leads to higher cache-efficiency,
 checkpointing may be faster overall than recording the full algorithm
 even though more computations are performed.</p>
-<h2 id="example-algorithm">Example Algorithm<a class="headerlink" href="#example-algorithm" title="Permalink to this headline">¶</a></h2>
+<h2 id="example-algorithm">Example Algorithm<a class="headerlink" href="#example-algorithm" title="Permalink to this heading">¶</a></h2>
 <p>To demonstrate the checkpointing method,
 we choose a simple repeated application of the sine function to a single input:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
@@ -572,7 +572,7 @@ we choose a simple repeated application of the sine function to a single input:<
 </div>
 <p>We divide the for loop into equidistant stages and insert a checkpoint at each
 of these.</p>
-<h2 id="checkpoint-callback">Checkpoint Callback<a class="headerlink" href="#checkpoint-callback" title="Permalink to this headline">¶</a></h2>
+<h2 id="checkpoint-callback">Checkpoint Callback<a class="headerlink" href="#checkpoint-callback" title="Permalink to this heading">¶</a></h2>
 <p>To create a checkpoint,
 we need to store the inputs of the stage and the slots in the tape for the inputs
 and outputs in a callback object inheriting from <a class="desctype reference internal" href="ref/chkpt_cb.html#_CPPv4I0E18CheckpointCallback" title="CheckpointCallback (C++ class) — Base class of any checkpoint callbacks associated with the given TapeType."><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">CheckpointCallback</span></code></a>.
@@ -606,7 +606,7 @@ The prototype for our callback is:</p>
 we added the forward computation for one stage within the same class
 in the <code class="docutils literal notranslate"><span class="pre">computeStage</span></code> method,
 which could also be performed outside of the object.</p>
-<h3 id="computestage-method"><code class="docutils literal notranslate"><span class="pre">computeStage</span></code> Method<a class="headerlink" href="#computestage-method" title="Permalink to this headline">¶</a></h3>
+<h3 id="computestage-method"><code class="docutils literal notranslate"><span class="pre">computeStage</span></code> Method<a class="headerlink" href="#computestage-method" title="Permalink to this heading">¶</a></h3>
 <p>Within the <code class="docutils literal notranslate"><span class="pre">computeStage</span></code> method,
 we first store the input value, the number of iterations,
 and the slots of the input in the checkpoint object:</p>
@@ -634,7 +634,7 @@ since the variable is already registered on tape (it’s both input and output).
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">Tape</span><span class="o">::</span><span class="n">getActive</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">insertCallback</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 </div>
-<h3 id="computeadjoint-method"><code class="docutils literal notranslate"><span class="pre">computeAdjoint</span></code> Method<a class="headerlink" href="#computeadjoint-method" title="Permalink to this headline">¶</a></h3>
+<h3 id="computeadjoint-method"><code class="docutils literal notranslate"><span class="pre">computeAdjoint</span></code> Method<a class="headerlink" href="#computeadjoint-method" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">computeAdjoint</span></code> method is called automatically by XAD
 at the checkpoints in the tape.
 We first need to load the inputs to this computation stage and
@@ -684,7 +684,7 @@ i.e. when its destructor is called,
 the nested tape for this computation stage is wiped and the memory can be
 reused for the previous stage.
 This saves overall memory.</p>
-<h2 id="call-site">Call-Site<a class="headerlink" href="#call-site" title="Permalink to this headline">¶</a></h2>
+<h2 id="call-site">Call-Site<a class="headerlink" href="#call-site" title="Permalink to this heading">¶</a></h2>
 <p>The full algorithm with checkpointing can then be initiated as follows:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><code><span class="n">tape_type</span><span class="w"> </span><span class="n">tape</span><span class="p">;</span><span class="w"></span>
 
@@ -720,7 +720,7 @@ It should not be destroyed before.</p>
 <p>See <a class="reference internal" href="ref/tape.html#ref-tape-ckpt-mem"><span class="std std-ref">Checkpoint Callback Memory Management</span></a> for how to use tape-based destruction with dynamically
 allocated checkpoint callbacks.</p>
 </div>
-<h2 id="other-usage-patterns">Other Usage Patterns<a class="headerlink" href="#other-usage-patterns" title="Permalink to this headline">¶</a></h2>
+<h2 id="other-usage-patterns">Other Usage Patterns<a class="headerlink" href="#other-usage-patterns" title="Permalink to this heading">¶</a></h2>
 <p>Alternative methods may be used to update the adjoints
 within a checkpoint’s <a class="reference internal" href="ref/chkpt_cb.html#_CPPv4N18CheckpointCallback14computeAdjointEP8TapeType" title="CheckpointCallback::computeAdjoint (C++ function) — This function is called by XAD during rolling back the tape, giving a reference to itself. Gives weak exception guarantee - if this user-implemented function throws an exception, the tape is in an undefined state and needs to be reset/re-initialized before it can be used again."><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CheckpointCallback::computeAdjoint()</span></code></a> method,
 such as:</p>
@@ -817,7 +817,7 @@ i.e., new checkpoints are created within a nested tape in a checkpoint.</p>
     <script id="__config" type="application/json">{"base": ".", "features": ["toc.follow", "navigation.sections", "navigation.tracking", "search.highlight", "search.share"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="static/javascripts/bundle.dc1bded0.min.js"></script>
+      <script src="_static/javascripts/bundle.dc1bded0.min.js"></script>
     
   </body>
 </html>
